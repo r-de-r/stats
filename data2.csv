@@ -1,0 +1,7 @@
+ID	Weight	Height	Age	BloodType
+Int64	Float64	Float64	Int64	String
+1	125	44.6	157.6	17	A
+2	321	57.3	158.8	26	B
+3	437	54.3	162.2	22	AB
+4	426	45.4	160.8	31	O
+5	243	48.5	174.5	34	B
