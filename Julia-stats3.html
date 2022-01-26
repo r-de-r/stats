@@ -14512,7 +14512,42 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">Version</span><span class="p">()</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>最新バージョン 2022-01-26 13:11
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AE%E6%93%8D%E4%BD%9C">&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12398;&#25805;&#20316;<a class="anchor-link" href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AE%E6%93%8D%E4%BD%9C">&#182;</a></h1><p>Julia で引用できるデータを例として，データフレームの操作法について述べる。</p>
@@ -14541,7 +14576,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">airquality</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s">&quot;datasets&quot;</span><span class="p">,</span> <span class="s">&quot;airquality&quot;</span><span class="p">);</span>
@@ -14561,7 +14596,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span>
@@ -14580,7 +14615,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[99]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -14605,7 +14640,7 @@ n, m が省略された場合は 1 が仮定される。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -14624,7 +14659,7 @@ n, m が省略された場合は 1 が仮定される。</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[100]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -14641,7 +14676,7 @@ n, m が省略された場合は 1 が仮定される。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">last</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -14660,7 +14695,7 @@ n, m が省略された場合は 1 が仮定される。</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[101]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -14690,7 +14725,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">names</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span>
@@ -14709,7 +14744,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[102]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -14764,14 +14799,14 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <p>1 番目の指定法が一番わかり易いと思うが，例からも想像できるように，変数名の中に '.' があるとエラーになる。そのような場合には前もって列名を変更するか 2 番目の方法すなわち引用符でくくればよい。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[104]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="c"># airquality.Solar.R</span>
-<span class="c"># ArgumentError: column name :Solar not found in the data frame; existing most similar names are: :Solar.R</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">airquality</span><span class="o">.</span><span class="n">Solar</span><span class="o">.</span><span class="n">R</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="kt">ArgumentError</span><span class="o">:</span> <span class="n">column</span> <span class="n">name</span> <span class="o">:</span><span class="n">Solar</span> <span class="n">not</span> <span class="n">found</span> <span class="k">in</span> <span class="n">the</span> <span class="n">data</span> <span class="n">frame</span><span class="p">;</span> <span class="n">existing</span> <span class="n">most</span> <span class="n">similar</span> <span class="n">names</span> <span class="n">are</span><span class="o">:</span> <span class="ss">:Solar</span><span class="o">.</span><span class="n">R</span>
 </pre></div>
 
      </div>
@@ -14779,18 +14814,83 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+ArgumentError: column name :Solar not found in the data frame; existing most similar names are: :Solar.R
+
+Stacktrace:
+ [1] lookupname
+   @ ~/.julia/packages/DataFrames/BM4OQ/src/other/index.jl:395 [inlined]
+ [2] getindex
+   @ ~/.julia/packages/DataFrames/BM4OQ/src/other/index.jl:401 [inlined]
+ [3] getindex(df::DataFrame, #unused#::typeof(!), col_ind::Symbol)
+   @ DataFrames ~/.julia/packages/DataFrames/BM4OQ/src/dataframe/dataframe.jl:525
+ [4] getproperty(df::DataFrame, col_ind::Symbol)
+   @ DataFrames ~/.julia/packages/DataFrames/BM4OQ/src/abstractdataframe/abstractdataframe.jl:378
+ [5] top-level scope
+   @ In[13]:1
+ [6] eval
+   @ ./boot.jl:373 [inlined]
+ [7] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">airquality</span><span class="o">.</span><span class="s">&quot;Solar.R&quot;</span><span class="p">;</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">airquality</span><span class="o">.</span><span class="s">&quot;Solar.R&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>5-element Vector{Union{Missing, Int64}}:
+ 190
+ 118
+ 149
+ 313
+    missing</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14804,7 +14904,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">airquality</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
@@ -14823,7 +14923,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -14850,7 +14950,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">airquality</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
@@ -14871,7 +14971,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -14888,7 +14988,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">test2</span> <span class="o">=</span> <span class="n">airquality</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
@@ -14909,7 +15009,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -14934,7 +15034,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">airquality2</span> <span class="o">=</span> <span class="n">rename</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;Solar.R&quot;</span> <span class="o">=&gt;</span> <span class="s">&quot;Solar_R&quot;</span><span class="p">));</span>
@@ -14954,7 +15054,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -14977,7 +15077,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span>
@@ -14996,12 +15096,12 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<p>DataFrameRow (6 columns)</p><div class="data-frame"><table class="data-frame"><thead><tr><th></th><th>Ozone</th><th>Solar_R</th><th>Wind</th><th>Temp</th><th>Month</th><th>Day</th></tr><tr><th></th><th title="Union{Missing, Int64}">Int64?</th><th title="Union{Missing, Int64}">Int64?</th><th title="Float64">Float64</th><th title="Int64">Int64</th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>41</td><td>190</td><td>7.4</td><td>67</td><td>5</td><td>1</td></tr></tbody></table></div>
+<p>DataFrameRow (6 columns)</p><div class="data-frame"><table class="data-frame"><thead><tr><th></th><th>Ozone</th><th>Solar.R</th><th>Wind</th><th>Temp</th><th>Month</th><th>Day</th></tr><tr><th></th><th title="Union{Missing, Int64}">Int64?</th><th title="Union{Missing, Int64}">Int64?</th><th title="Float64">Float64</th><th title="Int64">Int64</th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>41</td><td>190</td><td>7.4</td><td>67</td><td>5</td><td>1</td></tr></tbody></table></div>
 </div>
 
 </div>
@@ -15019,7 +15119,7 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">rename!</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="kt">Dict</span><span class="p">(</span><span class="s">&quot;Solar.R&quot;</span> <span class="o">=&gt;</span> <span class="s">&quot;Solar_R&quot;</span><span class="p">));</span>
@@ -15039,25 +15139,14 @@ Int64 は整数型，Float64 は実数型，String は文字列型である。�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-ArgumentError: Tried renaming :Solar.R to :Solar_R, when :Solar.R does not exist in the data frame.
 
-Stacktrace:
- [1] rename!(x::DataFrames.Index, nms::Vector{Pair{Symbol, Symbol}})
-   @ DataFrames ~/.julia/packages/DataFrames/BM4OQ/src/other/index.jl:91
- [2] rename!(df::DataFrame, args::Dict{String, String})
-   @ DataFrames ~/.julia/packages/DataFrames/BM4OQ/src/abstractdataframe/abstractdataframe.jl:222
- [3] top-level scope
-   @ In[39]:1
- [4] eval
-   @ ./boot.jl:373 [inlined]
- [5] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
-   @ Base ./loading.jl:1196</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<p>DataFrameRow (6 columns)</p><div class="data-frame"><table class="data-frame"><thead><tr><th></th><th>Ozone</th><th>Solar_R</th><th>Wind</th><th>Temp</th><th>Month</th><th>Day</th></tr><tr><th></th><th title="Union{Missing, Int64}">Int64?</th><th title="Union{Missing, Int64}">Int64?</th><th title="Float64">Float64</th><th title="Int64">Int64</th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>41</td><td>190</td><td>7.4</td><td>67</td><td>5</td><td>1</td></tr></tbody></table></div>
 </div>
+
 </div>
 
 </div>
@@ -15074,7 +15163,7 @@ Stacktrace:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]);</span> <span class="c"># 列番号で指定</span>
@@ -15094,7 +15183,7 @@ Stacktrace:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
@@ -15111,7 +15200,7 @@ Stacktrace:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="p">[</span><span class="ss">:Ozone</span><span class="p">,</span> <span class="ss">:Solar_R</span><span class="p">,</span> <span class="ss">:Wind</span><span class="p">,</span> <span class="ss">:Temp</span><span class="p">]);</span> <span class="c"># シンボルで指定</span>
@@ -15131,7 +15220,7 @@ Stacktrace:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
@@ -15145,26 +15234,17 @@ Stacktrace:
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">列を（名前を変えて）コピーしたり，変数変換することもできる。ByRow</span><span class="p">()</span> <span class="n">の引数は関数，無名関数である。</span>
-
-<span class="n">元の</span> <span class="n">Temp</span> <span class="n">を</span> <span class="n">Fahrenheit，Temp</span> <span class="n">から変換して</span> <span class="n">Celcius</span> <span class="n">を作成する。</span>
-</pre></div>
-
-     </div>
 </div>
-</div>
-</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>列を（名前を変えて）コピーしたり，変数変換することもできる。ByRow() の引数は関数，無名関数である。</p>
+<p>元の Temp を Fahrenheit，Temp から変換して Celcius を作成する。</p>
 
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[127]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="ss">:Ozone</span><span class="p">,</span> <span class="ss">:Solar_R</span><span class="p">,</span> <span class="ss">:Wind</span><span class="p">,</span>
@@ -15185,7 +15265,7 @@ Stacktrace:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[127]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -15197,462 +15277,6 @@ Stacktrace:
 
 </div>
 
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%94%E3%81%A8%E3%81%AE%E8%A8%98%E8%BF%B0%E7%B5%B1%E8%A8%88%E9%87%8F">&#12464;&#12523;&#12540;&#12503;&#12372;&#12392;&#12398;&#35352;&#36848;&#32113;&#35336;&#37327;<a class="anchor-link" href="#%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%94%E3%81%A8%E3%81%AE%E8%A8%98%E8%BF%B0%E7%B5%B1%E8%A8%88%E9%87%8F">&#182;</a></h3><p>データフレームをグループを表す変数でグループ化し，それぞれのサブグループごとに統計量を求める。</p>
-<p>airquality データセットの :Month でグループ化する。</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">RDatasets</span>
-
-<span class="n">airquality</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s">&quot;datasets&quot;</span><span class="p">,</span> <span class="s">&quot;airquality&quot;</span><span class="p">);</span>
-<span class="n">select</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Day</span><span class="p">));</span>
-<span class="n">gdf</span> <span class="o">=</span> <span class="n">groupby</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">),</span> <span class="ss">:Month</span><span class="p">);</span>
-<span class="n">println</span><span class="p">(</span><span class="s">&quot;number of subgroup = &quot;</span><span class="p">,</span> <span class="n">length</span><span class="p">(</span><span class="n">gdf</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>number of subgroup = 5
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>gdf[1] は :Month が 5 の場合のサブグループである。</p>
-<p>それぞれの gdf[i] は，データフレームと同じように扱うことができる。</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">describe</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div class="data-frame"><p>5 rows × 7 columns</p><table class="data-frame"><thead><tr><th></th><th>variable</th><th>mean</th><th>min</th><th>median</th><th>max</th><th>nmissing</th><th>eltype</th></tr><tr><th></th><th title="Symbol">Symbol</th><th title="Float64">Float64</th><th title="Real">Real</th><th title="Float64">Float64</th><th title="Real">Real</th><th title="Int64">Int64</th><th title="Type">Type</th></tr></thead><tbody><tr><th>1</th><td>Ozone</td><td>23.6154</td><td>1</td><td>18.0</td><td>115</td><td>5</td><td>Union{Missing, Int64}</td></tr><tr><th>2</th><td>Solar.R</td><td>181.296</td><td>8</td><td>194.0</td><td>334</td><td>4</td><td>Union{Missing, Int64}</td></tr><tr><th>3</th><td>Wind</td><td>11.6226</td><td>5.7</td><td>11.5</td><td>20.1</td><td>0</td><td>Float64</td></tr><tr><th>4</th><td>Temp</td><td>65.5484</td><td>56</td><td>66.0</td><td>81</td><td>0</td><td>Int64</td></tr><tr><th>5</th><td>Month</td><td>5.0</td><td>5</td><td>5.0</td><td>5</td><td>0</td><td>Int64</td></tr></tbody></table></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>for ループで，すべてのサブグループについて分析できる。</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">for</span> <span class="n">df</span> <span class="k">in</span> <span class="n">gdf</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">Month: &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="ss">:Month</span><span class="p">],</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">describe</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
-<span class="k">end</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Month: 5
-<span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean     </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype                </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64  </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type                  </span>
-─────┼───────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      23.6154   1       18.0  115           5  Union{Missing, Int64}
-   2 │ Solar.R   181.296    8      194.0  334           4  Union{Missing, Int64}
-   3 │ Wind       11.6226   5.7     11.5   20.1         0  Float64
-   4 │ Temp       65.5484  56       66.0   81           0  Int64
-   5 │ Month       5.0      5        5.0    5           0  Int64
-
-Month: 6
-<span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean     </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype                </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64  </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type                  </span>
-─────┼───────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      29.4444  12       23.0   71          21  Union{Missing, Int64}
-   2 │ Solar.R   190.167   31      188.5  332           0  Union{Missing, Int64}
-   3 │ Wind       10.2667   1.7      9.7   20.7         0  Float64
-   4 │ Temp       79.1     65       78.0   93           0  Int64
-   5 │ Month       6.0      6        6.0    6           0  Int64
-
-Month: 7
-<span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean      </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype                </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64   </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type                  </span>
-─────┼────────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      59.1154    7       60.0  135           5  Union{Missing, Int64}
-   2 │ Solar.R   216.484     7      253.0  314           0  Union{Missing, Int64}
-   3 │ Wind        8.94194   4.1      8.6   14.9         0  Float64
-   4 │ Temp       83.9032   73       84.0   92           0  Int64
-   5 │ Month       7.0       7        7.0    7           0  Int64
-
-Month: 8
-<span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean      </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype                </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64   </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type                  </span>
-─────┼────────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      59.9615    9       52.0  168           5  Union{Missing, Int64}
-   2 │ Solar.R   171.857    24      197.5  273           3  Union{Missing, Int64}
-   3 │ Wind        8.79355   2.3      8.6   15.5         0  Float64
-   4 │ Temp       83.9677   72       82.0   97           0  Int64
-   5 │ Month       8.0       8        8.0    8           0  Int64
-
-Month: 9
-<span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean     </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype                </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64  </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type                  </span>
-─────┼───────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      31.4483   7       23.0   96           1  Union{Missing, Int64}
-   2 │ Solar.R   167.433   14      192.0  259           0  Union{Missing, Int64}
-   3 │ Wind       10.18     2.8     10.3   16.6         0  Float64
-   4 │ Temp       76.9     63       76.0   93           0  Int64
-   5 │ Month       9.0      9        9.0    9           0  Int64
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>変数ごとに一覧表示するには，プログラムを書く必要がある。</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">describe</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="k">for</span> <span class="n">df</span> <span class="k">in</span> <span class="n">gdf</span><span class="p">]</span>
-<span class="n">variable</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Ozone&quot;</span><span class="p">,</span> <span class="s">&quot;Solar.R&quot;</span><span class="p">,</span> <span class="s">&quot;Wind&quot;</span><span class="p">,</span> <span class="s">&quot;Temp&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">variable</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">[]</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-        <span class="n">pos</span> <span class="o">=</span> <span class="n">indexin</span><span class="p">([</span><span class="kt">Symbol</span><span class="p">(</span><span class="n">i</span><span class="p">)],</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="o">:</span><span class="p">,</span> <span class="mi">1</span><span class="p">])[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">ismissing</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="k">continue</span>
-        <span class="n">row</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">pos</span><span class="p">,</span> <span class="o">:</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>5-element Vector{DataFrame}:
- <span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean     </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype             </span> ⋯
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64  </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type               </span> ⋯
-─────┼──────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      23.6154   1       18.0  115           5  Union{Missing, Int6 ⋯
-   2 │ Solar.R   181.296    8      194.0  334           4  Union{Missing, Int6
-   3 │ Wind       11.6226   5.7     11.5   20.1         0  Float64
-   4 │ Temp       65.5484  56       66.0   81           0  Int64
-   5 │ Month       5.0      5        5.0    5           0  Int64               ⋯
-<span class="ansi-cyan-fg">                                                                1 column omitted</span>
- <span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean     </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype             </span> ⋯
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64  </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type               </span> ⋯
-─────┼──────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      29.4444  12       23.0   71          21  Union{Missing, Int6 ⋯
-   2 │ Solar.R   190.167   31      188.5  332           0  Union{Missing, Int6
-   3 │ Wind       10.2667   1.7      9.7   20.7         0  Float64
-   4 │ Temp       79.1     65       78.0   93           0  Int64
-   5 │ Month       6.0      6        6.0    6           0  Int64               ⋯
-<span class="ansi-cyan-fg">                                                                1 column omitted</span>
- <span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean      </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype            </span> ⋯
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64   </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type              </span> ⋯
-─────┼──────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      59.1154    7       60.0  135           5  Union{Missing, Int ⋯
-   2 │ Solar.R   216.484     7      253.0  314           0  Union{Missing, Int
-   3 │ Wind        8.94194   4.1      8.6   14.9         0  Float64
-   4 │ Temp       83.9032   73       84.0   92           0  Int64
-   5 │ Month       7.0       7        7.0    7           0  Int64              ⋯
-<span class="ansi-cyan-fg">                                                                1 column omitted</span>
- <span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean      </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype            </span> ⋯
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64   </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type              </span> ⋯
-─────┼──────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      59.9615    9       52.0  168           5  Union{Missing, Int ⋯
-   2 │ Solar.R   171.857    24      197.5  273           3  Union{Missing, Int
-   3 │ Wind        8.79355   2.3      8.6   15.5         0  Float64
-   4 │ Temp       83.9677   72       82.0   97           0  Int64
-   5 │ Month       8.0       8        8.0    8           0  Int64              ⋯
-<span class="ansi-cyan-fg">                                                                1 column omitted</span>
- <span class="ansi-bold">5×7 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> variable </span><span class="ansi-bold"> mean     </span><span class="ansi-bold"> min  </span><span class="ansi-bold"> median  </span><span class="ansi-bold"> max   </span><span class="ansi-bold"> nmissing </span><span class="ansi-bold"> eltype             </span> ⋯
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Symbol   </span><span class="ansi-black-intense-fg"> Float64  </span><span class="ansi-black-intense-fg"> Real </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Real  </span><span class="ansi-black-intense-fg"> Int64    </span><span class="ansi-black-intense-fg"> Type               </span> ⋯
-─────┼──────────────────────────────────────────────────────────────────────────
-   1 │ Ozone      31.4483   7       23.0   96           1  Union{Missing, Int6 ⋯
-   2 │ Solar.R   167.433   14      192.0  259           0  Union{Missing, Int6
-   3 │ Wind       10.18     2.8     10.3   16.6         0  Float64
-   4 │ Temp       76.9     63       76.0   93           0  Int64
-   5 │ Month       9.0      9        9.0    9           0  Int64               ⋯
-<span class="ansi-cyan-fg">                                                                1 column omitted</span></pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">DataFrames</span><span class="p">,</span> <span class="n">Statistics</span>
-<span class="k">for</span> <span class="n">variable</span> <span class="k">in</span> <span class="p">[</span><span class="s">&quot;Ozone&quot;</span><span class="p">,</span> <span class="s">&quot;Solar.R&quot;</span><span class="p">,</span> <span class="s">&quot;Wind&quot;</span><span class="p">,</span> <span class="s">&quot;Temp&quot;</span><span class="p">]</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="si">$variable</span><span class="s">&quot;</span><span class="p">)</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span>
-        <span class="n">each</span> <span class="o">=</span> <span class="n">dropmissing</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">[</span><span class="s">&quot;Month&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="p">]))</span> <span class="c"># nrow(each)</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">combine</span><span class="p">(</span><span class="n">each</span><span class="p">,</span> <span class="ss">:Month</span> <span class="o">=&gt;</span> <span class="n">first</span> <span class="o">=&gt;</span> <span class="ss">:Month</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">=&gt;</span> <span class="ss">:n</span><span class="p">,</span> <span class="n">variable</span> <span class="o">=&gt;</span> <span class="n">mean</span> <span class="o">=&gt;</span> <span class="ss">:Mean</span><span class="p">,</span> <span class="n">variable</span> <span class="o">=&gt;</span> <span class="n">std</span> <span class="o">=&gt;</span> <span class="ss">:SD</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="p">[]</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="n">res</span>
-        <span class="k">else</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="n">vcat</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
-        <span class="k">end</span>
-    <span class="k">end</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="k">end</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>
-Ozone
-<span class="ansi-bold">5×4 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> Month </span><span class="ansi-bold"> n     </span><span class="ansi-bold"> Mean    </span><span class="ansi-bold"> SD      </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Float64 </span>
-─────┼────────────────────────────────
-   1 │     5     26  23.6154  22.2244
-   2 │     6      9  29.4444  18.2079
-   3 │     7     26  59.1154  31.6358
-   4 │     8     26  59.9615  39.6812
-   5 │     9     29  31.4483  24.1418
-
-Solar.R
-<span class="ansi-bold">5×4 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> Month </span><span class="ansi-bold"> n     </span><span class="ansi-bold"> Mean    </span><span class="ansi-bold"> SD       </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Float64  </span>
-─────┼─────────────────────────────────
-   1 │     5     27  181.296  115.075
-   2 │     6     30  190.167   92.883
-   3 │     7     31  216.484   80.5683
-   4 │     8     28  171.857   76.8349
-   5 │     9     30  167.433   79.1183
-
-Wind
-<span class="ansi-bold">5×4 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> Month </span><span class="ansi-bold"> n     </span><span class="ansi-bold"> Mean     </span><span class="ansi-bold"> SD      </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Float64  </span><span class="ansi-black-intense-fg"> Float64 </span>
-─────┼─────────────────────────────────
-   1 │     5     31  11.6226   3.53145
-   2 │     6     30  10.2667   3.76923
-   3 │     7     31   8.94194  3.03598
-   4 │     8     31   8.79355  3.22593
-   5 │     9     30  10.18     3.46125
-
-Temp
-<span class="ansi-bold">5×4 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> Month </span><span class="ansi-bold"> n     </span><span class="ansi-bold"> Mean    </span><span class="ansi-bold"> SD      </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Float64 </span><span class="ansi-black-intense-fg"> Float64 </span>
-─────┼────────────────────────────────
-   1 │     5     31  65.5484  6.85487
-   2 │     6     30  79.1     6.59859
-   3 │     7     31  83.9032  4.31551
-   4 │     8     31  83.9677  6.58526
-   5 │     9     30  76.9     8.35567
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">attitude</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">airquality</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">anscombe</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">attenu</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">BOD</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">cars</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">chickwts</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">CO2</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">crimtab</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">esoph</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">euro</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">faithful</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">Formaldehyde</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">freeny</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">HairEyeColor</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">infert</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">InsectSprays</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">iris</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">islands</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">LifeCycleSavings</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">Loblolly</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">longley</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">morley</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">mtcars</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">occupationalStatus</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">OrchardSprays</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">PlantGrowth</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">precip</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">pressure</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">Puromycin</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">quakes</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">randu</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">rivers</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">rock</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">sleep</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">stackloss</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">swiss</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">Theoph</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">Titanic</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">ToothGrowth</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">trees</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">UCBAdmissions</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">USArrests</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">USJudgeRatings</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">USPersonalExpenditure</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">VADeaths</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">volcano</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">warpbreaks</span><span class="o">.</span><span class="n">rda</span>
-<span class="n">women</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">WorldPhones</span><span class="o">.</span><span class="n">csv</span><span class="o">.</span><span class="n">gz</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>

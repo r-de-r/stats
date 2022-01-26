@@ -14512,12 +14512,47 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">Version</span><span class="p">()</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>最新バージョン 2022-01-26 13:09
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="1.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%B8%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">1.&#12288;&#12487;&#12540;&#12479;&#12434;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12408;&#35501;&#12415;&#36796;&#12416;<a class="anchor-link" href="#1.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%B8%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">&#182;</a></h1><p>統計解析の対象となるデータは，データファイルとして用意され，統計解析プログラム（Julia や R や Python）でコンピュータに読み込まれ，分析・処理される。</p>
+<h1 id="%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%B8%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">&#12288;&#12487;&#12540;&#12479;&#12434;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12408;&#35501;&#12415;&#36796;&#12416;<a class="anchor-link" href="#%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%B8%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">&#182;</a></h1><p>統計解析の対象となるデータは，データファイルとして用意され，統計解析プログラム（Julia や R や Python）でコンピュータに読み込まれ，分析・処理される。</p>
 <p>ここでは，データファイルがどのようになっているかを見ておく。</p>
-<h2 id="1.1.%E3%80%80Excel-%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.1.&#12288;Excel &#12398;&#12527;&#12540;&#12463;&#12471;&#12540;&#12488;&#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.1.%E3%80%80Excel-%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>統計データに限らず，データの整理には，Excel などのスプレッドシートアプリが使われる。
+<h2 id="%E3%80%80Excel-%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#12288;Excel &#12398;&#12527;&#12540;&#12463;&#12471;&#12540;&#12488;&#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#%E3%80%80Excel-%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>統計データに限らず，データの整理には，Excel などのスプレッドシートアプリが使われる。
 ワークシートは二次元の行列のようにまとめられている。行には観察対象や年次のように繰り返されるものを割り当てる。
 列はそれぞれの行において何種類かの観察値，測定値を割り当て，それぞれが何を表すかということで，変数ともいわれる。
 変数は整数値，実数値，文字列のいずれかのデータを取る。
@@ -14531,7 +14566,7 @@ XLS 形式はサポートしていない。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">DataFrames</span><span class="p">,</span> <span class="n">XLSX</span>
@@ -14551,7 +14586,7 @@ XLS 形式はサポートしていない。</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
@@ -14574,7 +14609,7 @@ XLS 形式はサポートしていない。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Weight</span><span class="p">)</span>
@@ -14593,7 +14628,7 @@ XLS 形式はサポートしていない。</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14619,7 +14654,7 @@ XLS 形式はサポートしていない。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Weight</span> <span class="o">=</span> <span class="n">float</span><span class="o">.</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Weight</span><span class="p">)</span>
@@ -14640,7 +14675,7 @@ XLS 形式はサポートしていない。</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -14663,7 +14698,7 @@ XLS 形式はサポートしていない。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span>
@@ -14682,7 +14717,7 @@ XLS 形式はサポートしていない。</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -14705,7 +14740,7 @@ XLS 形式はサポートしていない。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="nb">missing</span><span class="p">)</span>
@@ -14724,7 +14759,7 @@ XLS 形式はサポートしていない。</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -14742,7 +14777,7 @@ XLS 形式はサポートしていない。</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Weight</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">missing</span> <span class="c"># これは，エラーになる</span>
@@ -14778,7 +14813,7 @@ Stacktrace:
  [1] setindex!(A::Vector{Float64}, x::Missing, i1::Int64)
    @ Base ./array.jl:903
  [2] top-level scope
-   @ In[49]:1
+   @ In[7]:1
  [3] eval
    @ ./boot.jl:373 [inlined]
  [4] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
@@ -14799,7 +14834,7 @@ Stacktrace:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Height</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">missing</span> <span class="c"># これはエラーにならない</span>
@@ -14818,7 +14853,7 @@ Stacktrace:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -14836,7 +14871,7 @@ Stacktrace:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.2.%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.2.&#12288;CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.2.%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>上述のように XLSX 形式のワークシートファイルは XLSX.readtable() によって直接読み込むこともできるが，XLS 形式のワークシートには対応していない。
+<h2 id="%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#12288;CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>上述のように XLSX 形式のワークシートファイルは XLSX.readtable() によって直接読み込むこともできるが，XLS 形式のワークシートには対応していない。
 また，Excel のバージョンアップなどで，XLSX.readtable() が対応できなくなる可能性もある。
 このようなことから，一般性を保証するためには CSV 形式（拡張子が .csv）で保存することが望ましい。</p>
 <p>CSV ファイルは以下のようになっている。1 行目に変数名，2 行目以降にデータが，それぞれカンマで区切られている。</p>
@@ -14852,7 +14887,7 @@ Stacktrace:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">CSV</span><span class="p">,</span> <span class="n">DataFrames</span>
@@ -14872,7 +14907,7 @@ Stacktrace:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -14891,75 +14926,135 @@ Stacktrace:
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>データフレームの各列の型は，実際に入力されるデータから推論され妥当なものになっている。</p>
 <p>当然，前述したように，Any 型以外の場合には missing は代入できない。</p>
-<h2 id="1.3.%E3%80%80%E4%B8%80%E8%88%AC%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.3.&#12288;&#19968;&#33324;&#12398; CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.3.%E3%80%80%E4%B8%80%E8%88%AC%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>CSV ファイルは Excel ファイルの一般的な保存形式ということに限らず，単に，前述したような 1 行目に変数名，2列目以降にデータをカンマで区切って列挙したものということである。</p>
+<h2 id="%E3%80%80%E4%B8%80%E8%88%AC%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#12288;&#19968;&#33324;&#12398; CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#%E3%80%80%E4%B8%80%E8%88%AC%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>CSV ファイルは Excel ファイルの一般的な保存形式ということに限らず，単に，前述したような 1 行目に変数名，2列目以降にデータをカンマで区切って列挙したものということである。</p>
 <p>Excel を使わずとも単純なエディタで CSV ファイルをつくることもできる。
 また，世の中にある CSV ファイルの中には CSV.read(ファイル名, DataFrame) だけでは読み込めないものもある。</p>
 <p>それらに対応するために CSV.read() が持っているいくつかのオプション（引数）についてまとめておこう。詳しくは <a href="https://csv.juliadata.org/stable/">https://csv.juliadata.org/stable/</a> を参照。</p>
-<h3 id="header=%E6%95%B4%E6%95%B0">header=&#25972;&#25968;<a class="anchor-link" href="#header=%E6%95%B4%E6%95%B0">&#182;</a></h3><p>列名の定義について指定する。省略されている場合は，適当に解釈される。<br>
+<ul>
+<li><p>header=整数<br>
+列名の定義について指定する。省略されている場合は，適当に解釈される。<br>
 列名が何行目に定義されているかを指定する。<br>
 デフォルトでは header=1。<br>
 2 以上の値が指定されたときはそれまでの行は読み飛ばされる。<br>
 また，列名の指定行のすぐ後からデータが始まると解釈されるので，もし読み飛ばすべき行があるならば，skipto, datarow でデータ開始行を指定する。<br>
 例　df = CSV.read("small.csv", DataFrame, header=0, skipto=2)</p>
-<h3 id="header=0-%E3%82%82%E3%81%97%E3%81%8F%E3%81%AF-header=false">header=0 &#12418;&#12375;&#12367;&#12399; header=false<a class="anchor-link" href="#header=0-%E3%82%82%E3%81%97%E3%81%8F%E3%81%AF-header=false">&#182;</a></h3><p>列名を持たないファイルの場合は，列名を自動生成することができる。<br>
+</li>
+<li><p>header=0 もしくは header=false<br>
+列名を持たないファイルの場合は，列名を自動生成することができる。<br>
 例　df = CSV.read("small.csv", DataFrame, header=0)</p>
-<h3 id="header=%5B%22ab%22,-%22cd%22,-...%5D">header=["ab", "cd", ...]<a class="anchor-link" href="#header=%5B%22ab%22,-%22cd%22,-...%5D">&#182;</a></h3><p>文字列ベクトルで列名を定義する。<br>
+</li>
+<li><p>header=["ab", "cd", ...]<br>
+文字列ベクトルで列名を定義する。<br>
 例　df = CSV.read("small.csv", DataFrame, header=["a1", "b1", "c1"])</p>
-<h3 id="header=%5B:ab,-:cd,-...%5D">header=[:ab, :cd, ...]<a class="anchor-link" href="#header=%5B:ab,-:cd,-...%5D">&#182;</a></h3><p>シンボルベクトルで列名を定義する。<br>
+</li>
+<li><p>header=[:ab, :cd, ...]<br>
+シンボルベクトルで列名を定義する。<br>
 例　df = CSV.read("small.csv", DataFrame, header=[:a, :b, :c]])</p>
-<h3 id="datarow,-skipto">datarow, skipto<a class="anchor-link" href="#datarow,-skipto">&#182;</a></h3><p>データが始まる行番号を指定する。どちらも同じ。</p>
-<h3 id="footerskip">footerskip<a class="anchor-link" href="#footerskip">&#182;</a></h3><p>データの最後の何行を読み飛ばすかを指定する。</p>
-<h3 id="limit">limit<a class="anchor-link" href="#limit">&#182;</a></h3><p>入力行数の制限</p>
-<h3 id="transpose=false">transpose=false<a class="anchor-link" href="#transpose=false">&#182;</a></h3><p>行と列を転置して入力する。</p>
-<h3 id="comment">comment<a class="anchor-link" href="#comment">&#182;</a></h3><p>指定した文字列から始まる行を（コメント行として）読み飛ばす。</p>
-<h3 id="ignoreemptylines=true">ignoreemptylines=true<a class="anchor-link" href="#ignoreemptylines=true">&#182;</a></h3><p>空行を読み飛ばす</p>
-<h3 id="select">select<a class="anchor-link" href="#select">&#182;</a></h3><p>選択する列をベクトルで指定する。<br>
+</li>
+<li><p>datarow, skipto<br>
+データが始まる行番号を指定する。どちらも同じ。</p>
+</li>
+<li><p>footerskip<br>
+データの最後の何行を読み飛ばすかを指定する。</p>
+</li>
+<li><p>limit<br>
+入力行数の制限</p>
+</li>
+<li><p>transpose=false<br>
+行と列を転置して入力する。</p>
+</li>
+<li><p>comment<br>
+指定した文字列から始まる行を（コメント行として）読み飛ばす。</p>
+</li>
+<li><p>ignoreemptylines=true<br>
+空行を読み飛ばす</p>
+</li>
+<li><p>select<br>
+選択する列をベクトルで指定する。<br>
 select=[1, 3]　列番号で指定<br>
 select=[:a, :c]　列シンボルで指定<br>
 select=["a", "c"]　列名で指定<br>
 select=[true, false, true]　論理値で指定<br>
 select=(i, nm) -&gt; i in (1, 3)　ラムダ式（無名関数）で指定<br></p>
-<h3 id="drop">drop<a class="anchor-link" href="#drop">&#182;</a></h3><p>選択しない列をベクトルで指定する（select の逆である）。</p>
-<h3 id="missingstrings,-missingstring">missingstrings, missingstring<a class="anchor-link" href="#missingstrings,-missingstring">&#182;</a></h3><p>欠損値を表す文字列を指定する。R では NA が自動的に欠損値扱いになるが，Julia では特別に指定しないといけないので注意が必要である。<br>
+</li>
+<li><p>drop<br>
+選択しない列をベクトルで指定する（select の逆である）。</p>
+</li>
+<li><p>missingstrings, missingstring<br>
+欠損値を表す文字列を指定する。R では NA が自動的に欠損値扱いになるが，Julia では特別に指定しないといけないので注意が必要である。<br>
 missingstring="-999"<br>
 missingstrings=["-999", "NA"]</p>
-<h3 id="delim=','">delim=','<a class="anchor-link" href="#delim=','">&#182;</a></h3><p>データのデリミターをシングルクオートでくくって指定する。<br>
+</li>
+<li><p>delim=','<br>
+データのデリミターをシングルクオートでくくって指定する。<br>
 最初の 10 行を見て，カンマ(',')，タブ('\t')，半角空白(' ')，コロン(':')，セミコロン(';')，連結 concatenation('|') のどれかをデリミターと解釈する。<br>
 delim="@@@" のように文字列も使える</p>
-<h3 id="ignorerepeated=false">ignorerepeated=false<a class="anchor-link" href="#ignorerepeated=false">&#182;</a></h3><p>連続するデリミタを無視するかどうかを指示する。<br>
+</li>
+<li><p>ignorerepeated=false<br>
+連続するデリミタを無視するかどうかを指示する。<br>
 複数の空白で桁位置を揃えて入力されたファイルを読むときなどには，
 delim=' ', ignorerepeated=true を指定すればよい。</p>
-<h3 id="quotechar='%22'">quotechar='"'<a class="anchor-link" href="#quotechar='%22'">&#182;</a></h3><p>文字列をくくる引用符である。</p>
-<h3 id="escapechar='%22'">escapechar='"'<a class="anchor-link" href="#escapechar='%22'">&#182;</a></h3><p>引用符のエスケープ文字である。</p>
-<h3 id="dateformat">dateformat<a class="anchor-link" href="#dateformat">&#182;</a></h3><p>日付，時間のフォーマットを示す文字列である。<br>
+</li>
+<li><p>quotechar='"'<br>
+文字列をくくる引用符である。</p>
+</li>
+<li><p>escapechar='"'<br>
+引用符のエスケープ文字である。</p>
+</li>
+<li><p>dateformat<br>
+日付，時間のフォーマットを示す文字列である。<br>
 dateformat="yyyy/mm/dd" など</p>
-<h3 id="dateformats">dateformats<a class="anchor-link" href="#dateformats">&#182;</a></h3><p>日付，時間のフォーマットを辞書型で示す。</p>
-<h3 id="decimal='.'">decimal='.'<a class="anchor-link" href="#decimal='.'">&#182;</a></h3><p>小数点を表す文字をシングルクオートくくて指定する。</p>
-<h3 id="truestrings=%5B%22T%22,-%22TRUE%22%5D">truestrings=["T", "TRUE"]<a class="anchor-link" href="#truestrings=%5B%22T%22,-%22TRUE%22%5D">&#182;</a></h3><p>true の他に真値を表す文字列を定義する。</p>
-<h3 id="falsestrings=%5B%22F%22,-%22FALSE%22%5D">falsestrings=["F", "FALSE"]<a class="anchor-link" href="#falsestrings=%5B%22F%22,-%22FALSE%22%5D">&#182;</a></h3><p>false の他に真値を表す文字列を定義する。</p>
-<h3 id="type">type<a class="anchor-link" href="#type">&#182;</a></h3><p>ファイル全体に共通する唯一のデータ型を指定する。<br>
+</li>
+<li><p>dateformats<br>
+日付，時間のフォーマットを辞書型で示す。</p>
+</li>
+<li><p>decimal='.'<br>
+小数点を表す文字をシングルクオートくくて指定する。</p>
+</li>
+<li><p>truestrings=["T", "TRUE"]<br>
+true の他に真値を表す文字列を定義する。</p>
+</li>
+<li><p>falsestrings=["F", "FALSE"]<br>
+false の他に真値を表す文字列を定義する。</p>
+</li>
+<li><p>type<br>
+ファイル全体に共通する唯一のデータ型を指定する。<br>
 項目全て（全列）をここで指定した型として読む。<br>
 実数データ行列を読むときに type=Float64 のように指定する。整数の場合は Int，文字列の場合は String である。</p>
-<h3 id="types">types<a class="anchor-link" href="#types">&#182;</a></h3><p>列ごとのデータ型を指定する。<br>
+</li>
+<li><p>types<br>
+列ごとのデータ型を指定する。<br>
 ベクトルで与える場合は，全ての列について指定する。<br>
 types=Dict(3 =&gt; Int)　　3 列目の変数は整数ということを指定する。<br>
 types=Dict(:col3 =&gt; Int)　　3 列目の変数は整数ということを指定する。<br>
 types=Dict("col4" =&gt; Float64)　　"col4" という列の変数は実数であることを指定する。<br>
 types=[Int, Float64, String]</p>
-<h3 id="typemap">typemap<a class="anchor-link" href="#typemap">&#182;</a></h3><p>特定の型の入力値を別の型として読み込む。<br>
+</li>
+<li><p>typemap<br>
+特定の型の入力値を別の型として読み込む。<br>
 型のマッピング Dict(Float64=&gt;String) のように指定する。<br>
 typemap=Dict(Int =&gt; String)　　整数を文字列として読み込む。<br>
 types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読み込む。</p>
-<h3 id="pool">pool<a class="anchor-link" href="#pool">&#182;</a></h3><p>lazystrings=false</p>
-<h3 id="strict=false">strict=false<a class="anchor-link" href="#strict=false">&#182;</a></h3><p>不正な値は警告して missing にする</p>
-<h3 id="silencewarnings=false">silencewarnings=false<a class="anchor-link" href="#silencewarnings=false">&#182;</a></h3><p>strict=false のとき，不正な値の警告はしない</p>
-<h3 id="maxwarnings=100">maxwarnings=100<a class="anchor-link" href="#maxwarnings=100">&#182;</a></h3><p>警告を表示する最高回数</p>
+</li>
+<li><p>pool<br>
+lazystrings=false</p>
+</li>
+<li><p>strict=false<br>
+不正な値は警告して missing にする</p>
+</li>
+<li><p>silencewarnings=false<br>
+strict=false のとき，不正な値の警告はしない</p>
+</li>
+<li><p>maxwarnings=100<br>
+警告を表示する最高回数</p>
+</li>
+</ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.4.%E3%80%80%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E4%B8%8A%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%A8%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">1.4.&#12288;&#12514;&#12491;&#12479;&#12540;&#19978;&#12395;&#34920;&#31034;&#12373;&#12428;&#12383;&#34920;&#12434;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12395;&#35501;&#12415;&#36796;&#12416;<a class="anchor-link" href="#1.4.%E3%80%80%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E4%B8%8A%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%A8%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">&#182;</a></h2><p>ブラウザで表示した Web ページや，Word などの文章中に含まれる，見かけが表のようなデータをデータフレームとして読み取りたいことがある。</p>
+<h2 id="%E3%80%80%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E4%B8%8A%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%A8%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">&#12288;&#12514;&#12491;&#12479;&#12540;&#19978;&#12395;&#34920;&#31034;&#12373;&#12428;&#12383;&#34920;&#12434;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12395;&#35501;&#12415;&#36796;&#12416;<a class="anchor-link" href="#%E3%80%80%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E4%B8%8A%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%A8%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">&#182;</a></h2><p>ブラウザで表示した Web ページや，Word などの文章中に含まれる，見かけが表のようなデータをデータフレームとして読み取りたいことがある。</p>
 <p>例えば，今見ている文書の「1.2. CSV ファイル」節に 2 つのデータの表示がある。</p>
 <p>ID,Weight,Height,Age,BloodType<br>
 125,44.6,157.6,17,A<br>
@@ -14973,7 +15068,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span>
@@ -14992,7 +15087,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -15020,7 +15115,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">CSV</span><span class="p">,</span> <span class="n">DataFrames</span>
@@ -15040,7 +15135,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -15070,7 +15165,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;data2.csv&quot;</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="ss">:No</span><span class="p">,</span> <span class="ss">:ID</span><span class="p">,</span> <span class="ss">:Weight</span><span class="p">,</span> <span class="ss">:Height</span><span class="p">,</span> <span class="ss">:Age</span><span class="p">,</span> <span class="ss">:BloodType</span><span class="p">],</span> <span class="n">datarow</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -15089,7 +15184,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15117,7 +15212,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">readcsvfile</span><span class="p">(</span><span class="n">fn</span><span class="p">;</span> <span class="n">datarow</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -15143,7 +15238,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15167,7 +15262,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">readcsvfile</span><span class="p">(</span><span class="s">&quot;data2.csv&quot;</span><span class="p">)</span>
@@ -15186,7 +15281,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[56]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -15203,7 +15298,7 @@ types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.5.%E3%80%80%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%9F%E5%86%85%E5%AE%B9%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E3%81%99%E3%82%8B">1.5.&#12288;&#12463;&#12522;&#12483;&#12503;&#12508;&#12540;&#12489;&#12395;&#12467;&#12500;&#12540;&#12375;&#12383;&#20869;&#23481;&#12434;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12395;&#12377;&#12427;<a class="anchor-link" href="#1.5.%E3%80%80%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%9F%E5%86%85%E5%AE%B9%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E3%81%99%E3%82%8B">&#182;</a></h2><p>モニターに表示された標準的なデータフレームの形式をしたデータをデータフレームに読み込む。</p>
+<h2 id="%E3%80%80%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%9F%E5%86%85%E5%AE%B9%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E3%81%99%E3%82%8B">&#12288;&#12463;&#12522;&#12483;&#12503;&#12508;&#12540;&#12489;&#12395;&#12467;&#12500;&#12540;&#12375;&#12383;&#20869;&#23481;&#12434;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12395;&#12377;&#12427;<a class="anchor-link" href="#%E3%80%80%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%9F%E5%86%85%E5%AE%B9%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E3%81%99%E3%82%8B">&#182;</a></h2><p>モニターに表示された標準的なデータフレームの形式をしたデータをデータフレームに読み込む。</p>
 <p>このような場合は，CSV.read() の第 1 引数として，ファイル名ではなく IOBuffer(clipboard()) を指定すれば良い。</p>
 <p>使用法は，たとえば以下のようなデータフレーム様の部分を control+C（Windows の場合は Ctrl+C）でコピーして，すぐに，<br>
 df = CSV.read(IOBuffer(clipboard()), DataFrame)<br>
@@ -15218,7 +15313,7 @@ foo,bar,baz
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="kt">IOBuffer</span><span class="p">(</span><span class="n">clipboard</span><span class="p">()),</span> <span class="n">DataFrame</span><span class="p">)</span>
@@ -15237,7 +15332,7 @@ foo,bar,baz
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
@@ -15267,7 +15362,7 @@ foo bar baz
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="kt">IOBuffer</span><span class="p">(</span><span class="n">clipboard</span><span class="p">()),</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="sc">&#39; &#39;</span><span class="p">,</span> <span class="n">ignorerepeated</span><span class="o">=</span><span class="nb">true</span><span class="p">)</span>
@@ -15286,7 +15381,7 @@ foo bar baz
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
@@ -15303,7 +15398,7 @@ foo bar baz
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.6.%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">1.6.&#12288;&#12456;&#12531;&#12467;&#12540;&#12487;&#12451;&#12531;&#12464;&#12398;&#36949;&#12358;&#12501;&#12449;&#12452;&#12523;&#12434;&#35501;&#12416;<a class="anchor-link" href="#1.6.%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#182;</a></h2><p>Windows で作られた（変数名などに）日本語を含むファイル（インターネットからダウンロードしたファイルや研究チームで共有するファイル）は，以下のようにして読む（エンコーディングとして，shift_jis ではなく，cp932 を指定する）。</p>
+<h2 id="%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#12288;&#12456;&#12531;&#12467;&#12540;&#12487;&#12451;&#12531;&#12464;&#12398;&#36949;&#12358;&#12501;&#12449;&#12452;&#12523;&#12434;&#35501;&#12416;<a class="anchor-link" href="#%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#182;</a></h2><p>Windows で作られた（変数名などに）日本語を含むファイル（インターネットからダウンロードしたファイルや研究チームで共有するファイル）は，以下のようにして読む（エンコーディングとして，shift_jis ではなく，cp932 を指定する）。</p>
 <p>以下のような cp932 で保存された CSV ファイルを読む。</p>
 <p>日本語,ファイル,数値<br>
 1,2,3<br>
@@ -15314,7 +15409,7 @@ foo bar baz
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;cp932.csv&quot;</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">)</span>
@@ -15333,7 +15428,7 @@ foo bar baz
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -15356,7 +15451,7 @@ foo bar baz
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">StringEncodings</span>
@@ -15376,7 +15471,7 @@ foo bar baz
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -15405,7 +15500,7 @@ foo bar baz
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;utf8.csv&quot;</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">)</span>
@@ -15424,7 +15519,7 @@ foo bar baz
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -15441,7 +15536,7 @@ foo bar baz
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.7.%E3%80%80%E3%83%87%E3%83%AA%E3%83%9F%E3%82%BF%E3%81%A7%E5%8C%BA%E5%88%87%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E5%9B%BA%E5%AE%9A%E6%9B%B8%E5%BC%8F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">1.7.&#12288;&#12487;&#12522;&#12511;&#12479;&#12391;&#21306;&#20999;&#12425;&#12428;&#12390;&#12356;&#12394;&#12356;&#22266;&#23450;&#26360;&#24335;&#12501;&#12449;&#12452;&#12523;&#12434;&#35501;&#12416;<a class="anchor-link" href="#1.7.%E3%80%80%E3%83%87%E3%83%AA%E3%83%9F%E3%82%BF%E3%81%A7%E5%8C%BA%E5%88%87%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E5%9B%BA%E5%AE%9A%E6%9B%B8%E5%BC%8F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#182;</a></h2><p>たとえば，「1.2. CSV ファイル」節の最初に示したデータはカンマで区切られている。これに対して以下のようにカンマで区切られていないファイルがある。</p>
+<h2 id="%E3%80%80%E3%83%87%E3%83%AA%E3%83%9F%E3%82%BF%E3%81%A7%E5%8C%BA%E5%88%87%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E5%9B%BA%E5%AE%9A%E6%9B%B8%E5%BC%8F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#12288;&#12487;&#12522;&#12511;&#12479;&#12391;&#21306;&#20999;&#12425;&#12428;&#12390;&#12356;&#12394;&#12356;&#22266;&#23450;&#26360;&#24335;&#12501;&#12449;&#12452;&#12523;&#12434;&#35501;&#12416;<a class="anchor-link" href="#%E3%80%80%E3%83%87%E3%83%AA%E3%83%9F%E3%82%BF%E3%81%A7%E5%8C%BA%E5%88%87%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E5%9B%BA%E5%AE%9A%E6%9B%B8%E5%BC%8F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#182;</a></h2><p>たとえば，「1.2. CSV ファイル」節の最初に示したデータはカンマで区切られている。これに対して以下のようにカンマで区切られていないファイルがある。</p>
 <pre>
 ID,Weight,Height,Age,BloodType
 12544.6157.617A
@@ -15469,7 +15564,7 @@ julia&gt; df = fixedformat("sample2.dat")<br></p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="2.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92-csv-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%99">2.&#12288;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12434; csv &#12501;&#12449;&#12452;&#12523;&#12395;&#26360;&#12365;&#20986;&#12377;<a class="anchor-link" href="#2.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92-csv-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%99">&#182;</a></h1><p>入力されたデータはそのまま使われる場合もあるが，いろいろな編集や新たな変数の創生など元のデータとはかなり違いがでてくることも多い。毎回同じような手順を経てデータ分析に取り掛かるのは，無駄でもあるので，その時点のデータを別ファイルで保存しておき，次回以降はそのファイルからデータフレームに入力すればよい。</p>
+<h1 id="%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92-csv-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%99">&#12288;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12434; csv &#12501;&#12449;&#12452;&#12523;&#12395;&#26360;&#12365;&#20986;&#12377;<a class="anchor-link" href="#%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92-csv-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%99">&#182;</a></h1><p>入力されたデータはそのまま使われる場合もあるが，いろいろな編集や新たな変数の創生など元のデータとはかなり違いがでてくることも多い。毎回同じような手順を経てデータ分析に取り掛かるのは，無駄でもあるので，その時点のデータを別ファイルで保存しておき，次回以降はそのファイルからデータフレームに入力すればよい。</p>
 <p>編集されたデータフレームの保存は簡単で，<br>
 CSV.write(ファイル, データフレーム)<br>
 とすればよい。</p>
@@ -15478,7 +15573,7 @@ CSV.write(ファイル, データフレーム)<br>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">CSV</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;output.csv&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
@@ -15497,7 +15592,7 @@ CSV.write(ファイル, データフレーム)<br>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
@@ -15515,19 +15610,45 @@ CSV.write(ファイル, データフレーム)<br>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.1.%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">2.1.&#12288;CSV.write &#12398;&#24341;&#25968;<a class="anchor-link" href="#2.1.%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">&#182;</a></h2><p>CSV.write() の引数には，以下のようなものがある。詳しくは <a href="https://csv.juliadata.org/stable/">https://csv.juliadata.org/stable/</a> を参照。</p>
-<h3 id="bufsize=2%5E22">bufsize=2^22<a class="anchor-link" href="#bufsize=2%5E22">&#182;</a></h3><p>バッファーサイズ</p>
-<h3 id="delim=','">delim=','<a class="anchor-link" href="#delim=','">&#182;</a></h3><p>デリミター</p>
-<h3 id="quotechar='%22'">quotechar='"'<a class="anchor-link" href="#quotechar='%22'">&#182;</a></h3><p>引用符</p>
-<h3 id="escapechar='%22'">escapechar='"'<a class="anchor-link" href="#escapechar='%22'">&#182;</a></h3><p>引用符のエスケープ文字</p>
-<h3 id="missingstring=%22%22">missingstring=""<a class="anchor-link" href="#missingstring=%22%22">&#182;</a></h3><p>missing を表す文字列</p>
-<h3 id="dateformat">dateformat<a class="anchor-link" href="#dateformat">&#182;</a></h3><p>dateformat="yyyy/mm/dd" など</p>
-<h3 id="append=false">append=false<a class="anchor-link" href="#append=false">&#182;</a></h3><p>既存のファイルに書き足すかどうか</p>
-<h3 id="writeheader=!append">writeheader=!append<a class="anchor-link" href="#writeheader=!append">&#182;</a></h3><p>列名を出力するか</p>
-<h3 id="header">header<a class="anchor-link" href="#header">&#182;</a></h3><p>使用する列名のリスト</p>
-<h3 id="newline='%5Cn'">newline='\n'<a class="anchor-link" href="#newline='%5Cn'">&#182;</a></h3><p>改行文字</p>
-<h3 id="quotestrings=false">quotestrings=false<a class="anchor-link" href="#quotestrings=false">&#182;</a></h3><p>文字列を引用符で囲むかどうか</p>
-<h3 id="decimal='.'">decimal='.'<a class="anchor-link" href="#decimal='.'">&#182;</a></h3><p>小数点として使用する文字</p>
+<h2 id="%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">&#12288;CSV.write &#12398;&#24341;&#25968;<a class="anchor-link" href="#%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">&#182;</a></h2><p>CSV.write() の引数には，以下のようなものがある。詳しくは <a href="https://csv.juliadata.org/stable/">https://csv.juliadata.org/stable/</a> を参照。</p>
+<ul>
+<li><p>bufsize=2^22<br>
+バッファーサイズ</p>
+</li>
+<li><p>delim=','<br>
+デリミター</p>
+</li>
+<li><p>quotechar='"'<br>
+引用符</p>
+</li>
+<li><p>escapechar='"'<br>
+引用符のエスケープ文字</p>
+</li>
+<li><p>missingstring=""<br>
+missing を表す文字列</p>
+</li>
+<li><p>dateformat<br>
+dateformat="yyyy/mm/dd" など</p>
+</li>
+<li><p>append=false<br>
+既存のファイルに書き足すかどうか</p>
+</li>
+<li><p>writeheader=!append<br>
+列名を出力するか</p>
+</li>
+<li><p>header<br>
+使用する列名のリスト</p>
+</li>
+<li><p>newline='\n'<br>
+改行文字</p>
+</li>
+<li><p>quotestrings=false<br>
+文字列を引用符で囲むかどうか</p>
+</li>
+<li><p>decimal='.'<br>
+小数点として使用する文字</p>
+</li>
+</ul>
 
 </div>
 </div>

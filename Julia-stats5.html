@@ -14512,17 +14512,281 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">Version</span><span class="p">()</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>最新バージョン 2022-01-26 14:01
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="1.%E3%80%80%E4%B8%80%E5%A4%89%E9%87%8F%E3%82%B0%E3%83%A9%E3%83%95">1.&#12288;&#19968;&#22793;&#37327;&#12464;&#12521;&#12501;<a class="anchor-link" href="#1.%E3%80%80%E4%B8%80%E5%A4%89%E9%87%8F%E3%82%B0%E3%83%A9%E3%83%95">&#182;</a></h1><p>1 変量のグラフ表示には，名義尺度変数に対しては棒グラフ（bar chart），連続変数に対してはヒストグラム（histogram）が代表的なものである。</p>
-<p>RDatasets 中の airquality データセットを用いて例示する。</p>
+<h1 id="%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%AF%E8%A6%96%E5%8C%96">&#12487;&#12540;&#12479;&#12398;&#21487;&#35222;&#21270;<a class="anchor-link" href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%AF%E8%A6%96%E5%8C%96">&#182;</a></h1><p>1 変量のグラフ表示には，名義尺度変数に対しては棒グラフ（bar chart），連続変数に対してはヒストグラム（histogram）が代表的なものである。</p>
+<p>2 変量のグラフ表示では散布図が主なものである。</p>
+<p>Julia でグラフ表示をする場合，Plots パッケージを使用する。バックエンドは GR を使用することにする。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
+<span class="n">gr</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="nb">false</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Plots.GRBackend()</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E4%BE%8B%E7%A4%BA%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">&#20363;&#31034;&#12395;&#20351;&#29992;&#12377;&#12427;&#12487;&#12540;&#12479;&#12475;&#12483;&#12488;<a class="anchor-link" href="#%E4%BE%8B%E7%A4%BA%E3%81%AB%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88">&#182;</a></h2><h3 id="%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC%E3%83%87%E3%83%BC%E3%82%BF">&#12459;&#12486;&#12468;&#12522;&#12540;&#12487;&#12540;&#12479;<a class="anchor-link" href="#%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BC%E3%83%87%E3%83%BC%E3%82%BF">&#182;</a></h3><p>HairEyeColor データセットは，学生の髪と目の色と性別の集計表である。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">FreqTables</span>
+<span class="n">haireyecolor</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s">&quot;datasets&quot;</span><span class="p">,</span> <span class="s">&quot;HairEyeColor&quot;</span><span class="p">)</span>
+<span class="n">size</span><span class="p">(</span><span class="n">haireyecolor</span><span class="p">)</span> 
+<span class="n">first</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: RDatasets not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[6]:2
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="n">eachrow</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">row</span><span class="o">.</span><span class="n">Freq</span>
+    <span class="n">push!</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: DataFrame not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[7]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: df2 not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[8]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: df2 not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[9]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>連続変数（数値）データとしては，RDatasets 中の airquality データセットを用いて例示する。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">RDatasets</span>
@@ -14557,7 +14821,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -14577,182 +14841,32 @@ a.anchor-link {
 <p>Ozone, Solar_R は欠損値を含むので取り扱いに注意が必要である。dropmissing() により欠損値をリストワイズ除去したデータフレームも作っておく。同時に，分析に必要のない変数を「選択しない」（それ以外を選択する）ために select() を使う。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
-<span class="n">gr</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="nb">false</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Plots.GRBackend()</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.1.%E3%80%801-%E3%81%A4%E3%81%AE%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">1.1.&#12288;1 &#12388;&#12398;&#22793;&#25968;&#12398;&#22580;&#21512;<a class="anchor-link" href="#1.1.%E3%80%801-%E3%81%A4%E3%81%AE%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2><p>bar() は，度数分布をグラフにするので，データフレーム上の変数の棒グラフを描くにはまず度数分布表をつくらなければならない。</p>
+<h2 id="%E3%80%80%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95">&#12288;&#26834;&#12464;&#12521;&#12501;<a class="anchor-link" href="#%E3%80%80%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>bar() は，度数分布をグラフにするので，データフレーム上の変数の棒グラフを描くにはまず度数分布表をつくらなければならない。</p>
+<p>データ全体を対象にする場合には 1 次元の度数分布表，グループを考慮する場合には 2 次元の度数分布表を作る。</p>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E3%80%80%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E5%A0%B4%E5%90%88">&#12288;&#19968;&#27161;&#26412;&#12398;&#22580;&#21512;<a class="anchor-link" href="#%E3%80%80%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E5%A0%B4%E5%90%88">&#19968;&#27161;&#26412;&#12398;&#22580;&#21512;<a class="anchor-link" href="#%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">FreqTables</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s">&quot;datasets&quot;</span><span class="p">,</span> <span class="s">&quot;HairEyeColor&quot;</span><span class="p">)</span>
-<span class="n">first</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div class="data-frame"><p>5 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>Hair</th><th>Eye</th><th>Sex</th><th>Freq</th></tr><tr><th></th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>Black</td><td>Brown</td><td>Male</td><td>32</td></tr><tr><th>2</th><td>Brown</td><td>Brown</td><td>Male</td><td>53</td></tr><tr><th>3</th><td>Red</td><td>Brown</td><td>Male</td><td>10</td></tr><tr><th>4</th><td>Blond</td><td>Brown</td><td>Male</td><td>3</td></tr><tr><th>5</th><td>Black</td><td>Blue</td><td>Male</td><td>11</td></tr></tbody></table></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="n">eachrow</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">row</span><span class="o">.</span><span class="n">Freq</span>
-    <span class="n">push!</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
-<span class="k">end</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(592, 4)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div class="data-frame"><p>5 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>Hair</th><th>Eye</th><th>Sex</th><th>Freq</th></tr><tr><th></th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>Black</td><td>Brown</td><td>Male</td><td>32</td></tr><tr><th>2</th><td>Black</td><td>Brown</td><td>Male</td><td>32</td></tr><tr><th>3</th><td>Black</td><td>Brown</td><td>Male</td><td>32</td></tr><tr><th>4</th><td>Black</td><td>Brown</td><td>Male</td><td>32</td></tr><tr><th>5</th><td>Black</td><td>Brown</td><td>Male</td><td>32</td></tr></tbody></table></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">filter</span><span class="p">(</span><span class="ss">:Sex</span> <span class="o">=&gt;</span> <span class="n">sex</span> <span class="o">-&gt;</span> <span class="n">sex</span> <span class="o">==</span> <span class="s">&quot;Male&quot;</span><span class="p">,</span> <span class="n">df2</span><span class="p">);</span>
@@ -14776,16 +14890,17 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>(279, 4)
-<span class="ansi-bold">3×4 DataFrame</span>
-<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> Hair   </span><span class="ansi-bold"> Eye    </span><span class="ansi-bold"> Sex    </span><span class="ansi-bold"> Freq  </span>
-<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> String </span><span class="ansi-black-intense-fg"> String </span><span class="ansi-black-intense-fg"> String </span><span class="ansi-black-intense-fg"> Int64 </span>
-─────┼───────────────────────────────
-   1 │ Black   Brown   Male       32
-   2 │ Black   Brown   Male       32
-   3 │ Black   Brown   Male       32
-</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: df2 not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[11]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
 </div>
 </div>
 
@@ -14793,10 +14908,10 @@ a.anchor-link {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">df2</span><span class="o">.</span><span class="n">Sex</span> <span class="o">.==</span> <span class="s">&quot;Male&quot;</span><span class="p">,</span> <span class="ss">:Hair</span><span class="p">];</span>
@@ -14807,10 +14922,39 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: df2 not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[12]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">freq1</span> <span class="o">=</span> <span class="n">freqtable</span><span class="p">(</span><span class="n">df3</span><span class="p">)</span>
@@ -14834,16 +14978,17 @@ a.anchor-link {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>4-element Named Vector{Int64}
-Dim1  │ 
-──────┼────
-Black │  56
-Blond │  46
-Brown │ 143
-Red   │  34
-[&#34;Black&#34;, &#34;Blond&#34;, &#34;Brown&#34;, &#34;Red&#34;]
-</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: df3 not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[13]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
 </div>
 </div>
 
@@ -14860,7 +15005,7 @@ Red   │  34
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">bar</span><span class="p">(</span><span class="n">freq1</span><span class="p">)</span>
@@ -14879,126 +15024,21 @@ Red   │  34
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: freq1 not defined
 
-<div class="jp-RenderedSVG jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="image/svg+xml">
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400" viewBox="0 0 2400 1600">
-<defs>
-  <clipPath id="clip640">
-    <rect x="0" y="0" width="2400" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip640)" d="
-M0 1600 L2400 1600 L2400 0 L0 0  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip641">
-    <rect x="480" y="0" width="1681" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip640)" d="
-M165.3 1486.24 L2352.76 1486.24 L2352.76 47.2441 L165.3 47.2441  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip642">
-    <rect x="165" y="47" width="2188" height="1440"/>
-  </clipPath>
-</defs>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  165.3,1486.24 2352.76,1486.24 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  490.543,1486.24 490.543,1505.14 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1002.87,1486.24 1002.87,1505.14 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1515.19,1486.24 1515.19,1505.14 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  2027.51,1486.24 2027.51,1505.14 
-  "/>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 490.543, 1558.62)" x="490.543" y="1558.62">1</text>
-</g>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1002.87, 1558.62)" x="1002.87" y="1558.62">2</text>
-</g>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1515.19, 1558.62)" x="1515.19" y="1558.62">3</text>
-</g>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 2027.51, 1558.62)" x="2027.51" y="1558.62">4</text>
-</g>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  165.3,1486.24 165.3,47.2441 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  165.3,1445.51 146.403,1445.51 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  165.3,1160.71 146.403,1160.71 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  165.3,875.915 146.403,875.915 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  165.3,591.115 146.403,591.115 
-  "/>
-<polyline clip-path="url(#clip640)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  165.3,306.316 146.403,306.316 
-  "/>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 98.2489, 1463.01)" x="98.2489" y="1463.01">0</text>
-</g>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 85.1976, 1178.21)" x="85.1976" y="1178.21">30</text>
-</g>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 85.1976, 893.415)" x="85.1976" y="893.415">60</text>
-</g>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 85.1976, 608.615)" x="85.1976" y="608.615">90</text>
-</g>
-<g clip-path="url(#clip640)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 72.1462, 323.816)" x="72.1462" y="323.816">120</text>
-</g>
-<path clip-path="url(#clip642)" d="
-M285.614 913.888 L285.614 1445.51 L695.473 1445.51 L695.473 913.888 L285.614 913.888 L285.614 913.888  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip642)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  285.614,913.888 285.614,1445.51 695.473,1445.51 695.473,913.888 285.614,913.888 
-  "/>
-<path clip-path="url(#clip642)" d="
-M797.937 1008.82 L797.937 1445.51 L1207.8 1445.51 L1207.8 1008.82 L797.937 1008.82 L797.937 1008.82  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip642)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  797.937,1008.82 797.937,1445.51 1207.8,1445.51 1207.8,1008.82 797.937,1008.82 
-  "/>
-<path clip-path="url(#clip642)" d="
-M1310.26 87.9704 L1310.26 1445.51 L1720.12 1445.51 L1720.12 87.9704 L1310.26 87.9704 L1310.26 87.9704  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip642)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1310.26,87.9704 1310.26,1445.51 1720.12,1445.51 1720.12,87.9704 1310.26,87.9704 
-  "/>
-<path clip-path="url(#clip642)" d="
-M1822.58 1122.74 L1822.58 1445.51 L2232.44 1445.51 L2232.44 1122.74 L1822.58 1122.74 L1822.58 1122.74  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip642)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1822.58,1122.74 1822.58,1445.51 2232.44,1445.51 2232.44,1122.74 1822.58,1122.74 
-  "/>
-<circle clip-path="url(#clip642)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="490.543" cy="913.888" r="2"/>
-<circle clip-path="url(#clip642)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1002.87" cy="1008.82" r="2"/>
-<circle clip-path="url(#clip642)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1515.19" cy="87.9704" r="2"/>
-<circle clip-path="url(#clip642)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2027.51" cy="1122.74" r="2"/>
-</svg>
-
+Stacktrace:
+ [1] top-level scope
+   @ In[14]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
 </div>
-
 </div>
 
 </div>
@@ -15008,7 +15048,7 @@ M1822.58 1122.74 L1822.58 1445.51 L2232.44 1445.51 L2232.44 1122.74 L1822.58 112
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">default</span><span class="p">(</span>
@@ -15042,135 +15082,21 @@ M1822.58 1122.74 L1822.58 1445.51 L2232.44 1445.51 L2232.44 1122.74 L1822.58 112
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: freq not defined
 
-<div class="jp-RenderedSVG jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="image/svg+xml">
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400" viewBox="0 0 2400 1600">
-<defs>
-  <clipPath id="clip680">
-    <rect x="0" y="0" width="2400" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip680)" d="
-M0 1600 L2400 1600 L2400 0 L0 0  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip681">
-    <rect x="480" y="0" width="1681" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip680)" d="
-M224.509 1427.03 L2352.76 1427.03 L2352.76 115.145 L224.509 115.145  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip682">
-    <rect x="224" y="115" width="2129" height="1313"/>
-  </clipPath>
-</defs>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1427.03 2352.76,1427.03 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  578.333,1427.03 578.333,1445.93 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1051.87,1427.03 1051.87,1445.93 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1525.4,1427.03 1525.4,1445.93 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1998.93,1427.03 1998.93,1445.93 
-  "/>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 578.333, 1499.41)" x="578.333" y="1499.41">Black</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1051.87, 1499.41)" x="1051.87" y="1499.41">Blond</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1525.4, 1499.41)" x="1525.4" y="1499.41">Brown</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1998.93, 1499.41)" x="1998.93" y="1499.41">Red</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(0, 1288.63, 1571.77)" x="1288.63" y="1571.77">Hair</text>
-</g>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1427.03 224.509,115.145 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1389.9 205.612,1389.9 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1130.26 205.612,1130.26 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,870.617 205.612,870.617 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,610.975 205.612,610.975 
-  "/>
-<polyline clip-path="url(#clip680)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,351.333 205.612,351.333 
-  "/>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 157.458, 1407.4)" x="157.458" y="1407.4">0</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 144.407, 1147.76)" x="144.407" y="1147.76">30</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 144.407, 888.117)" x="144.407" y="888.117">60</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 144.407, 628.475)" x="144.407" y="628.475">90</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 131.355, 368.833)" x="131.355" y="368.833">120</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(-90, 60.6096, 771.088)" x="60.6096" y="771.088">Number of students</text>
-</g>
-<g clip-path="url(#clip680)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:79px; text-anchor:middle;" transform="rotate(0, 1288.63, 62.4)" x="1288.63" y="62.4">Distribution of eye color in male students.</text>
-</g>
-<path clip-path="url(#clip682)" d="
-M341.567 905.236 L341.567 1389.9 L815.1 1389.9 L815.1 905.236 L341.567 905.236 L341.567 905.236  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip682)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  341.567,905.236 341.567,1389.9 815.1,1389.9 815.1,905.236 341.567,905.236 
-  "/>
-<path clip-path="url(#clip682)" d="
-M815.1 991.783 L815.1 1389.9 L1288.63 1389.9 L1288.63 991.783 L815.1 991.783 L815.1 991.783  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip682)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  815.1,991.783 815.1,1389.9 1288.63,1389.9 1288.63,991.783 815.1,991.783 
-  "/>
-<path clip-path="url(#clip682)" d="
-M1288.63 152.274 L1288.63 1389.9 L1762.17 1389.9 L1762.17 152.274 L1288.63 152.274 L1288.63 152.274  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip682)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1288.63,152.274 1288.63,1389.9 1762.17,1389.9 1762.17,152.274 1288.63,152.274 
-  "/>
-<path clip-path="url(#clip682)" d="
-M1762.17 1095.64 L1762.17 1389.9 L2235.7 1389.9 L2235.7 1095.64 L1762.17 1095.64 L1762.17 1095.64  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip682)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1762.17,1095.64 1762.17,1389.9 2235.7,1389.9 2235.7,1095.64 1762.17,1095.64 
-  "/>
-<circle clip-path="url(#clip682)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="578.333" cy="905.236" r="2"/>
-<circle clip-path="url(#clip682)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1051.87" cy="991.783" r="2"/>
-<circle clip-path="url(#clip682)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1525.4" cy="152.274" r="2"/>
-<circle clip-path="url(#clip682)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1998.93" cy="1095.64" r="2"/>
-</svg>
-
+Stacktrace:
+ [1] top-level scope
+   @ In[15]:10
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
 </div>
-
 </div>
 
 </div>
@@ -15180,13 +15106,13 @@ M1762.17 1095.64 L1762.17 1389.9 L2235.7 1389.9 L2235.7 1095.64 L1762.17 1095.64
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>二次元集計表により，列ごとの棒グラフを描くことができる。</p>
+<h3 id="%E4%BA%8C%E6%A8%99%E6%9C%AC%E4%BB%A5%E4%B8%8A%E3%81%AE%E5%A0%B4%E5%90%88">&#20108;&#27161;&#26412;&#20197;&#19978;&#12398;&#22580;&#21512;<a class="anchor-link" href="#%E4%BA%8C%E6%A8%99%E6%9C%AC%E4%BB%A5%E4%B8%8A%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h3><p>二次元集計表により，列ごとの棒グラフを描くことができる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">freq2</span> <span class="o">=</span> <span class="n">freqtable</span><span class="p">(</span><span class="n">df2</span><span class="o">.</span><span class="n">Hair</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">Sex</span><span class="p">)</span>
@@ -15205,19 +15131,21 @@ M1762.17 1095.64 L1762.17 1389.9 L2235.7 1389.9 L2235.7 1095.64 L1762.17 1095.64
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: df2 not defined
 
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>4×2 Named Matrix{Int64}
-Dim1 ╲ Dim2 │ Female    Male
-────────────┼───────────────
-Black       │     52      56
-Blond       │     81      46
-Brown       │    143     143
-Red         │     37      34</pre>
+Stacktrace:
+ [1] top-level scope
+   @ In[16]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
 </div>
 
 </div>
@@ -15225,11 +15153,14 @@ Red         │     37      34</pre>
 </div>
 
 </div>
-
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="%E6%A8%AA%E3%81%AB%E4%B8%A6%E3%81%B9%E3%82%8B%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95">&#27178;&#12395;&#20006;&#12409;&#12427;&#26834;&#12464;&#12521;&#12501;<a class="anchor-link" href="#%E6%A8%AA%E3%81%AB%E4%B8%A6%E3%81%B9%E3%82%8B%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">StatsPlots</span>
@@ -15257,179 +15188,21 @@ Red         │     37      34</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: freq2 not defined
 
-<div class="jp-RenderedSVG jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="image/svg+xml">
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400" viewBox="0 0 2400 1600">
-<defs>
-  <clipPath id="clip840">
-    <rect x="0" y="0" width="2400" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip840)" d="
-M0 1600 L2400 1600 L2400 0 L0 0  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip841">
-    <rect x="480" y="0" width="1681" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip840)" d="
-M224.509 1427.03 L2352.76 1427.03 L2352.76 115.145 L224.509 115.145  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip842">
-    <rect x="224" y="115" width="2129" height="1313"/>
-  </clipPath>
-</defs>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1427.03 2352.76,1427.03 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  536.467,1427.03 536.467,1445.93 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1037.91,1427.03 1037.91,1445.93 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1539.35,1427.03 1539.35,1445.93 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  2040.8,1427.03 2040.8,1445.93 
-  "/>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 536.467, 1499.41)" x="536.467" y="1499.41">Black</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1037.91, 1499.41)" x="1037.91" y="1499.41">Blond</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1539.35, 1499.41)" x="1539.35" y="1499.41">Brown</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 2040.8, 1499.41)" x="2040.8" y="1499.41">Red</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(0, 1288.63, 1571.77)" x="1288.63" y="1571.77">Hair</text>
-</g>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1427.03 224.509,115.145 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1389.9 205.612,1389.9 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1130.26 205.612,1130.26 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,870.617 205.612,870.617 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,610.975 205.612,610.975 
-  "/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,351.333 205.612,351.333 
-  "/>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 157.458, 1407.4)" x="157.458" y="1407.4">0</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 144.407, 1147.76)" x="144.407" y="1147.76">30</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 144.407, 888.117)" x="144.407" y="888.117">60</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 144.407, 628.475)" x="144.407" y="628.475">90</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 131.355, 368.833)" x="131.355" y="368.833">120</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(-90, 60.6096, 771.088)" x="60.6096" y="771.088">Number of students</text>
-</g>
-<g clip-path="url(#clip840)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:79px; text-anchor:middle;" transform="rotate(0, 1288.63, 62.4)" x="1288.63" y="62.4">Distribution of eye color in 592 students.</text>
-</g>
-<path clip-path="url(#clip842)" d="
-M335.89 939.855 L335.89 1389.9 L536.467 1389.9 L536.467 939.855 L335.89 939.855 L335.89 939.855  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  335.89,939.855 335.89,1389.9 536.467,1389.9 536.467,939.855 335.89,939.855 
-  "/>
-<path clip-path="url(#clip842)" d="
-M837.333 688.868 L837.333 1389.9 L1037.91 1389.9 L1037.91 688.868 L837.333 688.868 L837.333 688.868  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  837.333,688.868 837.333,1389.9 1037.91,1389.9 1037.91,688.868 837.333,688.868 
-  "/>
-<path clip-path="url(#clip842)" d="
-M1338.78 152.274 L1338.78 1389.9 L1539.35 1389.9 L1539.35 152.274 L1338.78 152.274 L1338.78 152.274  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1338.78,152.274 1338.78,1389.9 1539.35,1389.9 1539.35,152.274 1338.78,152.274 
-  "/>
-<path clip-path="url(#clip842)" d="
-M1840.22 1069.68 L1840.22 1389.9 L2040.8 1389.9 L2040.8 1069.68 L1840.22 1069.68 L1840.22 1069.68  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1840.22,1069.68 1840.22,1389.9 2040.8,1389.9 2040.8,1069.68 1840.22,1069.68 
-  "/>
-<circle clip-path="url(#clip842)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="436.179" cy="939.855" r="2"/>
-<circle clip-path="url(#clip842)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="937.622" cy="688.868" r="2"/>
-<circle clip-path="url(#clip842)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1439.07" cy="152.274" r="2"/>
-<circle clip-path="url(#clip842)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1940.51" cy="1069.68" r="2"/>
-<path clip-path="url(#clip842)" d="
-M536.467 905.236 L536.467 1389.9 L737.045 1389.9 L737.045 905.236 L536.467 905.236 L536.467 905.236  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  536.467,905.236 536.467,1389.9 737.045,1389.9 737.045,905.236 536.467,905.236 
-  "/>
-<path clip-path="url(#clip842)" d="
-M1037.91 991.783 L1037.91 1389.9 L1238.49 1389.9 L1238.49 991.783 L1037.91 991.783 L1037.91 991.783  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1037.91,991.783 1037.91,1389.9 1238.49,1389.9 1238.49,991.783 1037.91,991.783 
-  "/>
-<path clip-path="url(#clip842)" d="
-M1539.35 152.274 L1539.35 1389.9 L1739.93 1389.9 L1739.93 152.274 L1539.35 152.274 L1539.35 152.274  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1539.35,152.274 1539.35,1389.9 1739.93,1389.9 1739.93,152.274 1539.35,152.274 
-  "/>
-<path clip-path="url(#clip842)" d="
-M2040.8 1095.64 L2040.8 1389.9 L2241.38 1389.9 L2241.38 1095.64 L2040.8 1095.64 L2040.8 1095.64  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip842)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  2040.8,1095.64 2040.8,1389.9 2241.38,1389.9 2241.38,1095.64 2040.8,1095.64 
-  "/>
-<circle clip-path="url(#clip842)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="636.756" cy="905.236" r="2"/>
-<circle clip-path="url(#clip842)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="1138.2" cy="991.783" r="2"/>
-<circle clip-path="url(#clip842)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="1639.64" cy="152.274" r="2"/>
-<circle clip-path="url(#clip842)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="2141.09" cy="1095.64" r="2"/>
-<path clip-path="url(#clip840)" d="
-M1881.11 314.395 L2281.81 314.395 L2281.81 158.875 L1881.11 158.875  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1881.11,314.395 2281.81,314.395 2281.81,158.875 1881.11,158.875 1881.11,314.395 
-  "/>
-<path clip-path="url(#clip840)" d="
-M1904.75 231.451 L2046.64 231.451 L2046.64 189.979 L1904.75 189.979 L1904.75 231.451  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1904.75,231.451 2046.64,231.451 2046.64,189.979 1904.75,189.979 1904.75,231.451 
-  "/>
-<path clip-path="url(#clip840)" d="M2070.28 193.435 L2090.15 193.435 L2090.15 197.37 L2074.96 197.37 L2074.96 207.555 L2088.66 207.555 L2088.66 211.49 L2074.96 211.49 L2074.96 227.995 L2070.28 227.995 L2070.28 193.435 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2116.95 213.967 L2116.95 216.05 L2097.37 216.05 Q2097.65 220.449 2100.01 222.763 Q2102.39 225.055 2106.63 225.055 Q2109.08 225.055 2111.37 224.453 Q2113.69 223.851 2115.96 222.648 L2115.96 226.675 Q2113.66 227.648 2111.26 228.157 Q2108.85 228.666 2106.37 228.666 Q2100.17 228.666 2096.53 225.055 Q2092.92 221.444 2092.92 215.287 Q2092.92 208.921 2096.35 205.194 Q2099.8 201.444 2105.63 201.444 Q2110.86 201.444 2113.9 204.824 Q2116.95 208.18 2116.95 213.967 M2112.69 212.717 Q2112.65 209.222 2110.72 207.138 Q2108.83 205.055 2105.68 205.055 Q2102.11 205.055 2099.96 207.069 Q2097.83 209.083 2097.51 212.74 L2112.69 212.717 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2144.13 207.046 Q2145.72 204.176 2147.95 202.81 Q2150.17 201.444 2153.18 201.444 Q2157.23 201.444 2159.43 204.291 Q2161.63 207.115 2161.63 212.347 L2161.63 227.995 L2157.34 227.995 L2157.34 212.486 Q2157.34 208.759 2156.03 206.953 Q2154.71 205.148 2152 205.148 Q2148.69 205.148 2146.77 207.347 Q2144.84 209.546 2144.84 213.342 L2144.84 227.995 L2140.56 227.995 L2140.56 212.486 Q2140.56 208.736 2139.24 206.953 Q2137.92 205.148 2135.17 205.148 Q2131.9 205.148 2129.98 207.37 Q2128.06 209.569 2128.06 213.342 L2128.06 227.995 L2123.78 227.995 L2123.78 202.069 L2128.06 202.069 L2128.06 206.097 Q2129.52 203.713 2131.56 202.578 Q2133.59 201.444 2136.4 201.444 Q2139.22 201.444 2141.19 202.879 Q2143.18 204.314 2144.13 207.046 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2181.9 214.963 Q2176.74 214.963 2174.75 216.143 Q2172.76 217.324 2172.76 220.171 Q2172.76 222.439 2174.24 223.782 Q2175.75 225.101 2178.32 225.101 Q2181.86 225.101 2183.99 222.601 Q2186.14 220.078 2186.14 215.912 L2186.14 214.963 L2181.9 214.963 M2190.4 213.203 L2190.4 227.995 L2186.14 227.995 L2186.14 224.06 Q2184.68 226.421 2182.51 227.555 Q2180.33 228.666 2177.18 228.666 Q2173.2 228.666 2170.84 226.444 Q2168.5 224.199 2168.5 220.449 Q2168.5 216.074 2171.42 213.851 Q2174.36 211.629 2180.17 211.629 L2186.14 211.629 L2186.14 211.213 Q2186.14 208.273 2184.2 206.676 Q2182.27 205.055 2178.78 205.055 Q2176.56 205.055 2174.45 205.588 Q2172.34 206.12 2170.4 207.185 L2170.4 203.25 Q2172.74 202.347 2174.94 201.907 Q2177.14 201.444 2179.22 201.444 Q2184.84 201.444 2187.62 204.361 Q2190.4 207.277 2190.4 213.203 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2199.17 191.977 L2203.43 191.977 L2203.43 227.995 L2199.17 227.995 L2199.17 191.977 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2234.52 213.967 L2234.52 216.05 L2214.94 216.05 Q2215.21 220.449 2217.58 222.763 Q2219.96 225.055 2224.2 225.055 Q2226.65 225.055 2228.94 224.453 Q2231.26 223.851 2233.52 222.648 L2233.52 226.675 Q2231.23 227.648 2228.83 228.157 Q2226.42 228.666 2223.94 228.666 Q2217.74 228.666 2214.1 225.055 Q2210.49 221.444 2210.49 215.287 Q2210.49 208.921 2213.92 205.194 Q2217.37 201.444 2223.2 201.444 Q2228.43 201.444 2231.46 204.824 Q2234.52 208.18 2234.52 213.967 M2230.26 212.717 Q2230.21 209.222 2228.29 207.138 Q2226.4 205.055 2223.25 205.055 Q2219.68 205.055 2217.53 207.069 Q2215.4 209.083 2215.08 212.74 L2230.26 212.717 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="
-M1904.75 283.291 L2046.64 283.291 L2046.64 241.819 L1904.75 241.819 L1904.75 283.291  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip840)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1904.75,283.291 2046.64,283.291 2046.64,241.819 1904.75,241.819 1904.75,283.291 
-  "/>
-<path clip-path="url(#clip840)" d="M2070.28 245.275 L2077.25 245.275 L2086.07 268.793 L2094.94 245.275 L2101.9 245.275 L2101.9 279.835 L2097.34 279.835 L2097.34 249.488 L2088.43 273.191 L2083.73 273.191 L2074.82 249.488 L2074.82 279.835 L2070.28 279.835 L2070.28 245.275 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2122.78 266.803 Q2117.62 266.803 2115.63 267.983 Q2113.64 269.164 2113.64 272.011 Q2113.64 274.279 2115.12 275.622 Q2116.63 276.941 2119.2 276.941 Q2122.74 276.941 2124.87 274.441 Q2127.02 271.918 2127.02 267.752 L2127.02 266.803 L2122.78 266.803 M2131.28 265.043 L2131.28 279.835 L2127.02 279.835 L2127.02 275.9 Q2125.56 278.261 2123.39 279.395 Q2121.21 280.506 2118.06 280.506 Q2114.08 280.506 2111.72 278.284 Q2109.38 276.039 2109.38 272.289 Q2109.38 267.914 2112.3 265.691 Q2115.24 263.469 2121.05 263.469 L2127.02 263.469 L2127.02 263.053 Q2127.02 260.113 2125.08 258.516 Q2123.15 256.895 2119.66 256.895 Q2117.44 256.895 2115.33 257.428 Q2113.22 257.96 2111.28 259.025 L2111.28 255.09 Q2113.62 254.187 2115.82 253.747 Q2118.02 253.284 2120.1 253.284 Q2125.72 253.284 2128.5 256.201 Q2131.28 259.117 2131.28 265.043 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2140.05 243.817 L2144.31 243.817 L2144.31 279.835 L2140.05 279.835 L2140.05 243.817 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip840)" d="M2175.4 265.807 L2175.4 267.89 L2155.82 267.89 Q2156.09 272.289 2158.46 274.603 Q2160.84 276.895 2165.08 276.895 Q2167.53 276.895 2169.82 276.293 Q2172.14 275.691 2174.4 274.488 L2174.4 278.515 Q2172.11 279.488 2169.71 279.997 Q2167.3 280.506 2164.82 280.506 Q2158.62 280.506 2154.98 276.895 Q2151.37 273.284 2151.37 267.127 Q2151.37 260.761 2154.8 257.034 Q2158.25 253.284 2164.08 253.284 Q2169.31 253.284 2172.34 256.664 Q2175.4 260.02 2175.4 265.807 M2171.14 264.557 Q2171.09 261.062 2169.17 258.978 Q2167.27 256.895 2164.13 256.895 Q2160.56 256.895 2158.41 258.909 Q2156.28 260.923 2155.96 264.58 L2171.14 264.557 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /></svg>
-
+Stacktrace:
+ [1] top-level scope
+   @ In[17]:2
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
 </div>
 
 </div>
@@ -15437,11 +15210,14 @@ M1904.75 283.291 L2046.64 283.291 L2046.64 241.819 L1904.75 241.819 L1904.75 283
 </div>
 
 </div>
-
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="%E7%A9%8D%E3%81%BF%E4%B8%8A%E3%81%92%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95">&#31309;&#12415;&#19978;&#12370;&#26834;&#12464;&#12521;&#12501;<a class="anchor-link" href="#%E7%A9%8D%E3%81%BF%E4%B8%8A%E3%81%92%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">StatsPlots</span>
@@ -15469,187 +15245,21 @@ M1904.75 283.291 L2046.64 283.291 L2046.64 241.819 L1904.75 241.819 L1904.75 283
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: freq2 not defined
 
-<div class="jp-RenderedSVG jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="image/svg+xml">
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="400" viewBox="0 0 2400 1600">
-<defs>
-  <clipPath id="clip760">
-    <rect x="0" y="0" width="2400" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip760)" d="
-M0 1600 L2400 1600 L2400 0 L0 0  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip761">
-    <rect x="480" y="0" width="1681" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip760)" d="
-M224.509 1427.03 L2352.76 1427.03 L2352.76 115.145 L224.509 115.145  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip762">
-    <rect x="224" y="115" width="2129" height="1313"/>
-  </clipPath>
-</defs>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1427.03 2352.76,1427.03 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  540.949,1427.03 540.949,1445.93 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1039.4,1427.03 1039.4,1445.93 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1537.86,1427.03 1537.86,1445.93 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  2036.32,1427.03 2036.32,1445.93 
-  "/>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 540.949, 1499.41)" x="540.949" y="1499.41">Black</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1039.4, 1499.41)" x="1039.4" y="1499.41">Blond</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1537.86, 1499.41)" x="1537.86" y="1499.41">Brown</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 2036.32, 1499.41)" x="2036.32" y="1499.41">Red</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(0, 1288.63, 1571.77)" x="1288.63" y="1571.77">Hair</text>
-</g>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1427.03 224.509,115.145 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1389.9 205.612,1389.9 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,1173.53 205.612,1173.53 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,957.164 205.612,957.164 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,740.796 205.612,740.796 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,524.428 205.612,524.428 
-  "/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  224.509,308.059 205.612,308.059 
-  "/>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 157.458, 1407.4)" x="157.458" y="1407.4">0</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 144.407, 1191.03)" x="144.407" y="1191.03">50</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 131.355, 974.664)" x="131.355" y="974.664">100</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 131.355, 758.296)" x="131.355" y="758.296">150</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 131.355, 541.928)" x="131.355" y="541.928">200</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 131.355, 325.559)" x="131.355" y="325.559">250</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(-90, 60.6096, 771.088)" x="60.6096" y="771.088">Number of students</text>
-</g>
-<g clip-path="url(#clip760)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:79px; text-anchor:middle;" transform="rotate(0, 1288.63, 62.4)" x="1288.63" y="62.4">Distribution of hair color in 592students.</text>
-</g>
-<path clip-path="url(#clip762)" d="
-M341.567 922.546 L341.567 1147.57 L740.331 1147.57 L740.331 922.546 L341.567 922.546 L341.567 922.546  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  341.567,922.546 341.567,1147.57 740.331,1147.57 740.331,922.546 341.567,922.546 
-  "/>
-<path clip-path="url(#clip762)" d="
-M840.022 840.326 L840.022 1190.84 L1238.79 1190.84 L1238.79 840.326 L840.022 840.326 L840.022 840.326  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  840.022,840.326 840.022,1190.84 1238.79,1190.84 1238.79,840.326 840.022,840.326 
-  "/>
-<path clip-path="url(#clip762)" d="
-M1338.48 152.274 L1338.48 771.088 L1737.24 771.088 L1737.24 152.274 L1338.48 152.274 L1338.48 152.274  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1338.48,152.274 1338.48,771.088 1737.24,771.088 1737.24,152.274 1338.48,152.274 
-  "/>
-<path clip-path="url(#clip762)" d="
-M1836.93 1082.66 L1836.93 1242.77 L2235.7 1242.77 L2235.7 1082.66 L1836.93 1082.66 L1836.93 1082.66  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1836.93,1082.66 1836.93,1242.77 2235.7,1242.77 2235.7,1082.66 1836.93,1082.66 
-  "/>
-<circle clip-path="url(#clip762)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="540.949" cy="922.546" r="2"/>
-<circle clip-path="url(#clip762)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1039.4" cy="840.326" r="2"/>
-<circle clip-path="url(#clip762)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1537.86" cy="152.274" r="2"/>
-<circle clip-path="url(#clip762)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2036.32" cy="1082.66" r="2"/>
-<path clip-path="url(#clip762)" d="
-M341.567 1147.57 L341.567 1389.9 L740.331 1389.9 L740.331 1147.57 L341.567 1147.57 L341.567 1147.57  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  341.567,1147.57 341.567,1389.9 740.331,1389.9 740.331,1147.57 341.567,1147.57 
-  "/>
-<path clip-path="url(#clip762)" d="
-M840.022 1190.84 L840.022 1389.9 L1238.79 1389.9 L1238.79 1190.84 L840.022 1190.84 L840.022 1190.84  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  840.022,1190.84 840.022,1389.9 1238.79,1389.9 1238.79,1190.84 840.022,1190.84 
-  "/>
-<path clip-path="url(#clip762)" d="
-M1338.48 771.088 L1338.48 1389.9 L1737.24 1389.9 L1737.24 771.088 L1338.48 771.088 L1338.48 771.088  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1338.48,771.088 1338.48,1389.9 1737.24,1389.9 1737.24,771.088 1338.48,771.088 
-  "/>
-<path clip-path="url(#clip762)" d="
-M1836.93 1242.77 L1836.93 1389.9 L2235.7 1389.9 L2235.7 1242.77 L1836.93 1242.77 L1836.93 1242.77  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip762)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1836.93,1242.77 1836.93,1389.9 2235.7,1389.9 2235.7,1242.77 1836.93,1242.77 
-  "/>
-<circle clip-path="url(#clip762)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="540.949" cy="1147.57" r="2"/>
-<circle clip-path="url(#clip762)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="1039.4" cy="1190.84" r="2"/>
-<circle clip-path="url(#clip762)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="1537.86" cy="771.088" r="2"/>
-<circle clip-path="url(#clip762)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="2036.32" cy="1242.77" r="2"/>
-<path clip-path="url(#clip760)" d="
-M1881.11 314.395 L2281.81 314.395 L2281.81 158.875 L1881.11 158.875  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1881.11,314.395 2281.81,314.395 2281.81,158.875 1881.11,158.875 1881.11,314.395 
-  "/>
-<path clip-path="url(#clip760)" d="
-M1904.75 231.451 L2046.64 231.451 L2046.64 189.979 L1904.75 189.979 L1904.75 231.451  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1904.75,231.451 2046.64,231.451 2046.64,189.979 1904.75,189.979 1904.75,231.451 
-  "/>
-<path clip-path="url(#clip760)" d="M2070.28 193.435 L2090.15 193.435 L2090.15 197.37 L2074.96 197.37 L2074.96 207.555 L2088.66 207.555 L2088.66 211.49 L2074.96 211.49 L2074.96 227.995 L2070.28 227.995 L2070.28 193.435 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2116.95 213.967 L2116.95 216.05 L2097.37 216.05 Q2097.65 220.449 2100.01 222.763 Q2102.39 225.055 2106.63 225.055 Q2109.08 225.055 2111.37 224.453 Q2113.69 223.851 2115.96 222.648 L2115.96 226.675 Q2113.66 227.648 2111.26 228.157 Q2108.85 228.666 2106.37 228.666 Q2100.17 228.666 2096.53 225.055 Q2092.92 221.444 2092.92 215.287 Q2092.92 208.921 2096.35 205.194 Q2099.8 201.444 2105.63 201.444 Q2110.86 201.444 2113.9 204.824 Q2116.95 208.18 2116.95 213.967 M2112.69 212.717 Q2112.65 209.222 2110.72 207.138 Q2108.83 205.055 2105.68 205.055 Q2102.11 205.055 2099.96 207.069 Q2097.83 209.083 2097.51 212.74 L2112.69 212.717 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2144.13 207.046 Q2145.72 204.176 2147.95 202.81 Q2150.17 201.444 2153.18 201.444 Q2157.23 201.444 2159.43 204.291 Q2161.63 207.115 2161.63 212.347 L2161.63 227.995 L2157.34 227.995 L2157.34 212.486 Q2157.34 208.759 2156.03 206.953 Q2154.71 205.148 2152 205.148 Q2148.69 205.148 2146.77 207.347 Q2144.84 209.546 2144.84 213.342 L2144.84 227.995 L2140.56 227.995 L2140.56 212.486 Q2140.56 208.736 2139.24 206.953 Q2137.92 205.148 2135.17 205.148 Q2131.9 205.148 2129.98 207.37 Q2128.06 209.569 2128.06 213.342 L2128.06 227.995 L2123.78 227.995 L2123.78 202.069 L2128.06 202.069 L2128.06 206.097 Q2129.52 203.713 2131.56 202.578 Q2133.59 201.444 2136.4 201.444 Q2139.22 201.444 2141.19 202.879 Q2143.18 204.314 2144.13 207.046 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2181.9 214.963 Q2176.74 214.963 2174.75 216.143 Q2172.76 217.324 2172.76 220.171 Q2172.76 222.439 2174.24 223.782 Q2175.75 225.101 2178.32 225.101 Q2181.86 225.101 2183.99 222.601 Q2186.14 220.078 2186.14 215.912 L2186.14 214.963 L2181.9 214.963 M2190.4 213.203 L2190.4 227.995 L2186.14 227.995 L2186.14 224.06 Q2184.68 226.421 2182.51 227.555 Q2180.33 228.666 2177.18 228.666 Q2173.2 228.666 2170.84 226.444 Q2168.5 224.199 2168.5 220.449 Q2168.5 216.074 2171.42 213.851 Q2174.36 211.629 2180.17 211.629 L2186.14 211.629 L2186.14 211.213 Q2186.14 208.273 2184.2 206.676 Q2182.27 205.055 2178.78 205.055 Q2176.56 205.055 2174.45 205.588 Q2172.34 206.12 2170.4 207.185 L2170.4 203.25 Q2172.74 202.347 2174.94 201.907 Q2177.14 201.444 2179.22 201.444 Q2184.84 201.444 2187.62 204.361 Q2190.4 207.277 2190.4 213.203 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2199.17 191.977 L2203.43 191.977 L2203.43 227.995 L2199.17 227.995 L2199.17 191.977 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2234.52 213.967 L2234.52 216.05 L2214.94 216.05 Q2215.21 220.449 2217.58 222.763 Q2219.96 225.055 2224.2 225.055 Q2226.65 225.055 2228.94 224.453 Q2231.26 223.851 2233.52 222.648 L2233.52 226.675 Q2231.23 227.648 2228.83 228.157 Q2226.42 228.666 2223.94 228.666 Q2217.74 228.666 2214.1 225.055 Q2210.49 221.444 2210.49 215.287 Q2210.49 208.921 2213.92 205.194 Q2217.37 201.444 2223.2 201.444 Q2228.43 201.444 2231.46 204.824 Q2234.52 208.18 2234.52 213.967 M2230.26 212.717 Q2230.21 209.222 2228.29 207.138 Q2226.4 205.055 2223.25 205.055 Q2219.68 205.055 2217.53 207.069 Q2215.4 209.083 2215.08 212.74 L2230.26 212.717 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="
-M1904.75 283.291 L2046.64 283.291 L2046.64 241.819 L1904.75 241.819 L1904.75 283.291  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip760)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1904.75,283.291 2046.64,283.291 2046.64,241.819 1904.75,241.819 1904.75,283.291 
-  "/>
-<path clip-path="url(#clip760)" d="M2070.28 245.275 L2077.25 245.275 L2086.07 268.793 L2094.94 245.275 L2101.9 245.275 L2101.9 279.835 L2097.34 279.835 L2097.34 249.488 L2088.43 273.191 L2083.73 273.191 L2074.82 249.488 L2074.82 279.835 L2070.28 279.835 L2070.28 245.275 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2122.78 266.803 Q2117.62 266.803 2115.63 267.983 Q2113.64 269.164 2113.64 272.011 Q2113.64 274.279 2115.12 275.622 Q2116.63 276.941 2119.2 276.941 Q2122.74 276.941 2124.87 274.441 Q2127.02 271.918 2127.02 267.752 L2127.02 266.803 L2122.78 266.803 M2131.28 265.043 L2131.28 279.835 L2127.02 279.835 L2127.02 275.9 Q2125.56 278.261 2123.39 279.395 Q2121.21 280.506 2118.06 280.506 Q2114.08 280.506 2111.72 278.284 Q2109.38 276.039 2109.38 272.289 Q2109.38 267.914 2112.3 265.691 Q2115.24 263.469 2121.05 263.469 L2127.02 263.469 L2127.02 263.053 Q2127.02 260.113 2125.08 258.516 Q2123.15 256.895 2119.66 256.895 Q2117.44 256.895 2115.33 257.428 Q2113.22 257.96 2111.28 259.025 L2111.28 255.09 Q2113.62 254.187 2115.82 253.747 Q2118.02 253.284 2120.1 253.284 Q2125.72 253.284 2128.5 256.201 Q2131.28 259.117 2131.28 265.043 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2140.05 243.817 L2144.31 243.817 L2144.31 279.835 L2140.05 279.835 L2140.05 243.817 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip760)" d="M2175.4 265.807 L2175.4 267.89 L2155.82 267.89 Q2156.09 272.289 2158.46 274.603 Q2160.84 276.895 2165.08 276.895 Q2167.53 276.895 2169.82 276.293 Q2172.14 275.691 2174.4 274.488 L2174.4 278.515 Q2172.11 279.488 2169.71 279.997 Q2167.3 280.506 2164.82 280.506 Q2158.62 280.506 2154.98 276.895 Q2151.37 273.284 2151.37 267.127 Q2151.37 260.761 2154.8 257.034 Q2158.25 253.284 2164.08 253.284 Q2169.31 253.284 2172.34 256.664 Q2175.4 260.02 2175.4 265.807 M2171.14 264.557 Q2171.09 261.062 2169.17 258.978 Q2167.27 256.895 2164.13 256.895 Q2160.56 256.895 2158.41 258.909 Q2156.28 260.923 2155.96 264.58 L2171.14 264.557 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /></svg>
-
+Stacktrace:
+ [1] top-level scope
+   @ In[18]:2
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
 </div>
-
 </div>
 
 </div>
@@ -15659,7 +15269,7 @@ M1904.75 283.291 L2046.64 283.291 L2046.64 241.819 L1904.75 241.819 L1904.75 283
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="ss">:topleft</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
@@ -15678,350 +15288,27 @@ M1904.75 283.291 L2046.64 283.291 L2046.64 241.819 L1904.75 241.819 L1904.75 283
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+UndefVarError: p1 not defined
 
-<div class="jp-RenderedSVG jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="image/svg+xml">
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="400" viewBox="0 0 3200 1600">
-<defs>
-  <clipPath id="clip600">
-    <rect x="0" y="0" width="3200" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip600)" d="
-M0 1600 L3200 1600 L3200 0 L0 0  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip601">
-    <rect x="640" y="0" width="2241" height="1600"/>
-  </clipPath>
-</defs>
-<path clip-path="url(#clip600)" d="
-M221.644 1446.59 L1552.76 1446.59 L1552.76 102.107 L221.644 102.107  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip602">
-    <rect x="221" y="102" width="1332" height="1345"/>
-  </clipPath>
-</defs>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  221.644,1446.59 1552.76,1446.59 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  416.758,1446.59 416.758,1465.49 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  730.386,1446.59 730.386,1465.49 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1044.01,1446.59 1044.01,1465.49 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1357.64,1446.59 1357.64,1465.49 
-  "/>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 416.758, 1528.56)" x="416.758" y="1528.56">Black</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 730.386, 1528.56)" x="730.386" y="1528.56">Blond</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1044.01, 1528.56)" x="1044.01" y="1528.56">Brown</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1357.64, 1528.56)" x="1357.64" y="1528.56">Red</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(0, 887.2, 1603.33)" x="887.2" y="1603.33">Hair</text>
-</g>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  221.644,1446.59 221.644,102.107 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  221.644,1408.54 202.746,1408.54 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  221.644,1142.44 202.746,1142.44 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  221.644,876.35 202.746,876.35 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  221.644,610.256 202.746,610.256 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  221.644,344.163 202.746,344.163 
-  "/>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 136.593, 1426.04)" x="136.593" y="1426.04">0</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 123.541, 1159.94)" x="123.541" y="1159.94">30</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 123.541, 893.85)" x="123.541" y="893.85">60</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 123.541, 627.756)" x="123.541" y="627.756">90</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 110.49, 361.663)" x="110.49" y="361.663">120</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(-90, 33.7444, 774.347)" x="33.7444" y="774.347">Number of students</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:79px; text-anchor:middle;" transform="rotate(0, 887.2, 62.4)" x="887.2" y="62.4">Distribution of eye color in 592 students.</text>
-</g>
-<path clip-path="url(#clip602)" d="
-M291.307 947.308 L291.307 1408.54 L416.758 1408.54 L416.758 947.308 L291.307 947.308 L291.307 947.308  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  291.307,947.308 291.307,1408.54 416.758,1408.54 416.758,947.308 291.307,947.308 
-  "/>
-<path clip-path="url(#clip602)" d="
-M604.935 690.084 L604.935 1408.54 L730.386 1408.54 L730.386 690.084 L604.935 690.084 L604.935 690.084  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  604.935,690.084 604.935,1408.54 730.386,1408.54 730.386,690.084 604.935,690.084 
-  "/>
-<path clip-path="url(#clip602)" d="
-M918.563 140.158 L918.563 1408.54 L1044.01 1408.54 L1044.01 140.158 L918.563 140.158 L918.563 140.158  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  918.563,140.158 918.563,1408.54 1044.01,1408.54 1044.01,140.158 918.563,140.158 
-  "/>
-<path clip-path="url(#clip602)" d="
-M1232.19 1080.35 L1232.19 1408.54 L1357.64 1408.54 L1357.64 1080.35 L1232.19 1080.35 L1232.19 1080.35  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1232.19,1080.35 1232.19,1408.54 1357.64,1408.54 1357.64,1080.35 1232.19,1080.35 
-  "/>
-<circle clip-path="url(#clip602)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="354.033" cy="947.308" r="2"/>
-<circle clip-path="url(#clip602)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="667.661" cy="690.084" r="2"/>
-<circle clip-path="url(#clip602)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="981.288" cy="140.158" r="2"/>
-<circle clip-path="url(#clip602)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="1294.92" cy="1080.35" r="2"/>
-<path clip-path="url(#clip602)" d="
-M416.758 911.829 L416.758 1408.54 L542.209 1408.54 L542.209 911.829 L416.758 911.829 L416.758 911.829  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  416.758,911.829 416.758,1408.54 542.209,1408.54 542.209,911.829 416.758,911.829 
-  "/>
-<path clip-path="url(#clip602)" d="
-M730.386 1000.53 L730.386 1408.54 L855.837 1408.54 L855.837 1000.53 L730.386 1000.53 L730.386 1000.53  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  730.386,1000.53 730.386,1408.54 855.837,1408.54 855.837,1000.53 730.386,1000.53 
-  "/>
-<path clip-path="url(#clip602)" d="
-M1044.01 140.158 L1044.01 1408.54 L1169.47 1408.54 L1169.47 140.158 L1044.01 140.158 L1044.01 140.158  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1044.01,140.158 1044.01,1408.54 1169.47,1408.54 1169.47,140.158 1044.01,140.158 
-  "/>
-<path clip-path="url(#clip602)" d="
-M1357.64 1106.96 L1357.64 1408.54 L1483.09 1408.54 L1483.09 1106.96 L1357.64 1106.96 L1357.64 1106.96  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip602)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1357.64,1106.96 1357.64,1408.54 1483.09,1408.54 1483.09,1106.96 1357.64,1106.96 
-  "/>
-<circle clip-path="url(#clip602)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="479.484" cy="911.829" r="2"/>
-<circle clip-path="url(#clip602)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="793.112" cy="1000.53" r="2"/>
-<circle clip-path="url(#clip602)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="1106.74" cy="140.158" r="2"/>
-<circle clip-path="url(#clip602)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="1420.37" cy="1106.96" r="2"/>
-<path clip-path="url(#clip600)" d="
-M266.014 302.443 L578.151 302.443 L578.151 146.923 L266.014 146.923  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  266.014,302.443 578.151,302.443 578.151,146.923 266.014,146.923 266.014,302.443 
-  "/>
-<path clip-path="url(#clip600)" d="
-M280.805 219.499 L369.545 219.499 L369.545 178.027 L280.805 178.027 L280.805 219.499  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  280.805,219.499 369.545,219.499 369.545,178.027 280.805,178.027 280.805,219.499 
-  "/>
-<path clip-path="url(#clip600)" d="M384.336 181.483 L404.197 181.483 L404.197 185.418 L389.011 185.418 L389.011 195.603 L402.715 195.603 L402.715 199.539 L389.011 199.539 L389.011 216.043 L384.336 216.043 L384.336 181.483 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M431.002 202.015 L431.002 204.099 L411.419 204.099 Q411.696 208.497 414.058 210.812 Q416.442 213.103 420.678 213.103 Q423.132 213.103 425.423 212.501 Q427.738 211.9 430.007 210.696 L430.007 214.724 Q427.715 215.696 425.308 216.205 Q422.9 216.714 420.423 216.714 Q414.22 216.714 410.585 213.103 Q406.974 209.492 406.974 203.335 Q406.974 196.969 410.4 193.242 Q413.849 189.492 419.683 189.492 Q424.914 189.492 427.946 192.872 Q431.002 196.228 431.002 202.015 M426.743 200.765 Q426.696 197.27 424.775 195.187 Q422.877 193.103 419.729 193.103 Q416.164 193.103 414.011 195.117 Q411.882 197.131 411.558 200.789 L426.743 200.765 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M458.178 195.094 Q459.775 192.224 461.997 190.858 Q464.219 189.492 467.229 189.492 Q471.28 189.492 473.479 192.339 Q475.678 195.164 475.678 200.395 L475.678 216.043 L471.395 216.043 L471.395 200.534 Q471.395 196.807 470.076 195.002 Q468.756 193.196 466.048 193.196 Q462.738 193.196 460.817 195.395 Q458.895 197.594 458.895 201.39 L458.895 216.043 L454.613 216.043 L454.613 200.534 Q454.613 196.784 453.293 195.002 Q451.974 193.196 449.219 193.196 Q445.956 193.196 444.034 195.418 Q442.113 197.617 442.113 201.39 L442.113 216.043 L437.831 216.043 L437.831 190.117 L442.113 190.117 L442.113 194.145 Q443.571 191.761 445.608 190.627 Q447.645 189.492 450.446 189.492 Q453.27 189.492 455.238 190.927 Q457.229 192.363 458.178 195.094 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M495.955 203.011 Q490.793 203.011 488.803 204.191 Q486.812 205.372 486.812 208.219 Q486.812 210.488 488.293 211.83 Q489.798 213.15 492.367 213.15 Q495.909 213.15 498.039 210.65 Q500.191 208.126 500.191 203.96 L500.191 203.011 L495.955 203.011 M504.451 201.251 L504.451 216.043 L500.191 216.043 L500.191 212.108 Q498.733 214.469 496.557 215.603 Q494.381 216.714 491.233 216.714 Q487.252 216.714 484.891 214.492 Q482.553 212.247 482.553 208.497 Q482.553 204.122 485.469 201.9 Q488.409 199.677 494.219 199.677 L500.191 199.677 L500.191 199.261 Q500.191 196.321 498.247 194.724 Q496.326 193.103 492.83 193.103 Q490.608 193.103 488.502 193.636 Q486.395 194.168 484.451 195.233 L484.451 191.298 Q486.789 190.395 488.988 189.955 Q491.187 189.492 493.27 189.492 Q498.895 189.492 501.673 192.409 Q504.451 195.326 504.451 201.251 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M513.224 180.025 L517.483 180.025 L517.483 216.043 L513.224 216.043 L513.224 180.025 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M548.571 202.015 L548.571 204.099 L528.988 204.099 Q529.265 208.497 531.626 210.812 Q534.011 213.103 538.247 213.103 Q540.7 213.103 542.992 212.501 Q545.307 211.9 547.575 210.696 L547.575 214.724 Q545.284 215.696 542.876 216.205 Q540.469 216.714 537.992 216.714 Q531.788 216.714 528.154 213.103 Q524.543 209.492 524.543 203.335 Q524.543 196.969 527.969 193.242 Q531.418 189.492 537.251 189.492 Q542.483 189.492 545.515 192.872 Q548.571 196.228 548.571 202.015 M544.312 200.765 Q544.265 197.27 542.344 195.187 Q540.446 193.103 537.298 193.103 Q533.733 193.103 531.58 195.117 Q529.45 197.131 529.126 200.789 L544.312 200.765 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="
-M280.805 271.339 L369.545 271.339 L369.545 229.867 L280.805 229.867 L280.805 271.339  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  280.805,271.339 369.545,271.339 369.545,229.867 280.805,229.867 280.805,271.339 
-  "/>
-<path clip-path="url(#clip600)" d="M384.336 233.323 L391.303 233.323 L400.122 256.841 L408.988 233.323 L415.956 233.323 L415.956 267.883 L411.396 267.883 L411.396 237.536 L402.484 261.24 L397.785 261.24 L388.873 237.536 L388.873 267.883 L384.336 267.883 L384.336 233.323 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M436.835 254.851 Q431.673 254.851 429.683 256.031 Q427.692 257.212 427.692 260.059 Q427.692 262.328 429.173 263.67 Q430.678 264.99 433.247 264.99 Q436.789 264.99 438.919 262.49 Q441.071 259.966 441.071 255.8 L441.071 254.851 L436.835 254.851 M445.331 253.091 L445.331 267.883 L441.071 267.883 L441.071 263.948 Q439.613 266.309 437.437 267.443 Q435.261 268.554 432.113 268.554 Q428.132 268.554 425.77 266.332 Q423.433 264.087 423.433 260.337 Q423.433 255.962 426.349 253.74 Q429.289 251.517 435.099 251.517 L441.071 251.517 L441.071 251.101 Q441.071 248.161 439.127 246.564 Q437.206 244.943 433.71 244.943 Q431.488 244.943 429.382 245.476 Q427.275 246.008 425.331 247.073 L425.331 243.138 Q427.669 242.235 429.868 241.795 Q432.067 241.332 434.15 241.332 Q439.775 241.332 442.553 244.249 Q445.331 247.166 445.331 253.091 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M454.104 231.865 L458.363 231.865 L458.363 267.883 L454.104 267.883 L454.104 231.865 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M489.451 253.855 L489.451 255.939 L469.867 255.939 Q470.145 260.337 472.506 262.652 Q474.891 264.943 479.127 264.943 Q481.58 264.943 483.872 264.341 Q486.187 263.74 488.455 262.536 L488.455 266.564 Q486.164 267.536 483.756 268.045 Q481.349 268.554 478.872 268.554 Q472.668 268.554 469.034 264.943 Q465.423 261.332 465.423 255.175 Q465.423 248.809 468.849 245.082 Q472.298 241.332 478.131 241.332 Q483.363 241.332 486.395 244.712 Q489.451 248.068 489.451 253.855 M485.191 252.605 Q485.145 249.11 483.224 247.027 Q481.326 244.943 478.178 244.943 Q474.613 244.943 472.46 246.957 Q470.33 248.971 470.006 252.629 L485.191 252.605 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="
-M1821.64 1446.59 L3152.76 1446.59 L3152.76 102.107 L1821.64 102.107  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<defs>
-  <clipPath id="clip603">
-    <rect x="1821" y="102" width="1332" height="1345"/>
-  </clipPath>
-</defs>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,1446.59 3152.76,1446.59 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  2019.56,1446.59 2019.56,1465.49 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  2331.32,1446.59 2331.32,1465.49 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  2643.08,1446.59 2643.08,1465.49 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  2954.84,1446.59 2954.84,1465.49 
-  "/>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 2019.56, 1528.56)" x="2019.56" y="1528.56">Black</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 2331.32, 1528.56)" x="2331.32" y="1528.56">Blond</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 2643.08, 1528.56)" x="2643.08" y="1528.56">Brown</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 2954.84, 1528.56)" x="2954.84" y="1528.56">Red</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(0, 2487.2, 1603.33)" x="2487.2" y="1603.33">Hair</text>
-</g>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,1446.59 1821.64,102.107 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,1408.54 1802.75,1408.54 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,1186.79 1802.75,1186.79 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,965.047 1802.75,965.047 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,743.303 1802.75,743.303 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,521.559 1802.75,521.559 
-  "/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1821.64,299.814 1802.75,299.814 
-  "/>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1736.59, 1426.04)" x="1736.59" y="1426.04">0</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1723.54, 1204.29)" x="1723.54" y="1204.29">50</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1710.49, 982.547)" x="1710.49" y="982.547">100</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1710.49, 760.803)" x="1710.49" y="760.803">150</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1710.49, 539.059)" x="1710.49" y="539.059">200</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:53px; text-anchor:middle;" transform="rotate(0, 1710.49, 317.314)" x="1710.49" y="317.314">250</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:65px; text-anchor:middle;" transform="rotate(-90, 1633.74, 774.347)" x="1633.74" y="774.347">Number of students</text>
-</g>
-<g clip-path="url(#clip600)">
-<text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:79px; text-anchor:middle;" transform="rotate(0, 2487.2, 62.4)" x="2487.2" y="62.4">Distribution of hair color in 592students.</text>
-</g>
-<path clip-path="url(#clip603)" d="
-M1894.86 929.568 L1894.86 1160.18 L2144.26 1160.18 L2144.26 929.568 L1894.86 929.568 L1894.86 929.568  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1894.86,929.568 1894.86,1160.18 2144.26,1160.18 2144.26,929.568 1894.86,929.568 
-  "/>
-<path clip-path="url(#clip603)" d="
-M2206.62 845.305 L2206.62 1204.53 L2456.02 1204.53 L2456.02 845.305 L2206.62 845.305 L2206.62 845.305  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  2206.62,845.305 2206.62,1204.53 2456.02,1204.53 2456.02,845.305 2206.62,845.305 
-  "/>
-<path clip-path="url(#clip603)" d="
-M2518.38 140.158 L2518.38 774.347 L2767.78 774.347 L2767.78 140.158 L2518.38 140.158 L2518.38 140.158  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  2518.38,140.158 2518.38,774.347 2767.78,774.347 2767.78,140.158 2518.38,140.158 
-  "/>
-<path clip-path="url(#clip603)" d="
-M2830.14 1093.66 L2830.14 1257.75 L3079.54 1257.75 L3079.54 1093.66 L2830.14 1093.66 L2830.14 1093.66  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  2830.14,1093.66 2830.14,1257.75 3079.54,1257.75 3079.54,1093.66 2830.14,1093.66 
-  "/>
-<circle clip-path="url(#clip603)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2019.56" cy="929.568" r="2"/>
-<circle clip-path="url(#clip603)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2331.32" cy="845.305" r="2"/>
-<circle clip-path="url(#clip603)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2643.08" cy="140.158" r="2"/>
-<circle clip-path="url(#clip603)" style="fill:#009af9; stroke:none; fill-opacity:0" cx="2954.84" cy="1093.66" r="2"/>
-<path clip-path="url(#clip603)" d="
-M1894.86 1160.18 L1894.86 1408.54 L2144.26 1408.54 L2144.26 1160.18 L1894.86 1160.18 L1894.86 1160.18  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  1894.86,1160.18 1894.86,1408.54 2144.26,1408.54 2144.26,1160.18 1894.86,1160.18 
-  "/>
-<path clip-path="url(#clip603)" d="
-M2206.62 1204.53 L2206.62 1408.54 L2456.02 1408.54 L2456.02 1204.53 L2206.62 1204.53 L2206.62 1204.53  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  2206.62,1204.53 2206.62,1408.54 2456.02,1408.54 2456.02,1204.53 2206.62,1204.53 
-  "/>
-<path clip-path="url(#clip603)" d="
-M2518.38 774.347 L2518.38 1408.54 L2767.78 1408.54 L2767.78 774.347 L2518.38 774.347 L2518.38 774.347  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  2518.38,774.347 2518.38,1408.54 2767.78,1408.54 2767.78,774.347 2518.38,774.347 
-  "/>
-<path clip-path="url(#clip603)" d="
-M2830.14 1257.75 L2830.14 1408.54 L3079.54 1408.54 L3079.54 1257.75 L2830.14 1257.75 L2830.14 1257.75  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip603)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:0.4; fill:none" points="
-  2830.14,1257.75 2830.14,1408.54 3079.54,1408.54 3079.54,1257.75 2830.14,1257.75 
-  "/>
-<circle clip-path="url(#clip603)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="2019.56" cy="1160.18" r="2"/>
-<circle clip-path="url(#clip603)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="2331.32" cy="1204.53" r="2"/>
-<circle clip-path="url(#clip603)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="2643.08" cy="774.347" r="2"/>
-<circle clip-path="url(#clip603)" style="fill:#e26f46; stroke:none; fill-opacity:0" cx="2954.84" cy="1257.75" r="2"/>
-<path clip-path="url(#clip600)" d="
-M1866.01 302.443 L2178.15 302.443 L2178.15 146.923 L1866.01 146.923  Z
-  " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1866.01,302.443 2178.15,302.443 2178.15,146.923 1866.01,146.923 1866.01,302.443 
-  "/>
-<path clip-path="url(#clip600)" d="
-M1880.8 219.499 L1969.55 219.499 L1969.55 178.027 L1880.8 178.027 L1880.8 219.499  Z
-  " fill="#009af9" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1880.8,219.499 1969.55,219.499 1969.55,178.027 1880.8,178.027 1880.8,219.499 
-  "/>
-<path clip-path="url(#clip600)" d="M1984.34 181.483 L2004.2 181.483 L2004.2 185.418 L1989.01 185.418 L1989.01 195.603 L2002.72 195.603 L2002.72 199.539 L1989.01 199.539 L1989.01 216.043 L1984.34 216.043 L1984.34 181.483 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2031 202.015 L2031 204.099 L2011.42 204.099 Q2011.7 208.497 2014.06 210.812 Q2016.44 213.103 2020.68 213.103 Q2023.13 213.103 2025.42 212.501 Q2027.74 211.9 2030.01 210.696 L2030.01 214.724 Q2027.71 215.696 2025.31 216.205 Q2022.9 216.714 2020.42 216.714 Q2014.22 216.714 2010.59 213.103 Q2006.97 209.492 2006.97 203.335 Q2006.97 196.969 2010.4 193.242 Q2013.85 189.492 2019.68 189.492 Q2024.91 189.492 2027.95 192.872 Q2031 196.228 2031 202.015 M2026.74 200.765 Q2026.7 197.27 2024.78 195.187 Q2022.88 193.103 2019.73 193.103 Q2016.16 193.103 2014.01 195.117 Q2011.88 197.131 2011.56 200.789 L2026.74 200.765 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2058.18 195.094 Q2059.77 192.224 2062 190.858 Q2064.22 189.492 2067.23 189.492 Q2071.28 189.492 2073.48 192.339 Q2075.68 195.164 2075.68 200.395 L2075.68 216.043 L2071.4 216.043 L2071.4 200.534 Q2071.4 196.807 2070.08 195.002 Q2068.76 193.196 2066.05 193.196 Q2062.74 193.196 2060.82 195.395 Q2058.9 197.594 2058.9 201.39 L2058.9 216.043 L2054.61 216.043 L2054.61 200.534 Q2054.61 196.784 2053.29 195.002 Q2051.97 193.196 2049.22 193.196 Q2045.96 193.196 2044.03 195.418 Q2042.11 197.617 2042.11 201.39 L2042.11 216.043 L2037.83 216.043 L2037.83 190.117 L2042.11 190.117 L2042.11 194.145 Q2043.57 191.761 2045.61 190.627 Q2047.65 189.492 2050.45 189.492 Q2053.27 189.492 2055.24 190.927 Q2057.23 192.363 2058.18 195.094 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2095.96 203.011 Q2090.79 203.011 2088.8 204.191 Q2086.81 205.372 2086.81 208.219 Q2086.81 210.488 2088.29 211.83 Q2089.8 213.15 2092.37 213.15 Q2095.91 213.15 2098.04 210.65 Q2100.19 208.126 2100.19 203.96 L2100.19 203.011 L2095.96 203.011 M2104.45 201.251 L2104.45 216.043 L2100.19 216.043 L2100.19 212.108 Q2098.73 214.469 2096.56 215.603 Q2094.38 216.714 2091.23 216.714 Q2087.25 216.714 2084.89 214.492 Q2082.55 212.247 2082.55 208.497 Q2082.55 204.122 2085.47 201.9 Q2088.41 199.677 2094.22 199.677 L2100.19 199.677 L2100.19 199.261 Q2100.19 196.321 2098.25 194.724 Q2096.33 193.103 2092.83 193.103 Q2090.61 193.103 2088.5 193.636 Q2086.4 194.168 2084.45 195.233 L2084.45 191.298 Q2086.79 190.395 2088.99 189.955 Q2091.19 189.492 2093.27 189.492 Q2098.9 189.492 2101.67 192.409 Q2104.45 195.326 2104.45 201.251 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2113.22 180.025 L2117.48 180.025 L2117.48 216.043 L2113.22 216.043 L2113.22 180.025 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2148.57 202.015 L2148.57 204.099 L2128.99 204.099 Q2129.27 208.497 2131.63 210.812 Q2134.01 213.103 2138.25 213.103 Q2140.7 213.103 2142.99 212.501 Q2145.31 211.9 2147.58 210.696 L2147.58 214.724 Q2145.28 215.696 2142.88 216.205 Q2140.47 216.714 2137.99 216.714 Q2131.79 216.714 2128.15 213.103 Q2124.54 209.492 2124.54 203.335 Q2124.54 196.969 2127.97 193.242 Q2131.42 189.492 2137.25 189.492 Q2142.48 189.492 2145.52 192.872 Q2148.57 196.228 2148.57 202.015 M2144.31 200.765 Q2144.27 197.27 2142.34 195.187 Q2140.45 193.103 2137.3 193.103 Q2133.73 193.103 2131.58 195.117 Q2129.45 197.131 2129.13 200.789 L2144.31 200.765 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="
-M1880.8 271.339 L1969.55 271.339 L1969.55 229.867 L1880.8 229.867 L1880.8 271.339  Z
-  " fill="#e26f46" fill-rule="evenodd" fill-opacity="0.4"/>
-<polyline clip-path="url(#clip600)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
-  1880.8,271.339 1969.55,271.339 1969.55,229.867 1880.8,229.867 1880.8,271.339 
-  "/>
-<path clip-path="url(#clip600)" d="M1984.34 233.323 L1991.3 233.323 L2000.12 256.841 L2008.99 233.323 L2015.96 233.323 L2015.96 267.883 L2011.4 267.883 L2011.4 237.536 L2002.48 261.24 L1997.78 261.24 L1988.87 237.536 L1988.87 267.883 L1984.34 267.883 L1984.34 233.323 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2036.84 254.851 Q2031.67 254.851 2029.68 256.031 Q2027.69 257.212 2027.69 260.059 Q2027.69 262.328 2029.17 263.67 Q2030.68 264.99 2033.25 264.99 Q2036.79 264.99 2038.92 262.49 Q2041.07 259.966 2041.07 255.8 L2041.07 254.851 L2036.84 254.851 M2045.33 253.091 L2045.33 267.883 L2041.07 267.883 L2041.07 263.948 Q2039.61 266.309 2037.44 267.443 Q2035.26 268.554 2032.11 268.554 Q2028.13 268.554 2025.77 266.332 Q2023.43 264.087 2023.43 260.337 Q2023.43 255.962 2026.35 253.74 Q2029.29 251.517 2035.1 251.517 L2041.07 251.517 L2041.07 251.101 Q2041.07 248.161 2039.13 246.564 Q2037.21 244.943 2033.71 244.943 Q2031.49 244.943 2029.38 245.476 Q2027.28 246.008 2025.33 247.073 L2025.33 243.138 Q2027.67 242.235 2029.87 241.795 Q2032.07 241.332 2034.15 241.332 Q2039.78 241.332 2042.55 244.249 Q2045.33 247.166 2045.33 253.091 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2054.1 231.865 L2058.36 231.865 L2058.36 267.883 L2054.1 267.883 L2054.1 231.865 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip600)" d="M2089.45 253.855 L2089.45 255.939 L2069.87 255.939 Q2070.15 260.337 2072.51 262.652 Q2074.89 264.943 2079.13 264.943 Q2081.58 264.943 2083.87 264.341 Q2086.19 263.74 2088.46 262.536 L2088.46 266.564 Q2086.16 267.536 2083.76 268.045 Q2081.35 268.554 2078.87 268.554 Q2072.67 268.554 2069.03 264.943 Q2065.42 261.332 2065.42 255.175 Q2065.42 248.809 2068.85 245.082 Q2072.3 241.332 2078.13 241.332 Q2083.36 241.332 2086.4 244.712 Q2089.45 248.068 2089.45 253.855 M2085.19 252.605 Q2085.15 249.11 2083.22 247.027 Q2081.33 244.943 2078.18 244.943 Q2074.61 244.943 2072.46 246.957 Q2070.33 248.971 2070.01 252.629 L2085.19 252.605 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /></svg>
-
+Stacktrace:
+ [1] top-level scope
+   @ In[19]:1
+ [2] eval
+   @ ./boot.jl:373 [inlined]
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+   @ Base ./loading.jl:1196</pre>
+</div>
 </div>
 
 </div>
 
 </div>
 
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>最終変更3</p>
-
-</div>
 </div>
 </body>
 
