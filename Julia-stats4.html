@@ -14515,7 +14515,7 @@ a.anchor-link {
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">Version</span><span class="p">()</span>
@@ -14538,7 +14538,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>最新バージョン 2022-01-26 23:54
+<pre>最新バージョン 2022-02-02 16:51
 </pre>
 </div>
 </div>
@@ -14666,7 +14666,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">1.1.&#12288;&#19968;&#22793;&#25968;&#12398;&#22580;&#21512;<a class="anchor-link" href="#1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2><p>単変量の基礎統計量を求める関数として，sum(), mean(), var(), std(), median(), quantile() がある。</p>
+<h2 id="1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">1.1.&#12288;&#19968;&#22793;&#25968;&#12398;&#22580;&#21512;<a class="anchor-link" href="#1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2><h3 id="1.1.1.%E3%80%80%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88%E9%87%8F">1.1.1.&#12288;&#22522;&#30990;&#32113;&#35336;&#37327;<a class="anchor-link" href="#1.1.1.%E3%80%80%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88%E9%87%8F">&#182;</a></h3><p>単変量の基礎統計量を求める関数として，sum(), mean(), var(), std(), median(), quantile() がある。</p>
 <p>個別の変数に対して適用する場合は以下のようにする。</p>
 
 </div>
@@ -14892,7 +14892,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>パーセンタイル値は quantile() で求める。第 2 引数で 任意の q 値をベクトルで指定できる。</p>
+<h3 id="1.1.2.%E3%80%80%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%AB%E5%80%A4">1.1.2.&#12288;&#12497;&#12540;&#12475;&#12531;&#12479;&#12452;&#12523;&#20516;<a class="anchor-link" href="#1.1.2.%E3%80%80%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%AB%E5%80%A4">&#182;</a></h3><p>パーセンタイル値は quantile() で求める。第 2 引数で 任意の q 値をベクトルで指定できる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14983,6 +14983,60 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="1.1.3.%E3%80%80%E5%BA%A6%E6%95%B0%E5%88%86%E5%B8%83">1.1.3.&#12288;&#24230;&#25968;&#20998;&#24067;<a class="anchor-link" href="#1.1.3.%E3%80%80%E5%BA%A6%E6%95%B0%E5%88%86%E5%B8%83">&#182;</a></h3><p>カテゴリー変数の度数分布は freqtable() で求める。freqtable() は欠損値 missing の個数もカウントする。</p>
+<p>chickwts は，餌の添加物（Feed）の種類による雛鳥の体重（Weight）のデータセットである。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">FreqTables</span>
+<span class="n">chickwts</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s">&quot;datasets&quot;</span><span class="p">,</span> <span class="s">&quot;chickwts&quot;</span><span class="p">)</span>
+<span class="n">freqtable</span><span class="p">(</span><span class="n">chickwts</span><span class="o">.</span><span class="n">Feed</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>6-element Named Vector{Int64}
+Dim1        │ 
+────────────┼───
+&#34;casein&#34;    │ 12
+&#34;horsebean&#34; │ 10
+&#34;linseed&#34;   │ 12
+&#34;meatmeal&#34;  │ 11
+&#34;soybean&#34;   │ 14
+&#34;sunflower&#34; │ 12</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="1.2.%E3%80%80%E8%A4%87%E6%95%B0%E3%81%AE%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">1.2.&#12288;&#35079;&#25968;&#12398;&#22793;&#25968;&#12398;&#22580;&#21512;<a class="anchor-link" href="#1.2.%E3%80%80%E8%A4%87%E6%95%B0%E3%81%AE%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2><p>分析対象が複数の変数の場合に，変数を 1 つずつ分析するのは効率が悪い。</p>
 <p>まとめて処理するために，eachcol(), describe(), combine() 関数がある。</p>
 <h3 id="1.2.1.%E3%80%80eachcol()-%E3%82%92%E4%BD%BF%E3%81%86">1.2.1.&#12288;eachcol() &#12434;&#20351;&#12358;<a class="anchor-link" href="#1.2.1.%E3%80%80eachcol()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>eachcol() はデータフレームの各列に対して関数を適用し，結果をベクトルとして返す。</p>
@@ -14992,7 +15046,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">mean</span><span class="o">.</span><span class="p">(</span><span class="n">eachcol</span><span class="p">(</span><span class="n">airquality</span><span class="p">));</span>
@@ -15012,7 +15066,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15044,7 +15098,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">DataFrame</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="n">names</span><span class="p">(</span><span class="n">airquality</span><span class="p">),</span> <span class="n">Mean</span><span class="o">=</span><span class="n">M</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
@@ -15095,61 +15149,11 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">mean</span><span class="p">(</span><span class="n">skipmissing</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">eachcol</span><span class="p">(</span><span class="n">airquality</span><span class="p">))</span>
 <span class="n">M</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>6-element Vector{Float64}:
-  42.12931034482759
- 185.93150684931507
-   9.95751633986928
-  77.88235294117646
-   6.993464052287582
-  15.803921568627452</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>上の例で使用した無名関数と同じことをする普通の関数として定義し，それを map() で使用する場合は以下のようになる。</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">mean2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">skipmissing</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">M</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">mean2</span><span class="p">,</span> <span class="n">eachcol</span><span class="p">(</span><span class="n">airquality</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15189,13 +15193,63 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>複数の統計量を計算してそれらを DataFtame() でまとめて一覧表にすることができる。</p>
+<p>上の例で使用した無名関数と同じことをする普通の関数として定義し，それを map() で使用する場合は以下のようになる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">mean2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">skipmissing</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">mean2</span><span class="p">,</span> <span class="n">eachcol</span><span class="p">(</span><span class="n">airquality</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>6-element Vector{Float64}:
+  42.12931034482759
+ 185.93150684931507
+   9.95751633986928
+  77.88235294117646
+   6.993464052287582
+  15.803921568627452</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>複数の統計量を計算してそれらを DataFtame() でまとめて一覧表にすることができる。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">mean</span><span class="p">(</span><span class="n">skipmissing</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">eachcol</span><span class="p">(</span><span class="n">airquality</span><span class="p">))</span>
@@ -15218,7 +15272,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -15241,7 +15295,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Statistics</span>
@@ -15267,7 +15321,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -15285,7 +15339,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">describe2</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
@@ -15329,7 +15383,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">describe2</span><span class="p">(</span><span class="n">airquality2</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
@@ -15384,7 +15438,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">describe</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="ss">:all</span><span class="p">))</span>
@@ -15435,7 +15489,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">describe2</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">arg</span><span class="o">...=</span><span class="ss">:all</span><span class="p">)</span>
@@ -15543,7 +15597,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">getcol</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sym</span><span class="p">,</span> <span class="n">newsym</span><span class="p">)</span>
@@ -15589,7 +15643,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
@@ -15613,7 +15667,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">quantile2</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">qs</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -15680,7 +15734,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">quantile3</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
@@ -15754,7 +15808,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">quantile2</span><span class="p">(</span><span class="n">airquality2</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="o">:</span><span class="mi">9</span><span class="p">)</span><span class="o">./</span><span class="mi">10</span><span class="p">)</span>
@@ -15773,7 +15827,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -15796,7 +15850,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">quantile2</span><span class="p">(</span><span class="n">airquality</span><span class="p">[</span><span class="o">:</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
@@ -15815,7 +15869,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
@@ -15850,7 +15904,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">my_std</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -15920,7 +15974,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">RDatasets</span>
@@ -15966,7 +16020,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">first</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span>
@@ -15985,7 +16039,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
 
 
@@ -16013,46 +16067,10 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">describe</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Month</span><span class="p">)))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div class="data-frame"><p>4 rows × 7 columns</p><table class="data-frame"><thead><tr><th></th><th>variable</th><th>mean</th><th>min</th><th>median</th><th>max</th><th>nmissing</th><th>eltype</th></tr><tr><th></th><th title="Symbol">Symbol</th><th title="Float64">Float64</th><th title="Real">Real</th><th title="Float64">Float64</th><th title="Real">Real</th><th title="Int64">Int64</th><th title="Type">Type</th></tr></thead><tbody><tr><th>1</th><td>Ozone</td><td>23.6154</td><td>1</td><td>18.0</td><td>115</td><td>5</td><td>Union{Missing, Int64}</td></tr><tr><th>2</th><td>Solar_R</td><td>181.296</td><td>8</td><td>194.0</td><td>334</td><td>4</td><td>Union{Missing, Int64}</td></tr><tr><th>3</th><td>Wind</td><td>11.6226</td><td>5.7</td><td>11.5</td><td>20.1</td><td>0</td><td>Float64</td></tr><tr><th>4</th><td>Temp</td><td>65.5484</td><td>56</td><td>66.0</td><td>81</td><td>0</td><td>Int64</td></tr></tbody></table></div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">describe2</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Month</span><span class="p">)))</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">describe</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Month</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -16073,7 +16091,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div class="data-frame"><p>4 rows × 11 columns (omitted printing of 2 columns)</p><table class="data-frame"><thead><tr><th></th><th>variable</th><th>sum</th><th>mean</th><th>var</th><th>std</th><th>minimum</th><th>q25</th><th>median</th><th>q75</th></tr><tr><th></th><th title="Symbol">Symbol</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th></tr></thead><tbody><tr><th>1</th><td>Ozone</td><td>614.0</td><td>23.6154</td><td>493.926</td><td>22.2244</td><td>1.0</td><td>11.0</td><td>18.0</td><td>31.5</td></tr><tr><th>2</th><td>Solar_R</td><td>4895.0</td><td>181.296</td><td>13242.4</td><td>115.075</td><td>8.0</td><td>72.0</td><td>194.0</td><td>284.5</td></tr><tr><th>3</th><td>Wind</td><td>360.3</td><td>11.6226</td><td>12.4711</td><td>3.53145</td><td>5.7</td><td>8.9</td><td>11.5</td><td>14.05</td></tr><tr><th>4</th><td>Temp</td><td>2032.0</td><td>65.5484</td><td>46.9892</td><td>6.85487</td><td>56.0</td><td>60.0</td><td>66.0</td><td>69.0</td></tr></tbody></table></div>
+<div class="data-frame"><p>4 rows × 7 columns</p><table class="data-frame"><thead><tr><th></th><th>variable</th><th>mean</th><th>min</th><th>median</th><th>max</th><th>nmissing</th><th>eltype</th></tr><tr><th></th><th title="Symbol">Symbol</th><th title="Float64">Float64</th><th title="Real">Real</th><th title="Float64">Float64</th><th title="Real">Real</th><th title="Int64">Int64</th><th title="Type">Type</th></tr></thead><tbody><tr><th>1</th><td>Ozone</td><td>23.6154</td><td>1</td><td>18.0</td><td>115</td><td>5</td><td>Union{Missing, Int64}</td></tr><tr><th>2</th><td>Solar_R</td><td>181.296</td><td>8</td><td>194.0</td><td>334</td><td>4</td><td>Union{Missing, Int64}</td></tr><tr><th>3</th><td>Wind</td><td>11.6226</td><td>5.7</td><td>11.5</td><td>20.1</td><td>0</td><td>Float64</td></tr><tr><th>4</th><td>Temp</td><td>65.5484</td><td>56</td><td>66.0</td><td>81</td><td>0</td><td>Int64</td></tr></tbody></table></div>
 </div>
 
 </div>
@@ -16086,6 +16104,42 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">describe2</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Month</span><span class="p">)))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>4 rows × 11 columns (omitted printing of 2 columns)</p><table class="data-frame"><thead><tr><th></th><th>variable</th><th>sum</th><th>mean</th><th>var</th><th>std</th><th>minimum</th><th>q25</th><th>median</th><th>q75</th></tr><tr><th></th><th title="Symbol">Symbol</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th><th title="Float64">Float64</th></tr></thead><tbody><tr><th>1</th><td>Ozone</td><td>614.0</td><td>23.6154</td><td>493.926</td><td>22.2244</td><td>1.0</td><td>11.0</td><td>18.0</td><td>31.5</td></tr><tr><th>2</th><td>Solar_R</td><td>4895.0</td><td>181.296</td><td>13242.4</td><td>115.075</td><td>8.0</td><td>72.0</td><td>194.0</td><td>284.5</td></tr><tr><th>3</th><td>Wind</td><td>360.3</td><td>11.6226</td><td>12.4711</td><td>3.53145</td><td>5.7</td><td>8.9</td><td>11.5</td><td>14.05</td></tr><tr><th>4</th><td>Temp</td><td>2032.0</td><td>65.5484</td><td>46.9892</td><td>6.85487</td><td>56.0</td><td>60.0</td><td>66.0</td><td>69.0</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">quantile</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="k">end</span><span class="p">],</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Month</span><span class="p">))</span><span class="o">.</span><span class="n">Wind</span><span class="p">)</span>
@@ -16104,7 +16158,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 
 
 
@@ -16127,7 +16181,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">quantile2</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="k">end</span><span class="p">],</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Month</span><span class="p">)))</span>
@@ -16146,7 +16200,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
 
 
 
@@ -16169,7 +16223,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">for</span> <span class="n">df</span> <span class="k">in</span> <span class="n">gdf</span>
@@ -16261,7 +16315,7 @@ Month: 9
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">long</span> <span class="o">=</span> <span class="n">stack</span><span class="p">(</span><span class="n">select</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="n">Not</span><span class="p">(</span><span class="ss">:Day</span><span class="p">)),</span> <span class="p">[</span><span class="ss">:Ozone</span><span class="p">,</span> <span class="ss">:Solar_R</span><span class="p">,</span> <span class="ss">:Wind</span><span class="p">,</span> <span class="ss">:Temp</span><span class="p">])</span>
@@ -16282,7 +16336,7 @@ Month: 9
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 
 
 
@@ -16299,7 +16353,7 @@ Month: 9
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">combine</span><span class="p">(</span><span class="n">gdf2</span><span class="p">,</span> <span class="n">nrow</span><span class="p">,</span>
@@ -16369,7 +16423,7 @@ Month: 9
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">.</span><span class="n">variable</span> <span class="o">.==</span> <span class="s">&quot;Wind&quot;</span><span class="p">,</span> <span class="p">[</span><span class="ss">:n</span><span class="p">,</span> <span class="ss">:Mean</span><span class="p">,</span> <span class="ss">:SD</span><span class="p">]]</span>
@@ -16388,7 +16442,7 @@ Month: 9
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
 
 
@@ -16405,7 +16459,7 @@ Month: 9
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">temp</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">sym1</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
@@ -16434,7 +16488,7 @@ Month: 9
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 
 
 
@@ -16457,7 +16511,7 @@ Month: 9
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">sort</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="ss">:Month</span><span class="p">)</span>
@@ -16476,7 +16530,7 @@ Month: 9
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 
 
 
@@ -16499,7 +16553,7 @@ Month: 9
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">describe</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="k">for</span> <span class="n">df</span> <span class="k">in</span> <span class="n">gdf</span><span class="p">]</span>
@@ -16596,7 +16650,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">DataFrames</span><span class="p">,</span> <span class="n">Statistics</span>
@@ -16688,13 +16742,272 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">2.&#12288;&#20108;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><p>2変量の統計量は，ピアソンの積率相関係数 cor()，スピアマンの順位相関係数 corspearman()，ケンドールの順位相関係数 corkendall()，共分散 var() がある。</p>
+<h1 id="2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">2.&#12288;&#20108;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><p>2変量の統計量は，カテゴリー変数の場合はクロス集計表，間隔尺度変数の場合はピアソンの積率相関係数 cor()，共分散 var()，順序尺度変数の場合はスピアマンの順位相関係数 corspearman()，ケンドールの順位相関係数 corkendall() がある。</p>
+<h2 id="2.1.%E3%80%80%E4%BA%8C%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">2.1.&#12288;&#20108;&#37325;&#12463;&#12525;&#12473;&#38598;&#35336;&#34920;<a class="anchor-link" href="#2.1.%E3%80%80%E4%BA%8C%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">&#182;</a></h2><p>2 変量の少なくとも 1 つがカテゴリー変数（名義尺度変数，順序尺度変数）の場合に用いる。対になる変数が間隔尺度変数，非尺度変数の場合は，階級分けして集計しなければならない。</p>
+<p>用いるのは 1 変量の場合の度数分布を作成するのと同じ freqtable() である。</p>
+<p>esoph はフランスにおける喫煙・飲酒と食道癌のケース・コントロール研究の結果である。集計データなので，元データに展開したものを用いる。</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">esoph</span> <span class="o">=</span>  <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s">&quot;datasets&quot;</span><span class="p">,</span> <span class="s">&quot;esoph&quot;</span><span class="p">)</span>
+<span class="n">insertcols!</span><span class="p">(</span><span class="n">esoph</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="ss">:which</span> <span class="o">=&gt;</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
+<span class="n">size</span><span class="p">(</span><span class="n">esoph</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
+<span class="n">first</span><span class="p">(</span><span class="n">esoph</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
+<span class="p">(</span><span class="n">sum</span><span class="p">(</span><span class="n">esoph</span><span class="o">.</span><span class="n">NCases</span><span class="p">),</span> <span class="n">sum</span><span class="p">(</span><span class="n">esoph</span><span class="o">.</span><span class="n">NControls</span><span class="p">))</span> <span class="o">|&gt;</span> <span class="n">println</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>(88, 6)
+<span class="ansi-bold">2×6 DataFrame</span>
+<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> AgeGp </span><span class="ansi-bold"> AlcGp     </span><span class="ansi-bold"> TobGp    </span><span class="ansi-bold"> NCases </span><span class="ansi-bold"> NControls </span><span class="ansi-bold"> which  </span>
+<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Cat…  </span><span class="ansi-black-intense-fg"> Cat…      </span><span class="ansi-black-intense-fg"> Cat…     </span><span class="ansi-black-intense-fg"> Int32  </span><span class="ansi-black-intense-fg"> Int32     </span><span class="ansi-black-intense-fg"> String </span>
+─────┼───────────────────────────────────────────────────────
+   1 │ 25-34  0-39g/day  0-9g/day       0         40
+   2 │ 25-34  0-39g/day  10-19          0         10
+(200, 975)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">ESOPH</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="k">in</span> <span class="n">eachrow</span><span class="p">(</span><span class="n">esoph</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">which</span> <span class="o">=</span> <span class="s">&quot;Case&quot;</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">row</span><span class="o">.</span><span class="n">NCases</span>
+        <span class="n">push!</span><span class="p">(</span><span class="n">ESOPH</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">which</span> <span class="o">=</span> <span class="s">&quot;Control&quot;</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">row</span><span class="o">.</span><span class="n">NControls</span>
+        <span class="n">push!</span><span class="p">(</span><span class="n">ESOPH</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">freqtable</span><span class="p">(</span><span class="n">ESOPH</span><span class="o">.</span><span class="n">which</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>2-element Named Vector{Int64}
+Dim1    │ 
+────────┼────
+Case    │ 200
+Control │ 975</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">select!</span><span class="p">(</span><span class="n">ESOPH</span><span class="p">,</span> <span class="n">Not</span><span class="p">([</span><span class="ss">:NCases</span><span class="p">,</span> <span class="ss">:NControls</span><span class="p">]));</span> <span class="c"># 症例数の 2 列を除く</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">ESOPH</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
+<span class="n">first</span><span class="p">(</span><span class="n">ESOPH</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>(1175, 4)
+<span class="ansi-bold">5×4 DataFrame</span>
+<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> AgeGp </span><span class="ansi-bold"> AlcGp     </span><span class="ansi-bold"> TobGp    </span><span class="ansi-bold"> which   </span>
+<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Cat…  </span><span class="ansi-black-intense-fg"> Cat…      </span><span class="ansi-black-intense-fg"> Cat…     </span><span class="ansi-black-intense-fg"> String  </span>
+─────┼─────────────────────────────────────
+   1 │ 25-34  0-39g/day  0-9g/day  Control
+   2 │ 25-34  0-39g/day  0-9g/day  Control
+   3 │ 25-34  0-39g/day  0-9g/day  Control
+   4 │ 25-34  0-39g/day  0-9g/day  Control
+   5 │ 25-34  0-39g/day  0-9g/day  Control
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">freqtable</span><span class="p">(</span><span class="n">ESOPH</span><span class="o">.</span><span class="n">AgeGp</span><span class="p">,</span> <span class="n">ESOPH</span><span class="o">.</span><span class="n">AlcGp</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>6×4 Named Matrix{Int64}
+Dim1 ╲ Dim2 │ &#34;0-39g/day&#34;      &#34;40-79&#34;     &#34;80-119&#34;       &#34;120+&#34;
+────────────┼───────────────────────────────────────────────────
+&#34;25-34&#34;     │          61           45            5            6
+&#34;35-44&#34;     │          90           84           20           14
+&#34;45-54&#34;     │          79          101           51           28
+&#34;55-64&#34;     │         101          106           67           44
+&#34;65-74&#34;     │          82           78           42           14
+&#34;75+&#34;       │          31           16            4            6
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">freqtable</span><span class="p">(</span><span class="n">ESOPH</span><span class="o">.</span><span class="n">AgeGp</span><span class="p">,</span> <span class="n">ESOPH</span><span class="o">.</span><span class="n">TobGp</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>6×4 Named Matrix{Int64}
+Dim1 ╲ Dim2 │ &#34;0-9g/day&#34;     &#34;10-19&#34;     &#34;20-29&#34;       &#34;30+&#34;
+────────────┼───────────────────────────────────────────────
+&#34;25-34&#34;     │         70          20          11          16
+&#34;35-44&#34;     │        111          50          30          17
+&#34;45-54&#34;     │        118          70          41          30
+&#34;55-64&#34;     │        142          88          50          38
+&#34;65-74&#34;     │        130          50          30           6
+&#34;75+&#34;       │         32          16           3           6
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">RDatasets</span>
@@ -16711,13 +17024,13 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">2.1.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12414;&#12394;&#12356;&#22580;&#21512;<a class="anchor-link" href="#2.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">&#182;</a></h2><h3 id="2.1.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">2.1.1.&#12288;&#12381;&#12428;&#12382;&#12428;&#12398;&#38306;&#25968;&#12434;&#20351;&#12358;<a class="anchor-link" href="#2.1.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>変数の対ごとに，関数を適用する。変数の指定法は色々ある。</p>
+<h2 id="2.2.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%EF%BC%8C%E5%85%B1%E5%88%86%E6%95%A3">2.2.&#12288;&#30456;&#38306;&#20418;&#25968;&#65292;&#20849;&#20998;&#25955;<a class="anchor-link" href="#2.2.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%EF%BC%8C%E5%85%B1%E5%88%86%E6%95%A3">&#182;</a></h2><h3 id="2.2.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">2.2.1.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12414;&#12394;&#12356;&#22580;&#21512;<a class="anchor-link" href="#2.2.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">&#182;</a></h3><h4 id="2.2.1.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">2.2.1.1.&#12288;&#12381;&#12428;&#12382;&#12428;&#12398;&#38306;&#25968;&#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.1.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h4><p>変数の対ごとに，関数を適用する。変数の指定法は色々ある。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">cor</span><span class="p">(</span><span class="n">airquality2</span><span class="o">.</span><span class="n">Ozone</span><span class="p">,</span> <span class="n">airquality2</span><span class="o">.</span><span class="n">Temp</span><span class="p">)</span>         <span class="o">|&gt;</span> <span class="n">println</span>
@@ -16764,12 +17077,12 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.1.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">2.1.2.&#12288;combine() &#12434;&#20351;&#12358;<a class="anchor-link" href="#2.1.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3>
+<h4 id="2.2.1.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">2.2.1.2.&#12288;combine() &#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.1.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h4>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">combine</span><span class="p">(</span><span class="n">airquality2</span><span class="p">,</span>
@@ -16793,7 +17106,7 @@ Temp
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
 
 
 
@@ -16810,14 +17123,14 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">2.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h2><h3 id="2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">2.2.1.&#12288;&#12381;&#12428;&#12382;&#12428;&#12398;&#38306;&#25968;&#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>欠損値が含まれるデータの場合は，両方の変数がともに missing でないデータ対のみが分析に使われる。</p>
+<h3 id="2.2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">2.2.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#2.2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h3><h4 id="2.2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">2.2.2.1.&#12288;&#12381;&#12428;&#12382;&#12428;&#12398;&#38306;&#25968;&#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h4><p>欠損値が含まれるデータの場合は，両方の変数がともに missing でないデータ対のみが分析に使われる。</p>
 <p>方法はいくつかあるが，airquality2 を作ったときと同じように，select() で 2 変数のみを含むデータフレームを作り，dropmissing() で欠損値を含むデータを除くのがもっとも簡単であろう。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">dropmissing</span><span class="p">(</span><span class="n">airquality</span><span class="p">[</span><span class="o">:</span><span class="p">,</span> <span class="p">[</span><span class="ss">:Ozone</span><span class="p">,</span> <span class="ss">:Temp</span><span class="p">]]);</span>
@@ -16837,7 +17150,7 @@ Temp
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
 
 
 
@@ -16854,7 +17167,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">cor</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Ozone</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">Temp</span><span class="p">)</span>         <span class="o">|&gt;</span> <span class="n">println</span>
@@ -16895,13 +17208,13 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">2.2.2.&#12288;combine() &#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>欠損値処理を行う無名関数の記述が長いので，何回も使う場合は関数定義をしておくとよい。</p>
+<h3 id="2.2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">2.2.2.2.&#12288;combine() &#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>欠損値処理を行う無名関数の記述が長いので，何回も使う場合は関数定義をしておくとよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">cor2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="n">cor</span><span class="p">(</span><span class="kt">Matrix</span><span class="p">(</span><span class="n">dropmissing</span><span class="p">(</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))))[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
@@ -16928,7 +17241,7 @@ Temp
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
 
 
 
@@ -16945,7 +17258,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">corspearman</span><span class="p">(</span><span class="n">airquality2</span><span class="o">.</span><span class="n">Ozone</span><span class="p">,</span> <span class="n">airquality2</span><span class="o">.</span><span class="n">Temp</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
@@ -16982,14 +17295,14 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="3.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%EF%BC%8C%E5%88%86%E6%95%A3%E3%83%BB%E5%85%B1%E5%88%86%E6%95%A3%E8%A1%8C%E5%88%97">3.&#12288;&#30456;&#38306;&#20418;&#25968;&#34892;&#21015;&#65292;&#20998;&#25955;&#12539;&#20849;&#20998;&#25955;&#34892;&#21015;<a class="anchor-link" href="#3.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%EF%BC%8C%E5%88%86%E6%95%A3%E3%83%BB%E5%85%B1%E5%88%86%E6%95%A3%E8%A1%8C%E5%88%97">&#182;</a></h1><p>3 個以上の変数を含むデータにおいて，すべての2変数の組み合わせにおける統計量は，相関係数行列，分散共分散行列として得られる。</p>
-<h2 id="3.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">3.1.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12414;&#12394;&#12356;&#22580;&#21512;<a class="anchor-link" href="#3.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">&#182;</a></h2><p>関連する変数すべてに欠損値がない場合はそれぞれの関数に行列変換したデータフレームを与えればよい。</p>
+<h2 id="2.3.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%EF%BC%8C%E5%88%86%E6%95%A3%E3%83%BB%E5%85%B1%E5%88%86%E6%95%A3%E8%A1%8C%E5%88%97">2.3.&#12288;&#30456;&#38306;&#20418;&#25968;&#34892;&#21015;&#65292;&#20998;&#25955;&#12539;&#20849;&#20998;&#25955;&#34892;&#21015;<a class="anchor-link" href="#2.3.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E8%A1%8C%E5%88%97%EF%BC%8C%E5%88%86%E6%95%A3%E3%83%BB%E5%85%B1%E5%88%86%E6%95%A3%E8%A1%8C%E5%88%97">&#182;</a></h2><p>3 個以上の変数を含むデータにおいて，すべての2変数の組み合わせにおける統計量は，相関係数行列，分散共分散行列として得られる。</p>
+<h3 id="2.3.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">2.3.1.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12414;&#12394;&#12356;&#22580;&#21512;<a class="anchor-link" href="#2.3.1.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88">&#182;</a></h3><p>関連する変数すべてに欠損値がない場合はそれぞれの関数に行列変換したデータフレームを与えればよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">cor</span><span class="p">(</span><span class="kt">Matrix</span><span class="p">(</span><span class="n">airquality2</span><span class="p">))</span> <span class="o">|&gt;</span> <span class="n">display</span>
@@ -17030,7 +17343,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">corspearman</span><span class="p">(</span><span class="kt">Matrix</span><span class="p">(</span><span class="n">airquality2</span><span class="p">))</span> <span class="o">|&gt;</span> <span class="n">display</span>
@@ -17071,7 +17384,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">corkendall</span><span class="p">(</span><span class="kt">Matrix</span><span class="p">(</span><span class="n">airquality2</span><span class="p">))</span> <span class="o">|&gt;</span> <span class="n">display</span>
@@ -17112,7 +17425,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">cov</span><span class="p">(</span><span class="kt">Matrix</span><span class="p">(</span><span class="n">airquality2</span><span class="p">))</span> <span class="o">|&gt;</span> <span class="n">display</span>
@@ -17153,7 +17466,7 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">3.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h2><p>対処法は 2 つある。1 つは，dropmissing() によって欠損値を含まない（リストワイズ除去）データフレームにして 「3.1.　欠損値を含まない場合」 を適用する。</p>
+<h3 id="2.3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">2.3.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#2.3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h3><p>対処法は 2 つある。1 つは，dropmissing() によって欠損値を含まない（リストワイズ除去）データフレームにして 「3.1.　欠損値を含まない場合」 を適用する。</p>
 <p>もう 1 つは，すべての 2 変数の組み合わせにおいて，2 変数の場合に示したペアワイズ除去により統計量を計算する。</p>
 <p>そのための関数を以下に示しておく。</p>
 
@@ -17161,7 +17474,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">function</span> <span class="n">multi</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">FUNC</span><span class="p">;</span> <span class="n">samplesize</span><span class="o">=</span><span class="nb">false</span><span class="p">)</span>
@@ -17197,7 +17510,7 @@ Temp
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
 
 
 
@@ -17221,7 +17534,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span> <span class="n">Not</span><span class="p">([</span><span class="ss">:Month</span><span class="p">,</span> <span class="ss">:Day</span><span class="p">]))</span>
@@ -17283,7 +17596,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">multi</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">corspearman</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">display</span>
@@ -17324,7 +17637,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">multi</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">corkendall</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">display</span>
@@ -17365,7 +17678,7 @@ Temp
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">multi</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">cov</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">display</span>
@@ -17401,6 +17714,109 @@ Temp
 
 </div>
 
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="3.%E3%80%80%E5%A4%9A%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">3.&#12288;&#22810;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#3.%E3%80%80%E5%A4%9A%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><h2 id="3.1.-%E5%A4%9A%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">3.1. &#22810;&#37325;&#12463;&#12525;&#12473;&#38598;&#35336;&#34920;<a class="anchor-link" href="#3.1.-%E5%A4%9A%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">&#182;</a></h2><p>3 重，4 重...のクロス集計も，2.1. で用いた freqtabs() で行う。</p>
+<p>REPL など，環境によっては集計表すべてを表示するのに工夫が必要なことがある。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">freqtable</span><span class="p">(</span><span class="n">ESOPH</span><span class="o">.</span><span class="n">AgeGp</span><span class="p">,</span> <span class="n">ESOPH</span><span class="o">.</span><span class="n">AlcGp</span><span class="p">,</span> <span class="n">ESOPH</span><span class="o">.</span><span class="n">TobGp</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">ESOPH.TobGp: &quot;</span><span class="p">,</span> <span class="n">names</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">3</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="o">:</span><span class="p">,</span> <span class="o">:</span><span class="p">,</span> <span class="n">i</span><span class="p">])</span>
+<span class="k">end</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+ESOPH.TobGp: 0-9g/day
+6×4 Named Matrix{Int64}
+Dim1 ╲ Dim2 │ &#34;0-39g/day&#34;      &#34;40-79&#34;     &#34;80-119&#34;       &#34;120+&#34;
+────────────┼───────────────────────────────────────────────────
+&#34;25-34&#34;     │          40           27            2            1
+&#34;35-44&#34;     │          60           35           11            5
+&#34;45-54&#34;     │          47           44           19            8
+&#34;55-64&#34;     │          51           49           27           15
+&#34;65-74&#34;     │          53           51           19            7
+&#34;75+&#34;       │          19            7            2            4
+
+ESOPH.TobGp: 10-19
+6×4 Named Matrix{Int64}
+Dim1 ╲ Dim2 │ &#34;0-39g/day&#34;      &#34;40-79&#34;     &#34;80-119&#34;       &#34;120+&#34;
+────────────┼───────────────────────────────────────────────────
+&#34;25-34&#34;     │          10            7            1            2
+&#34;35-44&#34;     │          15           26            6            3
+&#34;45-54&#34;     │          18           25           20            7
+&#34;55-64&#34;     │          25           27           23           13
+&#34;65-74&#34;     │          18           13           16            3
+&#34;75+&#34;       │           8            4            2            2
+
+ESOPH.TobGp: 20-29
+6×4 Named Matrix{Int64}
+Dim1 ╲ Dim2 │ &#34;0-39g/day&#34;      &#34;40-79&#34;     &#34;80-119&#34;       &#34;120+&#34;
+────────────┼───────────────────────────────────────────────────
+&#34;25-34&#34;     │           6            4            0            1
+&#34;35-44&#34;     │           7           15            2            6
+&#34;45-54&#34;     │          10           20            6            5
+&#34;55-64&#34;     │          15           21            9            5
+&#34;65-74&#34;     │           9           14            5            2
+&#34;75+&#34;       │           0            3            0            0
+
+ESOPH.TobGp: 30+
+6×4 Named Matrix{Int64}
+Dim1 ╲ Dim2 │ &#34;0-39g/day&#34;      &#34;40-79&#34;     &#34;80-119&#34;       &#34;120+&#34;
+────────────┼───────────────────────────────────────────────────
+&#34;25-34&#34;     │           5            7            2            2
+&#34;35-44&#34;     │           8            8            1            0
+&#34;45-54&#34;     │           4           12            6            8
+&#34;55-64&#34;     │          10            9            8           11
+&#34;65-74&#34;     │           2            0            2            2
+&#34;75+&#34;       │           4            2            0            0
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
