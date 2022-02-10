@@ -14538,7 +14538,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>最新バージョン 2022-02-02 16:51
+<pre>最新バージョン 2022-02-10 23:15
 </pre>
 </div>
 </div>
@@ -14551,7 +14551,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="1.%E3%80%80%E4%B8%80%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">1.&#12288;&#19968;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#1.%E3%80%80%E4%B8%80%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><p>サンプルサイズ，（算術）平均値，不偏分散，標準偏差は基本統計量と呼ばれる。その他に五数要約値である最小値，第一四分位数，中央値（第二四分位数），第三四分位数，最大値も必要である。</p>
-<p>RDatasets 中の airquality データセットを用いて例示する。</p>
+<p><code>RDatasets</code> 中の <code>airquality</code> データセットを用いて例示する。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14609,7 +14609,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Ozone, Solar_R は欠損値を含むので取り扱いに注意が必要である。dropmissing() により欠損値をリストワイズ除去したデータフレームも作っておく。同時に，分析に必要のない変数を「選択しない」（それ以外を選択する）ために select() を使う。</p>
+<p><code>Ozone</code>, <code>Solar_R</code> は欠損値を含むので取り扱いに注意が必要である。<code>dropmissing()</code> により欠損値をリストワイズ除去したデータフレームも作っておく。同時に，分析に必要のない変数を「選択しない」（それ以外を選択する）ために <code>select()</code> を使う。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14666,7 +14666,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">1.1.&#12288;&#19968;&#22793;&#25968;&#12398;&#22580;&#21512;<a class="anchor-link" href="#1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2><h3 id="1.1.1.%E3%80%80%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88%E9%87%8F">1.1.1.&#12288;&#22522;&#30990;&#32113;&#35336;&#37327;<a class="anchor-link" href="#1.1.1.%E3%80%80%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88%E9%87%8F">&#182;</a></h3><p>単変量の基礎統計量を求める関数として，sum(), mean(), var(), std(), median(), quantile() がある。</p>
+<h2 id="1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">1.1.&#12288;&#19968;&#22793;&#25968;&#12398;&#22580;&#21512;<a class="anchor-link" href="#1.1.%E3%80%80%E4%B8%80%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2><h3 id="1.1.1.%E3%80%80%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88%E9%87%8F">1.1.1.&#12288;&#22522;&#30990;&#32113;&#35336;&#37327;<a class="anchor-link" href="#1.1.1.%E3%80%80%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88%E9%87%8F">&#182;</a></h3><p>単変量の基礎統計量を求める関数として，<code>sum()</code>, <code>mean()</code>, <code>var()</code>, <code>std()</code>, <code>median()</code>, <code>quantile()</code> がある。</p>
 <p>個別の変数に対して適用する場合は以下のようにする。</p>
 
 </div>
@@ -14711,7 +14711,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Ozone には欠損値 missing が含まれているので，平均値を求めるためには前もって skipmissing() を適用しなければならない。</p>
+<p><code>Ozone</code> には欠損値 <code>missing</code> が含まれているので，平均値を求めるためには前もって <code>skipmissing()</code> を適用しなければならない。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14754,8 +14754,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>何回も Ozone について統計処理をする場合，使用するたびに skipmissing() するのは無駄なので，結果を変数に代入しておけばよい。</p>
-<p>なお，以下の使用例で最後に |&gt; plintln をつけているのはこの資料作成ツールのくせに対応するためなので，REPL モードで実行する場合は不要である。</p>
+<p>何回も <code>Ozone</code> について統計処理をする場合，使用するたびに <code>skipmissing()</code> するのは無駄なので，結果を変数に代入しておけばよい。</p>
+<p>なお，以下の使用例で最後に <code>|&gt; plintln</code> をつけているのはこの資料作成ツールのくせに対応するためなので，REPL モードで実行する場合は不要である。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14801,7 +14801,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>なお，airquality2 は一つでも欠損値を含む行は削除しているので，airquality2 においては skipmissing() を使う必要はないが，サンプルサイズが異なるので，結果が違うことに注意する必要がある。</p>
+<p>なお，<code>airquality2</code> は一つでも欠損値を含む行は削除しているので，<code>airquality2</code> においては <code>skipmissing()</code> を使う必要はないが，サンプルサイズが異なるので，結果が違うことに注意する必要がある。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14844,7 +14844,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>データの個数は length() で確認できるが skipmissing() で得られるデータは使用できない。以下で定義するような filter() を使う必要がある。filter() は，欠損値を除くデータを作る。skipmissing() は欠損値を含むデータというデータ型を作るだけで，実際に missing が除去されるわけではない。しかし，他の統計関数では skipmissing() による場合も filter(!ismissing, ) による場合も結果は同じである。</p>
+<p>データの個数は <code>length()</code> で確認できるが <code>skipmissing()</code> で得られるデータは使用できない。以下で定義するような <code>filter()</code> を使う必要がある。<code>filter()</code> は，欠損値を除くデータを作る。<code>skipmissing()</code> は欠損値を含むデータというデータ型を作るだけで，実際に <code>missing</code> が除去されるわけではない。しかし，他の統計関数では <code>skipmissing()</code> による場合も <code>filter(!ismissing, )</code> による場合も結果は同じである。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14892,7 +14892,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.1.2.%E3%80%80%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%AB%E5%80%A4">1.1.2.&#12288;&#12497;&#12540;&#12475;&#12531;&#12479;&#12452;&#12523;&#20516;<a class="anchor-link" href="#1.1.2.%E3%80%80%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%AB%E5%80%A4">&#182;</a></h3><p>パーセンタイル値は quantile() で求める。第 2 引数で 任意の q 値をベクトルで指定できる。</p>
+<h3 id="1.1.2.%E3%80%80%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%AB%E5%80%A4">1.1.2.&#12288;&#12497;&#12540;&#12475;&#12531;&#12479;&#12452;&#12523;&#20516;<a class="anchor-link" href="#1.1.2.%E3%80%80%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%AB%E5%80%A4">&#182;</a></h3><p>パーセンタイル値は <code>quantile()</code> で求める。第 2 引数で 任意の <code>q</code> 値をベクトルで指定できる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14983,8 +14983,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.1.3.%E3%80%80%E5%BA%A6%E6%95%B0%E5%88%86%E5%B8%83">1.1.3.&#12288;&#24230;&#25968;&#20998;&#24067;<a class="anchor-link" href="#1.1.3.%E3%80%80%E5%BA%A6%E6%95%B0%E5%88%86%E5%B8%83">&#182;</a></h3><p>カテゴリー変数の度数分布は freqtable() で求める。freqtable() は欠損値 missing の個数もカウントする。</p>
-<p>chickwts は，餌の添加物（Feed）の種類による雛鳥の体重（Weight）のデータセットである。</p>
+<h3 id="1.1.3.%E3%80%80%E5%BA%A6%E6%95%B0%E5%88%86%E5%B8%83">1.1.3.&#12288;&#24230;&#25968;&#20998;&#24067;<a class="anchor-link" href="#1.1.3.%E3%80%80%E5%BA%A6%E6%95%B0%E5%88%86%E5%B8%83">&#182;</a></h3><p>カテゴリー変数の度数分布は <code>freqtable()</code> で求める。<code>freqtable()</code> は欠損値 <code>missing</code> の個数もカウントする。</p>
+<p><code>chickwts</code> は，餌の添加物（<code>Feed</code>）の種類による雛鳥の体重（<code>Weight</code>）のデータセットである。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15038,9 +15038,9 @@ Dim1        │
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="1.2.%E3%80%80%E8%A4%87%E6%95%B0%E3%81%AE%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">1.2.&#12288;&#35079;&#25968;&#12398;&#22793;&#25968;&#12398;&#22580;&#21512;<a class="anchor-link" href="#1.2.%E3%80%80%E8%A4%87%E6%95%B0%E3%81%AE%E5%A4%89%E6%95%B0%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h2><p>分析対象が複数の変数の場合に，変数を 1 つずつ分析するのは効率が悪い。</p>
-<p>まとめて処理するために，eachcol(), describe(), combine() 関数がある。</p>
-<h3 id="1.2.1.%E3%80%80eachcol()-%E3%82%92%E4%BD%BF%E3%81%86">1.2.1.&#12288;eachcol() &#12434;&#20351;&#12358;<a class="anchor-link" href="#1.2.1.%E3%80%80eachcol()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>eachcol() はデータフレームの各列に対して関数を適用し，結果をベクトルとして返す。</p>
-<p>mean の後に . がついているのは，mean が複数の要素（データフレームの各列）に対して処理を行うようにするためである。</p>
+<p>まとめて処理するために，<code>eachcol()</code>, <code>describe()</code>, <code>combine()</code> 関数がある。</p>
+<h3 id="1.2.1.%E3%80%80eachcol()-%E3%82%92%E4%BD%BF%E3%81%86">1.2.1.&#12288;eachcol() &#12434;&#20351;&#12358;<a class="anchor-link" href="#1.2.1.%E3%80%80eachcol()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p><code>eachcol()</code> はデータフレームの各列に対して関数を適用し，結果をベクトルとして返す。</p>
+<p><code>mean</code> の後に <code>.</code> がついているのは，<code>mean</code> が複数の要素（データフレームの各列）に対して処理を行うようにするためである。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15090,9 +15090,9 @@ Dim1        │
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>REPL での出力と，println() での出力形式が異なるので，DataFrame() にしてから println() すればよい。</p>
-<p>なお，そのままでは各行の変数名が表示されないので，DataFrame() で，variable=names(データフレーム名) とすれば 1 列目に変数名が付加される。</p>
-<p>DataFrame() の中での，a=b という指定は，「変数 b を列名 a としてデータフレームに含める」という意味である（a と b が同じでも構わない）。</p>
+<p>REPL での出力と，<code>println()</code> での出力形式が異なるので，<code>DataFrame()</code> にしてから <code>println()</code> すればよい。</p>
+<p>なお，そのままでは各行の変数名が表示されないので，<code>DataFrame()</code> で，<code>variable=names(データフレーム名)</code> とすれば 1 列目に変数名が付加される。</p>
+<p><code>DataFrame()</code> の中での，<code>a=b</code> という指定は，「変数 <code>b</code> を列名 <code>a</code> としてデータフレームに含める」という意味である（<code>a</code> と <code>b</code> が同じでも構わない）。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15142,8 +15142,8 @@ Dim1        │
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>各変数に欠損値が含まれる場合には skipmissing() した後に統計関数を適用しなければならないので，以下のようにする。
-map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定義される関数を適用する。関数は普通の関数と無名関数の場合がある。無名関数は「仮引数 -&gt; 関数定義」の形をしている。</p>
+<p>各変数に欠損値が含まれる場合には <code>skipmissing()</code> した後に統計関数を適用しなければならないので，以下のようにする。
+<code>map()</code> は，第 2 引数のそれぞれの要素に対して 第 1 引数で定義される関数を適用する。関数は普通の関数と無名関数の場合がある。無名関数は「仮引数 -&gt; 関数定義」の形をしている。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15193,7 +15193,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>上の例で使用した無名関数と同じことをする普通の関数として定義し，それを map() で使用する場合は以下のようになる。</p>
+<p>上の例で使用した無名関数と同じことをする普通の関数として定義し，それを <code>map()</code> で使用する場合は以下のようになる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15243,7 +15243,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>複数の統計量を計算してそれらを DataFtame() でまとめて一覧表にすることができる。</p>
+<p>複数の統計量を計算してそれらを <code>DataFtame()</code> でまとめて一覧表にすることができる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15289,7 +15289,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>このように map() を使う方法は，同じような指定を何回も繰り返さなければならないが，必要な処理をまとめて関数化しておけば 1 行の関数呼び出しで実行できるので簡単に使用できる。</p>
+<p>このように <code>map()</code> を使う方法は，同じような指定を何回も繰り返さなければならないが，必要な処理をまとめて関数化しておけば 1 行の関数呼び出しで実行できるので簡単に使用できる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15425,13 +15425,13 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.2.2.%E3%80%80describe()-%E3%82%92%E4%BD%BF%E3%81%86">1.2.2.&#12288;describe() &#12434;&#20351;&#12358;<a class="anchor-link" href="#1.2.2.%E3%80%80describe()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>describe() では，より簡単に複数の変数に対して複数の統計量をまとめて求めることができる。</p>
-<p>必要な統計量は第 2 引数以降に任意の順序でシンボルによって列挙する。指定できるのは :mean, :std, :min, :q25, :median, :q75, :max, :nunique, :nmissing, :first, :last, :eltype である。</p>
-<p>すべての統計量を計算するときは :all を指定すればよい。</p>
-<p>describe() には総和 sum()，不偏分散 var() は実装されていない。</p>
-<p>describe() ではパーセンタイル値は q0(min), q25, q50(median), q75, q100(max) を求めることができる。</p>
+<h3 id="1.2.2.%E3%80%80describe()-%E3%82%92%E4%BD%BF%E3%81%86">1.2.2.&#12288;<code>describe()</code> &#12434;&#20351;&#12358;<a class="anchor-link" href="#1.2.2.%E3%80%80describe()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p><code>describe()</code> では，より簡単に複数の変数に対して複数の統計量をまとめて求めることができる。</p>
+<p>必要な統計量は第 2 引数以降に任意の順序でシンボルによって列挙する。指定できるのは <code>:mean</code>, <code>:std</code>, <code>:min</code>, <code>:q25</code>, <code>:median</code>, <code>:q75</code>, <code>:max</code>, <code>:nunique</code>, <code>:nmissing</code>, <code>:first</code>, <code>:last</code>, <code>:eltype</code> である。</p>
+<p>すべての統計量を計算するときは <code>:all</code> を指定すればよい。</p>
+<p><code>describe()</code> には総和 <code>sum()</code>，不偏分散 <code>var()</code> は実装されていない。</p>
+<p>describe()<code>ではパーセンタイル値は</code>q0<code>(</code>min<code>),</code>q25<code>,</code>q50<code>(</code>median<code>),</code>q75<code>,</code>q100<code>(</code>max`) を求めることができる。</p>
 <p>なお，REPL では結果の出力桁数（幅）により表示が打ち切られる。
-以下のように printlins() で明示的に出力すれば打ち切られることはない。
+以下のように <code>printlins()</code> で明示的に出力すれば打ち切られることはない。
 ただし，物理的な出力桁数の制限により折り返し表示されるので見にくくなることはある。</p>
 
 </div>
@@ -15482,8 +15482,8 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>sum(), var() に対応する関数を定義しておく。指定できるのは :sum, :mean, :var, :std, :min, :q25, :median, :q75, :max, :nmissing である。</p>
-<p>すべての統計量を計算するときは，統計量の指定をしないようにするか :all を指定すればよい。</p>
+<p><code>sum()</code>, <code>var()</code> に対応する関数を定義しておく。指定できるのは <code>:sum</code>, <code>:mean</code>, :<code>var</code>, <code>:std</code>, <code>:min</code>, <code>:q25</code>, <code>:median</code>, <code>:q75</code>, <code>:max</code>, <code>:nmissing</code> である。</p>
+<p>すべての統計量を計算するときは，統計量の指定をしないようにするか <code>:all</code> を指定すればよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15591,7 +15591,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>元の describe() に :sum と :var　にも対応する別バージョンの関数を呈示しておく。</p>
+<p>元の <code>describe()</code> に <code>:sum</code> と <code>:var</code>　にも対応する別バージョンの関数を呈示しておく。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15660,8 +15660,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>airquality2 = dropmissing(select(airquality, [1, 2, 3, 4]))
-複数の変数に対して，任意の q 値に対するパーセンタイル値を求めるには，以下のような関数を定義すればよい。missing を除去して計算される。</p>
+<p>複数の変数に対して，任意の <code>q</code> 値に対するパーセンタイル値を求めるには，以下のような関数を定義すればよい。<code>missing</code> を除去して計算される。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15802,7 +15801,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>パーセンタイル値を求める q 値を指定できる。</p>
+<p>パーセンタイル値を求める <code>q</code> 値を指定できる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15887,17 +15886,17 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="1.2.3.%E3%80%80combine(),-select()/select!(),-transform()/transform!()-%E3%82%92%E4%BD%BF%E3%81%86">1.2.3.&#12288;combine(), select()/select!(), transform()/transform!() &#12434;&#20351;&#12358;<a class="anchor-link" href="#1.2.3.%E3%80%80combine(),-select()/select!(),-transform()/transform!()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>Hadley Wickham が書いた論文 "The Split-Apply-Combine Strategy for Data Analysis" にあるように，統計解析は「データをグループ化し(split)，それぞれのグループに関数を適用し(apply)，結果をまとめ上げる(combine)」という三段階からなる。</p>
-<p>Julia ではこれを，combin2, select/select!, transform/transform! で行う。</p>
-<p>combine() は，第 1 引数で渡されたデータフレームについて，第 2 引数以降で指示された関数を適用し，結果をデータフレームにまとめる。
-本来は複数のサブグループに対して用いるものであるが，データフレーム全体も 1 個のサブグループに過ぎないので，適用してもなんの問題もない。</p>
+<p>Julia ではこれを，<code>combin2</code>, <code>select</code>/<code>select!</code>, <code>transform</code>/<code>transform!</code> で行う。</p>
+<p><code>combine()</code> は，第 1 引数で渡されたデータフレームについて，第 2 引数以降で指示された関数を適用し，結果をデータフレームにまとめる。</p>
+<p>本来は複数のサブグループに対して用いるものであるが，データフレーム全体も 1 個のサブグループに過ぎないので，適用してもなんの問題もない。</p>
 <p>第 2 引数は何通りかの書き方がある。</p>
 <ul>
-<li>nrow のようにデータフレームを引数とする関数名だけを書く場合。nrow() はデータフレームに作用する関数で，データフレームの行数を返す。結果のデータフレームで，nrow 列に 153 が書かれている。結果は 1 個の数値に限らない。たとえば size() はデータフレームの行数と列数をタプルで返すので，結果の x1 の列に (153, 6) が書かれている。列名の x1 はデフォルトである。quantil() はベクトルを返すが，tuple に変換しないと結果が見にくくなる。</li>
-<li>nrow =&gt; :名前　のように書くと，列名を定義できる。:nrow と書いたので，結果のデータフレームで，列名が n になっている。</li>
-<li>最初の =&gt; の左にあるものはデータフレームの列を示す。シンボル(: がついている）や文字列（" " で囲まれている）や数字（列の番号）などの場合もある。</li>
-<li>最初の =&gt; の右にあるのものは関数（自作の関数も可）または無名関数である。</li>
-<li>関数を何段階か順番に適用するときには無名関数で定義する（=&gt; で関数を数珠つなぎにすることはできない）。</li>
-<li>関数/無名関数の後に =&gt; に続くものがある場合は，それは結果のデータフレームの列名になる（重複する名前は指定できない）。ない場合にはデフォルトでもっともらしい名前が付けられる。</li>
+<li><code>nrow</code> のようにデータフレームを引数とする関数名だけを書く場合。<code>nrow()</code> はデータフレームに作用する関数で，データフレームの行数を返す。結果のデータフレームで，<code>nrow</code> 列に 153 が書かれている。結果は 1 個の数値に限らない。たとえば <code>size()</code> はデータフレームの行数と列数をタプルで返すので，結果の x1 の列に (153, 6) が書かれている。列名の <code>x1</code> はデフォルトである。<code>quantil()</code> はベクトルを返すが，tuple に変換しないと結果が見にくくなる。</li>
+<li><code>nrow =&gt; :名前</code>　のように書くと，列名を定義できる。<code>:nrow</code> と書いたので，結果のデータフレームで，列名が <code>n</code> になっている。</li>
+<li>最初の <code>=&gt;</code> の左にあるものはデータフレームの列を示す。シンボル(<code>:</code> がついている）や文字列（<code>" "</code> で囲まれている）や数字（列の番号）などの場合もある。</li>
+<li>最初の <code>=&gt;</code> の右にあるのものは関数（自作の関数も可）または無名関数である。</li>
+<li>関数を何段階か順番に適用するときには無名関数で定義する（<code>=&gt;</code> で関数を数珠つなぎにすることはできない）。</li>
+<li>関数/無名関数の後に <code>=&gt;</code> に続くものがある場合は，それは結果のデータフレームの列名になる（重複する名前は指定できない）。ない場合にはデフォルトでもっともらしい名前が付けられる。</li>
 </ul>
 
 </div>
@@ -15966,9 +15965,9 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="1.3.%E3%80%80%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%94%E3%81%A8%E3%81%AE%E8%A8%98%E8%BF%B0%E7%B5%B1%E8%A8%88%E9%87%8F">1.3.&#12288;&#12464;&#12523;&#12540;&#12503;&#12372;&#12392;&#12398;&#35352;&#36848;&#32113;&#35336;&#37327;<a class="anchor-link" href="#1.3.%E3%80%80%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E3%81%94%E3%81%A8%E3%81%AE%E8%A8%98%E8%BF%B0%E7%B5%B1%E8%A8%88%E9%87%8F">&#182;</a></h2><p>データフレームをグループを表す変数でグループ化し，それぞれのサブグループごとに統計量を求める。</p>
-<p>airquality データセットの :Month でグループ化する。</p>
-<p>select()/select!() はデータフレームの列を選択する。Not(シンボル)，Not(シンボルベクトル) はそれらを含まないことを表す。</p>
-<p>groupby(データフレーム，グループ化に使う列の指定) でグループ化する。列の指定はベクトルでもよい。</p>
+<p><code>airquality</code> データセットの <code>:Month</code> でグループ化する。</p>
+<p><code>select()</code>/<code>select!()</code> はデータフレームの列を選択する。<code>Not(シンボル)</code>，<code>Not(シンボルベクトル)</code> はそれらを含まないことを表す。</p>
+<p><code>groupby(データフレーム，グループ化に使う列の指定)</code> でグループ化する。列の指定はベクトルでもよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16014,7 +16013,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>gdf[1] は :Month が 5 の場合のサブグループである。</p>
+<p><code>gdf[1]</code> は <code>:Month</code> が 5 の場合のサブグループである。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16061,7 +16060,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>groupby() により分割されたそれぞれの gdf[i] は，データフレームなので，前節に述べた方法をそのまま適用できる。</p>
+<p><code>groupby()</code> により分割されたそれぞれの <code>gdf[i]</code> は，データフレームなので，前節に述べた方法をそのまま適用できる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16217,7 +16216,7 @@ map() は，第 2 引数のそれぞれの要素に対して 第 1 引数で定�
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>for ループで，すべてのサブグループについて分析できる。</p>
+<p><code>for</code> ループで，すべてのサブグループについて分析できる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16417,7 +16416,7 @@ Month: 9
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>必要なら小分けにして表示すればよい。</p>
-<p>result.variable の型は String なので，Wind の結果だけを抽出するには result.variable .== "Wind" とする（:Wind ではないので注意）。</p>
+<p><code>result.variable</code> の型は <code>String</code> なので，<code>Wind</code> の結果だけを抽出するには <code>result.variable .== "Wind"</code> とする（<code>:Wind</code> ではないので注意）。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16472,6 +16471,7 @@ Month: 9
 <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">6</span><span class="o">:</span><span class="mi">9</span>
     <span class="n">append!</span><span class="p">(</span><span class="n">result2</span><span class="p">,</span> <span class="n">temp</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="ss">:Month</span><span class="p">,</span> <span class="n">airquality</span><span class="p">))</span>
 <span class="k">end</span>
+
 <span class="n">result2</span>
 </pre></div>
 
@@ -16505,7 +16505,7 @@ Month: 9
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>月ごとの結果が必要なら Month でソートして表示する。</p>
+<p>月ごとの結果が必要なら <code>Month</code> でソートして表示する。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16742,10 +16742,10 @@ Temp
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">2.&#12288;&#20108;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><p>2変量の統計量は，カテゴリー変数の場合はクロス集計表，間隔尺度変数の場合はピアソンの積率相関係数 cor()，共分散 var()，順序尺度変数の場合はスピアマンの順位相関係数 corspearman()，ケンドールの順位相関係数 corkendall() がある。</p>
+<h1 id="2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">2.&#12288;&#20108;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#2.%E3%80%80%E4%BA%8C%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><p>2 変量の統計量は，カテゴリー変数の場合はクロス集計表，間隔尺度変数の場合はピアソンの積率相関係数 <code>cor()</code>，共分散 <code>var()</code>，順序尺度変数の場合はスピアマンの順位相関係数 <code>corspearman()</code>，ケンドールの順位相関係数 <code>corkendall()</code> がある。</p>
 <h2 id="2.1.%E3%80%80%E4%BA%8C%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">2.1.&#12288;&#20108;&#37325;&#12463;&#12525;&#12473;&#38598;&#35336;&#34920;<a class="anchor-link" href="#2.1.%E3%80%80%E4%BA%8C%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">&#182;</a></h2><p>2 変量の少なくとも 1 つがカテゴリー変数（名義尺度変数，順序尺度変数）の場合に用いる。対になる変数が間隔尺度変数，非尺度変数の場合は，階級分けして集計しなければならない。</p>
-<p>用いるのは 1 変量の場合の度数分布を作成するのと同じ freqtable() である。</p>
-<p>esoph はフランスにおける喫煙・飲酒と食道癌のケース・コントロール研究の結果である。集計データなので，元データに展開したものを用いる。</p>
+<p>用いるのは 1 変量の場合の度数分布を作成するのと同じ <code>freqtable()</code> である。</p>
+<p><code>esoph</code> はフランスにおける喫煙・飲酒と食道癌のケース・コントロール研究の結果である。集計データなので，元データに展開したものを用いる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -17123,8 +17123,8 @@ Dim1 ╲ Dim2 │ &#34;0-9g/day&#34;     &#34;10-19&#34;     &#34;20-29&#34;    
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">2.2.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#2.2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h3><h4 id="2.2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">2.2.2.1.&#12288;&#12381;&#12428;&#12382;&#12428;&#12398;&#38306;&#25968;&#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h4><p>欠損値が含まれるデータの場合は，両方の変数がともに missing でないデータ対のみが分析に使われる。</p>
-<p>方法はいくつかあるが，airquality2 を作ったときと同じように，select() で 2 変数のみを含むデータフレームを作り，dropmissing() で欠損値を含むデータを除くのがもっとも簡単であろう。</p>
+<h3 id="2.2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">2.2.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#2.2.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h3><h4 id="2.2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">2.2.2.1.&#12288;&#12381;&#12428;&#12382;&#12428;&#12398;&#38306;&#25968;&#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.2.1.%E3%80%80%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%AE%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h4><p>欠損値が含まれるデータの場合は，両方の変数がともに <code>missing</code> でないデータ対のみが分析に使われる。</p>
+<p>方法はいくつかあるが，<code>airquality2</code> を作ったときと同じように，<code>select()</code> で 2 変数のみを含むデータフレームを作り，<code>dropmissing()</code> で欠損値を含むデータを除くのがもっとも簡単であろう。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -17208,7 +17208,7 @@ Dim1 ╲ Dim2 │ &#34;0-9g/day&#34;     &#34;10-19&#34;     &#34;20-29&#34;    
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">2.2.2.2.&#12288;combine() &#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>欠損値処理を行う無名関数の記述が長いので，何回も使う場合は関数定義をしておくとよい。</p>
+<h3 id="2.2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">2.2.2.2.&#12288;<code>combine()</code> &#12434;&#20351;&#12358;<a class="anchor-link" href="#2.2.2.2.%E3%80%80combine()-%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h3><p>欠損値処理を行う無名関数の記述が長いので，何回も使う場合は関数定義をしておくとよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -17466,12 +17466,12 @@ Dim1 ╲ Dim2 │ &#34;0-9g/day&#34;     &#34;10-19&#34;     &#34;20-29&#34;    
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">2.3.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#2.3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h3><p>対処法は 2 つある。1 つは，dropmissing() によって欠損値を含まない（リストワイズ除去）データフレームにして 「3.1.　欠損値を含まない場合」 を適用する。</p>
+<h3 id="2.3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">2.3.2.&#12288;&#27424;&#25613;&#20516;&#12434;&#21547;&#12416;&#22580;&#21512;<a class="anchor-link" href="#2.3.2.%E3%80%80%E6%AC%A0%E6%90%8D%E5%80%A4%E3%82%92%E5%90%AB%E3%82%80%E5%A0%B4%E5%90%88">&#182;</a></h3><p>対処法は 2 つある。1 つは，<code>dropmissing()</code> によって欠損値を含まない（リストワイズ除去）データフレームにして 「2.2.1.　欠損値を含まない場合」 を適用する。</p>
 <p>もう 1 つは，すべての 2 変数の組み合わせにおいて，2 変数の場合に示したペアワイズ除去により統計量を計算する。</p>
 <p>そのための関数を以下に示しておく。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
@@ -17494,7 +17494,7 @@ Dim1 ╲ Dim2 │ &#34;0-9g/day&#34;     &#34;10-19&#34;     &#34;20-29&#34;    
         <span class="k">end</span>
     <span class="k">end</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">samplesize</span> <span class="o">?</span> <span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span> <span class="o">:</span> <span class="n">A</span><span class="p">)</span>
-<span class="k">end</span>
+<span class="k">end</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -17502,33 +17502,10 @@ Dim1 ╲ Dim2 │ &#34;0-9g/day&#34;     &#34;10-19&#34;     &#34;20-29&#34;    
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>multi (generic function with 1 method)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>samplesize=false を指定すれば，2変数の組み合わせにおける有効サンプルサイズの行列を返す。そのときには，戻り値を 2 個受け取るので，左辺には 2 個の変数を指定しなければならない。1 つ目は統計量の行列，2 つ目がサンプルサイズ行列である。</p>
+<p><code>samplesize=false</code> を指定すれば，2変数の組み合わせにおける有効サンプルサイズの行列を返す。そのときには，戻り値を 2 個受け取るので，左辺には 2 個の変数を指定しなければならない。1 つ目は統計量の行列，2 つ目がサンプルサイズ行列である。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -17719,7 +17696,7 @@ Dim1 ╲ Dim2 │ &#34;0-9g/day&#34;     &#34;10-19&#34;     &#34;20-29&#34;    
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="3.%E3%80%80%E5%A4%9A%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">3.&#12288;&#22810;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#3.%E3%80%80%E5%A4%9A%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><h2 id="3.1.-%E5%A4%9A%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">3.1. &#22810;&#37325;&#12463;&#12525;&#12473;&#38598;&#35336;&#34920;<a class="anchor-link" href="#3.1.-%E5%A4%9A%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">&#182;</a></h2><p>3 重，4 重...のクロス集計も，2.1. で用いた freqtabs() で行う。</p>
+<h1 id="3.%E3%80%80%E5%A4%9A%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">3.&#12288;&#22810;&#22793;&#37327;&#32113;&#35336;<a class="anchor-link" href="#3.%E3%80%80%E5%A4%9A%E5%A4%89%E9%87%8F%E7%B5%B1%E8%A8%88">&#182;</a></h1><h2 id="3.1.-%E5%A4%9A%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">3.1. &#22810;&#37325;&#12463;&#12525;&#12473;&#38598;&#35336;&#34920;<a class="anchor-link" href="#3.1.-%E5%A4%9A%E9%87%8D%E3%82%AF%E3%83%AD%E3%82%B9%E9%9B%86%E8%A8%88%E8%A1%A8">&#182;</a></h2><p>3 重，4 重...のクロス集計も，2.1. で用いた <code>freqtable()</code> で行う。</p>
 <p>REPL など，環境によっては集計表すべてを表示するのに工夫が必要なことがある。</p>
 
 </div>
