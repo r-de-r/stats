@@ -18474,7 +18474,7 @@ Details:
 <li>残差分析</li>
 </ul>
 <p>残差分析の結果は <code>PowerDivergenceTest(x, lambda=1.0)</code> が返す <code>std.residuals</code> を使用する。</p>
-<p>対応する p 値を表示するために，以下の関数を用意しておくとよい。</p>
+<p>対応する $p$ 値を表示するために，以下の関数を用意しておくとよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -19657,7 +19657,8 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.3.%E3%80%80%E3%83%91%E3%83%AF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B9%E6%A4%9C%E5%AE%9A">2.3.&#12288;&#12497;&#12527;&#12540;&#12480;&#12452;&#12496;&#12540;&#12472;&#12455;&#12531;&#12473;&#26908;&#23450;<a class="anchor-link" href="#2.3.%E3%80%80%E3%83%91%E3%83%AF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B9%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>PowerDivergenceTest(x; lambda = 1.0, theta0 = ones(length(x))/length(x))</p>
+<h2 id="2.3.%E3%80%80%E3%83%91%E3%83%AF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B9%E6%A4%9C%E5%AE%9A">2.3.&#12288;&#12497;&#12527;&#12540;&#12480;&#12452;&#12496;&#12540;&#12472;&#12455;&#12531;&#12473;&#26908;&#23450;<a class="anchor-link" href="#2.3.%E3%80%80%E3%83%91%E3%83%AF%E3%83%BC%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B9%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>関数定義<br>
+PowerDivergenceTest(x; lambda = 1.0, theta0 = ones(length(x))/length(x))</p>
 <p>パワーダイバージェンス検定（Power divergence test）は前節の ピアソンの $\chi^2$，対数尤度比検定（$G^2$ 検定）などを包含する，一般化した検定である。</p>
 $$
 \frac{2}{\lambda(\lambda+1)} \sum_{i=1}^I \sum_{j=1}^J n_{ij} \left [\left ( \frac{n_{ij}}{\hat{n}_{ij}}\right )^\lambda  - 1\right ]
@@ -19696,7 +19697,7 @@ $$<p>ここで，lambda($\lambda$) と適用される検定統計量の対応は
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[115]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
@@ -19725,7 +19726,7 @@ $$<p>ここで，lambda($\lambda$) と適用される検定統計量の対応は
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[115]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -19733,87 +19734,87 @@ $$<p>ここで，lambda($\lambda$) と適用される検定統計量の対応は
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="230" viewBox="0 0 1360 920">
 <defs>
-  <clipPath id="clip440">
+  <clipPath id="clip890">
     <rect x="0" y="0" width="1360" height="920"/>
   </clipPath>
 </defs>
-<path clip-path="url(#clip440)" d="
+<path clip-path="url(#clip890)" d="
 M0 920 L1360 920 L1360 0 L0 0  Z
   " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
 <defs>
-  <clipPath id="clip441">
+  <clipPath id="clip891">
     <rect x="272" y="0" width="953" height="920"/>
   </clipPath>
 </defs>
-<path clip-path="url(#clip440)" d="
+<path clip-path="url(#clip890)" d="
 M189.502 757.381 L1312.76 757.381 L1312.76 47.2441 L189.502 47.2441  Z
   " fill="#ffffff" fill-rule="evenodd" fill-opacity="1"/>
 <defs>
-  <clipPath id="clip442">
+  <clipPath id="clip892">
     <rect x="189" y="47" width="1124" height="711"/>
   </clipPath>
 </defs>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   189.502,757.381 1312.76,757.381 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   221.292,757.381 221.292,776.279 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   574.516,757.381 574.516,776.279 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   927.741,757.381 927.741,776.279 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   1280.97,757.381 1280.97,776.279 
   "/>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 221.292, 806.258)" x="221.292" y="806.258">−2</text>
 </g>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 574.516, 806.258)" x="574.516" y="806.258">−1</text>
 </g>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 927.741, 806.258)" x="927.741" y="806.258">0</text>
 </g>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 1280.97, 806.258)" x="1280.97" y="806.258">1</text>
 </g>
-<path clip-path="url(#clip440)" d="M752.02 829.965 L768.475 873.92 L762.269 873.92 L752.275 847.566 L739.989 873.92 L733.782 873.92 L749.41 839.736 L747.055 833.434 Q745.559 829.424 742.153 829.424 L739.098 829.424 L739.098 824.395 L742.821 824.458 Q750.015 824.554 752.02 829.965 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<path clip-path="url(#clip890)" d="M752.02 829.965 L768.475 873.92 L762.269 873.92 L752.275 847.566 L739.989 873.92 L733.782 873.92 L749.41 839.736 L747.055 833.434 Q745.559 829.424 742.153 829.424 L739.098 829.424 L739.098 824.395 L742.821 824.458 Q750.015 824.554 752.02 829.965 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   189.502,757.381 189.502,47.2441 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   189.502,654.281 170.604,654.281 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   189.502,523.85 170.604,523.85 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   189.502,393.419 170.604,393.419 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   189.502,262.989 170.604,262.989 
   "/>
-<polyline clip-path="url(#clip440)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<polyline clip-path="url(#clip890)" style="stroke:#000000; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   189.502,132.558 170.604,132.558 
   "/>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 134.43, 667.281)" x="134.43" y="667.281">3.4</text>
 </g>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 134.43, 536.85)" x="134.43" y="536.85">3.6</text>
 </g>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 134.43, 406.419)" x="134.43" y="406.419">3.8</text>
 </g>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 134.43, 275.989)" x="134.43" y="275.989">4.0</text>
 </g>
-<g clip-path="url(#clip440)">
+<g clip-path="url(#clip890)">
 <text style="fill:#000000; fill-opacity:1; font-family:Times New Roman,TimesNewRoman,Times,Baskerville,Georgia,serif; font-size:39px; text-anchor:middle;" transform="rotate(0, 134.43, 145.558)" x="134.43" y="145.558">4.2</text>
 </g>
-<path clip-path="url(#clip440)" d="M39.7336 590.483 L49.855 590.483 L49.855 578.42 L54.4065 578.42 L54.4065 590.483 L73.7583 590.483 Q78.1188 590.483 79.3601 589.305 Q80.6014 588.096 80.6014 584.435 L80.6014 578.42 L85.503 578.42 L85.503 584.435 Q85.503 591.215 82.9885 593.793 Q80.4422 596.371 73.7583 596.371 L54.4065 596.371 L54.4065 600.668 L49.855 600.668 L49.855 596.371 L39.7336 596.371 L39.7336 590.483 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M66.2149 540.226 L69.0795 540.226 L69.0795 567.152 Q75.1269 566.771 78.3097 563.524 Q81.4608 560.246 81.4608 554.421 Q81.4608 551.047 80.6332 547.896 Q79.8057 544.713 78.1506 541.594 L83.6888 541.594 Q85.0256 544.745 85.7258 548.055 Q86.426 551.366 86.426 554.771 Q86.426 563.301 81.4608 568.298 Q76.4955 573.264 68.0291 573.264 Q59.2763 573.264 54.1519 568.553 Q48.9957 563.81 48.9957 555.79 Q48.9957 548.596 53.6426 544.427 Q58.2578 540.226 66.2149 540.226 M64.4961 546.082 Q59.69 546.146 56.8255 548.787 Q53.9609 551.397 53.9609 555.726 Q53.9609 560.628 56.73 563.588 Q59.4991 566.516 64.528 566.962 L64.4961 546.082 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M50.9054 507.888 L56.4435 507.888 Q55.1704 510.37 54.5338 513.044 Q53.8972 515.718 53.8972 518.582 Q53.8972 522.943 55.234 525.139 Q56.5708 527.303 59.2444 527.303 Q61.2815 527.303 62.4591 525.744 Q63.605 524.184 64.6553 519.473 L65.1009 517.468 Q66.4377 511.23 68.8885 508.62 Q71.3075 505.978 75.668 505.978 Q80.6332 505.978 83.5296 509.925 Q86.426 513.84 86.426 520.715 Q86.426 523.579 85.8531 526.698 Q85.312 529.786 84.198 533.223 L78.1506 533.223 Q79.8375 529.977 80.6969 526.826 Q81.5244 523.675 81.5244 520.587 Q81.5244 516.45 80.124 514.222 Q78.6917 511.994 76.1136 511.994 Q73.7264 511.994 72.4533 513.617 Q71.1801 515.208 70.0025 520.651 L69.5251 522.688 Q68.3792 528.131 66.0239 530.55 Q63.6368 532.969 59.4991 532.969 Q54.4702 532.969 51.7329 529.404 Q48.9957 525.839 48.9957 519.282 Q48.9957 516.036 49.4731 513.171 Q49.9505 510.307 50.9054 507.888 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M39.7336 490.859 L49.855 490.859 L49.855 478.796 L54.4065 478.796 L54.4065 490.859 L73.7583 490.859 Q78.1188 490.859 79.3601 489.682 Q80.6014 488.472 80.6014 484.812 L80.6014 478.796 L85.503 478.796 L85.503 484.812 Q85.503 491.592 82.9885 494.17 Q80.4422 496.748 73.7583 496.748 L54.4065 496.748 L54.4065 501.045 L49.855 501.045 L49.855 496.748 L39.7336 496.748 L39.7336 490.859 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M50.9054 427.648 L56.4435 427.648 Q55.1704 430.131 54.5338 432.804 Q53.8972 435.478 53.8972 438.342 Q53.8972 442.703 55.234 444.899 Q56.5708 447.063 59.2444 447.063 Q61.2815 447.063 62.4591 445.504 Q63.605 443.944 64.6553 439.234 L65.1009 437.228 Q66.4377 430.99 68.8885 428.38 Q71.3075 425.738 75.668 425.738 Q80.6332 425.738 83.5296 429.685 Q86.426 433.6 86.426 440.475 Q86.426 443.339 85.8531 446.459 Q85.312 449.546 84.198 452.984 L78.1506 452.984 Q79.8375 449.737 80.6969 446.586 Q81.5244 443.435 81.5244 440.348 Q81.5244 436.21 80.124 433.982 Q78.6917 431.754 76.1136 431.754 Q73.7264 431.754 72.4533 433.377 Q71.1801 434.969 70.0025 440.411 L69.5251 442.448 Q68.3792 447.891 66.0239 450.31 Q63.6368 452.729 59.4991 452.729 Q54.4702 452.729 51.7329 449.164 Q48.9957 445.599 48.9957 439.043 Q48.9957 435.796 49.4731 432.932 Q49.9505 430.067 50.9054 427.648 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M39.7336 410.62 L49.855 410.62 L49.855 398.557 L54.4065 398.557 L54.4065 410.62 L73.7583 410.62 Q78.1188 410.62 79.3601 409.442 Q80.6014 408.233 80.6014 404.572 L80.6014 398.557 L85.503 398.557 L85.503 404.572 Q85.503 411.352 82.9885 413.93 Q80.4422 416.508 73.7583 416.508 L54.4065 416.508 L54.4065 420.805 L49.855 420.805 L49.855 416.508 L39.7336 416.508 L39.7336 410.62 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M67.5835 374.654 Q67.5835 381.751 69.2068 384.489 Q70.83 387.226 74.7449 387.226 Q77.8641 387.226 79.7102 385.189 Q81.5244 383.12 81.5244 379.587 Q81.5244 374.717 78.0869 371.789 Q74.6176 368.829 68.8885 368.829 L67.5835 368.829 L67.5835 374.654 M65.1645 362.972 L85.503 362.972 L85.503 368.829 L80.0921 368.829 Q83.3386 370.834 84.8982 373.826 Q86.426 376.818 86.426 381.147 Q86.426 386.621 83.3705 389.868 Q80.2831 393.082 75.1269 393.082 Q69.1113 393.082 66.0557 389.072 Q63.0002 385.03 63.0002 377.041 L63.0002 368.829 L62.4273 368.829 Q58.3851 368.829 56.1889 371.502 Q53.9609 374.144 53.9609 378.95 Q53.9609 382.006 54.693 384.902 Q55.425 387.799 56.8891 390.472 L51.4783 390.472 Q50.237 387.258 49.6322 384.234 Q48.9957 381.21 48.9957 378.346 Q48.9957 370.611 53.006 366.792 Q57.0164 362.972 65.1645 362.972 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M39.7336 345.117 L49.855 345.117 L49.855 333.054 L54.4065 333.054 L54.4065 345.117 L73.7583 345.117 Q78.1188 345.117 79.3601 343.939 Q80.6014 342.729 80.6014 339.069 L80.6014 333.054 L85.503 333.054 L85.503 339.069 Q85.503 345.849 82.9885 348.427 Q80.4422 351.005 73.7583 351.005 L54.4065 351.005 L54.4065 355.302 L49.855 355.302 L49.855 351.005 L39.7336 351.005 L39.7336 345.117 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M49.855 325.351 L49.855 319.495 L85.503 319.495 L85.503 325.351 L49.855 325.351 M35.9778 325.351 L35.9778 319.495 L43.3938 319.495 L43.3938 325.351 L35.9778 325.351 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M50.9054 284.515 L56.4435 284.515 Q55.1704 286.998 54.5338 289.671 Q53.8972 292.345 53.8972 295.209 Q53.8972 299.57 55.234 301.766 Q56.5708 303.931 59.2444 303.931 Q61.2815 303.931 62.4591 302.371 Q63.605 300.811 64.6553 296.101 L65.1009 294.095 Q66.4377 287.857 68.8885 285.247 Q71.3075 282.605 75.668 282.605 Q80.6332 282.605 83.5296 286.552 Q86.426 290.467 86.426 297.342 Q86.426 300.207 85.8531 303.326 Q85.312 306.413 84.198 309.851 L78.1506 309.851 Q79.8375 306.604 80.6969 303.453 Q81.5244 300.302 81.5244 297.215 Q81.5244 293.077 80.124 290.849 Q78.6917 288.621 76.1136 288.621 Q73.7264 288.621 72.4533 290.244 Q71.1801 291.836 70.0025 297.278 L69.5251 299.315 Q68.3792 304.758 66.0239 307.177 Q63.6368 309.596 59.4991 309.596 Q54.4702 309.596 51.7329 306.031 Q48.9957 302.466 48.9957 295.91 Q48.9957 292.663 49.4731 289.799 Q49.9505 286.934 50.9054 284.515 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M39.7336 267.487 L49.855 267.487 L49.855 255.424 L54.4065 255.424 L54.4065 267.487 L73.7583 267.487 Q78.1188 267.487 79.3601 266.309 Q80.6014 265.1 80.6014 261.439 L80.6014 255.424 L85.503 255.424 L85.503 261.439 Q85.503 268.219 82.9885 270.797 Q80.4422 273.375 73.7583 273.375 L54.4065 273.375 L54.4065 277.672 L49.855 277.672 L49.855 273.375 L39.7336 273.375 L39.7336 267.487 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M49.855 247.721 L49.855 241.865 L85.503 241.865 L85.503 247.721 L49.855 247.721 M35.9778 247.721 L35.9778 241.865 L43.3938 241.865 L43.3938 247.721 L35.9778 247.721 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip440)" d="M51.2237 203.957 L56.6982 203.957 Q55.3295 206.44 54.6611 208.954 Q53.9609 211.437 53.9609 213.983 Q53.9609 219.68 57.5894 222.831 Q61.186 225.982 67.7108 225.982 Q74.2357 225.982 77.8641 222.831 Q81.4608 219.68 81.4608 213.983 Q81.4608 211.437 80.7924 208.954 Q80.0921 206.44 78.7235 203.957 L84.1344 203.957 Q85.2802 206.408 85.8531 209.05 Q86.426 211.66 86.426 214.62 Q86.426 222.672 81.3653 227.415 Q76.3045 232.157 67.7108 232.157 Q58.9898 232.157 53.9927 227.383 Q48.9957 222.577 48.9957 214.238 Q48.9957 211.532 49.5686 208.954 Q50.1097 206.376 51.2237 203.957 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><polyline clip-path="url(#clip442)" style="stroke:#009af9; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
+<path clip-path="url(#clip890)" d="M39.7336 590.483 L49.855 590.483 L49.855 578.42 L54.4065 578.42 L54.4065 590.483 L73.7583 590.483 Q78.1188 590.483 79.3601 589.305 Q80.6014 588.096 80.6014 584.435 L80.6014 578.42 L85.503 578.42 L85.503 584.435 Q85.503 591.215 82.9885 593.793 Q80.4422 596.371 73.7583 596.371 L54.4065 596.371 L54.4065 600.668 L49.855 600.668 L49.855 596.371 L39.7336 596.371 L39.7336 590.483 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M66.2149 540.226 L69.0795 540.226 L69.0795 567.152 Q75.1269 566.771 78.3097 563.524 Q81.4608 560.246 81.4608 554.421 Q81.4608 551.047 80.6332 547.896 Q79.8057 544.713 78.1506 541.594 L83.6888 541.594 Q85.0256 544.745 85.7258 548.055 Q86.426 551.366 86.426 554.771 Q86.426 563.301 81.4608 568.298 Q76.4955 573.264 68.0291 573.264 Q59.2763 573.264 54.1519 568.553 Q48.9957 563.81 48.9957 555.79 Q48.9957 548.596 53.6426 544.427 Q58.2578 540.226 66.2149 540.226 M64.4961 546.082 Q59.69 546.146 56.8255 548.787 Q53.9609 551.397 53.9609 555.726 Q53.9609 560.628 56.73 563.588 Q59.4991 566.516 64.528 566.962 L64.4961 546.082 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M50.9054 507.888 L56.4435 507.888 Q55.1704 510.37 54.5338 513.044 Q53.8972 515.718 53.8972 518.582 Q53.8972 522.943 55.234 525.139 Q56.5708 527.303 59.2444 527.303 Q61.2815 527.303 62.4591 525.744 Q63.605 524.184 64.6553 519.473 L65.1009 517.468 Q66.4377 511.23 68.8885 508.62 Q71.3075 505.978 75.668 505.978 Q80.6332 505.978 83.5296 509.925 Q86.426 513.84 86.426 520.715 Q86.426 523.579 85.8531 526.698 Q85.312 529.786 84.198 533.223 L78.1506 533.223 Q79.8375 529.977 80.6969 526.826 Q81.5244 523.675 81.5244 520.587 Q81.5244 516.45 80.124 514.222 Q78.6917 511.994 76.1136 511.994 Q73.7264 511.994 72.4533 513.617 Q71.1801 515.208 70.0025 520.651 L69.5251 522.688 Q68.3792 528.131 66.0239 530.55 Q63.6368 532.969 59.4991 532.969 Q54.4702 532.969 51.7329 529.404 Q48.9957 525.839 48.9957 519.282 Q48.9957 516.036 49.4731 513.171 Q49.9505 510.307 50.9054 507.888 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M39.7336 490.859 L49.855 490.859 L49.855 478.796 L54.4065 478.796 L54.4065 490.859 L73.7583 490.859 Q78.1188 490.859 79.3601 489.682 Q80.6014 488.472 80.6014 484.812 L80.6014 478.796 L85.503 478.796 L85.503 484.812 Q85.503 491.592 82.9885 494.17 Q80.4422 496.748 73.7583 496.748 L54.4065 496.748 L54.4065 501.045 L49.855 501.045 L49.855 496.748 L39.7336 496.748 L39.7336 490.859 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M50.9054 427.648 L56.4435 427.648 Q55.1704 430.131 54.5338 432.804 Q53.8972 435.478 53.8972 438.342 Q53.8972 442.703 55.234 444.899 Q56.5708 447.063 59.2444 447.063 Q61.2815 447.063 62.4591 445.504 Q63.605 443.944 64.6553 439.234 L65.1009 437.228 Q66.4377 430.99 68.8885 428.38 Q71.3075 425.738 75.668 425.738 Q80.6332 425.738 83.5296 429.685 Q86.426 433.6 86.426 440.475 Q86.426 443.339 85.8531 446.459 Q85.312 449.546 84.198 452.984 L78.1506 452.984 Q79.8375 449.737 80.6969 446.586 Q81.5244 443.435 81.5244 440.348 Q81.5244 436.21 80.124 433.982 Q78.6917 431.754 76.1136 431.754 Q73.7264 431.754 72.4533 433.377 Q71.1801 434.969 70.0025 440.411 L69.5251 442.448 Q68.3792 447.891 66.0239 450.31 Q63.6368 452.729 59.4991 452.729 Q54.4702 452.729 51.7329 449.164 Q48.9957 445.599 48.9957 439.043 Q48.9957 435.796 49.4731 432.932 Q49.9505 430.067 50.9054 427.648 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M39.7336 410.62 L49.855 410.62 L49.855 398.557 L54.4065 398.557 L54.4065 410.62 L73.7583 410.62 Q78.1188 410.62 79.3601 409.442 Q80.6014 408.233 80.6014 404.572 L80.6014 398.557 L85.503 398.557 L85.503 404.572 Q85.503 411.352 82.9885 413.93 Q80.4422 416.508 73.7583 416.508 L54.4065 416.508 L54.4065 420.805 L49.855 420.805 L49.855 416.508 L39.7336 416.508 L39.7336 410.62 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M67.5835 374.654 Q67.5835 381.751 69.2068 384.489 Q70.83 387.226 74.7449 387.226 Q77.8641 387.226 79.7102 385.189 Q81.5244 383.12 81.5244 379.587 Q81.5244 374.717 78.0869 371.789 Q74.6176 368.829 68.8885 368.829 L67.5835 368.829 L67.5835 374.654 M65.1645 362.972 L85.503 362.972 L85.503 368.829 L80.0921 368.829 Q83.3386 370.834 84.8982 373.826 Q86.426 376.818 86.426 381.147 Q86.426 386.621 83.3705 389.868 Q80.2831 393.082 75.1269 393.082 Q69.1113 393.082 66.0557 389.072 Q63.0002 385.03 63.0002 377.041 L63.0002 368.829 L62.4273 368.829 Q58.3851 368.829 56.1889 371.502 Q53.9609 374.144 53.9609 378.95 Q53.9609 382.006 54.693 384.902 Q55.425 387.799 56.8891 390.472 L51.4783 390.472 Q50.237 387.258 49.6322 384.234 Q48.9957 381.21 48.9957 378.346 Q48.9957 370.611 53.006 366.792 Q57.0164 362.972 65.1645 362.972 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M39.7336 345.117 L49.855 345.117 L49.855 333.054 L54.4065 333.054 L54.4065 345.117 L73.7583 345.117 Q78.1188 345.117 79.3601 343.939 Q80.6014 342.729 80.6014 339.069 L80.6014 333.054 L85.503 333.054 L85.503 339.069 Q85.503 345.849 82.9885 348.427 Q80.4422 351.005 73.7583 351.005 L54.4065 351.005 L54.4065 355.302 L49.855 355.302 L49.855 351.005 L39.7336 351.005 L39.7336 345.117 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M49.855 325.351 L49.855 319.495 L85.503 319.495 L85.503 325.351 L49.855 325.351 M35.9778 325.351 L35.9778 319.495 L43.3938 319.495 L43.3938 325.351 L35.9778 325.351 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M50.9054 284.515 L56.4435 284.515 Q55.1704 286.998 54.5338 289.671 Q53.8972 292.345 53.8972 295.209 Q53.8972 299.57 55.234 301.766 Q56.5708 303.931 59.2444 303.931 Q61.2815 303.931 62.4591 302.371 Q63.605 300.811 64.6553 296.101 L65.1009 294.095 Q66.4377 287.857 68.8885 285.247 Q71.3075 282.605 75.668 282.605 Q80.6332 282.605 83.5296 286.552 Q86.426 290.467 86.426 297.342 Q86.426 300.207 85.8531 303.326 Q85.312 306.413 84.198 309.851 L78.1506 309.851 Q79.8375 306.604 80.6969 303.453 Q81.5244 300.302 81.5244 297.215 Q81.5244 293.077 80.124 290.849 Q78.6917 288.621 76.1136 288.621 Q73.7264 288.621 72.4533 290.244 Q71.1801 291.836 70.0025 297.278 L69.5251 299.315 Q68.3792 304.758 66.0239 307.177 Q63.6368 309.596 59.4991 309.596 Q54.4702 309.596 51.7329 306.031 Q48.9957 302.466 48.9957 295.91 Q48.9957 292.663 49.4731 289.799 Q49.9505 286.934 50.9054 284.515 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M39.7336 267.487 L49.855 267.487 L49.855 255.424 L54.4065 255.424 L54.4065 267.487 L73.7583 267.487 Q78.1188 267.487 79.3601 266.309 Q80.6014 265.1 80.6014 261.439 L80.6014 255.424 L85.503 255.424 L85.503 261.439 Q85.503 268.219 82.9885 270.797 Q80.4422 273.375 73.7583 273.375 L54.4065 273.375 L54.4065 277.672 L49.855 277.672 L49.855 273.375 L39.7336 273.375 L39.7336 267.487 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M49.855 247.721 L49.855 241.865 L85.503 241.865 L85.503 247.721 L49.855 247.721 M35.9778 247.721 L35.9778 241.865 L43.3938 241.865 L43.3938 247.721 L35.9778 247.721 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><path clip-path="url(#clip890)" d="M51.2237 203.957 L56.6982 203.957 Q55.3295 206.44 54.6611 208.954 Q53.9609 211.437 53.9609 213.983 Q53.9609 219.68 57.5894 222.831 Q61.186 225.982 67.7108 225.982 Q74.2357 225.982 77.8641 222.831 Q81.4608 219.68 81.4608 213.983 Q81.4608 211.437 80.7924 208.954 Q80.0921 206.44 78.7235 203.957 L84.1344 203.957 Q85.2802 206.408 85.8531 209.05 Q86.426 211.66 86.426 214.62 Q86.426 222.672 81.3653 227.415 Q76.3045 232.157 67.7108 232.157 Q58.9898 232.157 53.9927 227.383 Q48.9957 222.577 48.9957 214.238 Q48.9957 211.532 49.5686 208.954 Q50.1097 206.376 51.2237 203.957 Z" fill="#000000" fill-rule="evenodd" fill-opacity="1" /><polyline clip-path="url(#clip892)" style="stroke:#009af9; stroke-linecap:butt; stroke-linejoin:round; stroke-width:4; stroke-opacity:1; fill:none" points="
   221.292,67.3423 256.614,117.948 291.937,165.865 327.259,211.207 362.582,254.082 397.904,294.591 433.227,332.829 468.549,368.887 503.872,402.849 539.194,434.794 
   574.516,464.796 609.839,492.925 645.161,519.247 680.484,543.822 715.806,566.709 751.129,587.96 786.451,607.626 821.774,625.753 857.096,642.385 892.419,657.562 
   927.741,671.322 963.064,683.698 998.386,694.723 1033.71,704.427 1069.03,712.835 1104.35,719.972 1139.68,725.859 1175,730.518 1210.32,733.965 1245.64,736.215 
@@ -19832,20 +19833,22 @@ M189.502 757.381 L1312.76 757.381 L1312.76 47.2441 L189.502 47.2441  Z
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>$\chi^2$分布で近似する場合には λ ≒ 2/3 のときに最も近似効率が高いとされる。</p>
-<p>PowerDivergenceTest() での lambda は実数で指定しなければならない(lambda=1 ではなく，lambda=1.0 と指定する）。</p>
-<p>lambda=1.0 でピアソンの $\chi^2$検定を行う。</p>
+<p>$\chi^2$ 分布で近似する場合には λ ≒ 2/3 のときに最も近似効率が高いとされる。</p>
+<p><code>PowerDivergenceTest()</code> での <code>lambda</code> は実数で指定しなければならない(<code>lambda=1</code> ではなく，<code>lambda=1.0</code> と指定する）。</p>
+<ul>
+<li><code>lambda=1.0</code> でピアソンの $\chi^2$ 検定を行う。</li>
+</ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[116]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">PowerDivergenceTest</span><span class="p">([</span><span class="mi">10</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span> <span class="mi">12</span><span class="p">],</span> <span class="n">lambda</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="n">println</span><span class="p">(</span><span class="s">&quot;χ-sq. = </span><span class="si">$</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stat</span><span class="p">)</span><span class="s">,  df = </span><span class="si">$</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">df</span><span class="p">)</span><span class="s">,  p value = </span><span class="si">$p</span><span class="s">&quot;</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">result1</span> <span class="o">=</span> <span class="n">PowerDivergenceTest</span><span class="p">([</span><span class="mi">10</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span> <span class="mi">12</span><span class="p">],</span> <span class="n">lambda</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pvalue</span><span class="p">(</span><span class="n">result1</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;χ-sq. = </span><span class="si">$</span><span class="p">(</span><span class="n">result1</span><span class="o">.</span><span class="n">stat</span><span class="p">)</span><span class="s">,  df = </span><span class="si">$</span><span class="p">(</span><span class="n">result1</span><span class="o">.</span><span class="n">df</span><span class="p">)</span><span class="s">,  p value = </span><span class="si">$p</span><span class="s">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -19877,7 +19880,7 @@ M189.502 757.381 L1312.76 757.381 L1312.76 47.2441 L189.502 47.2441  Z
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">chisq_test</span><span class="p">([</span><span class="mi">10</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span> <span class="mi">12</span><span class="p">])</span> <span class="c"># 上の例と同じである</span>
@@ -19912,18 +19915,20 @@ M189.502 757.381 L1312.76 757.381 L1312.76 47.2441 L189.502 47.2441  Z
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>lambda=0.0 で，対数尤度比に基づく $G^2$ 検定）を行う。</p>
+<ul>
+<li><code>lambda=0.0</code> で，対数尤度比に基づく $G^2$ 検定を行う。</li>
+</ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">PowerDivergenceTest</span><span class="p">([</span><span class="mi">10</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span> <span class="mi">12</span><span class="p">],</span> <span class="n">lambda</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="n">println</span><span class="p">(</span><span class="s">&quot;G-sq. = </span><span class="si">$</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stat</span><span class="p">)</span><span class="s">,  df = </span><span class="si">$</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">df</span><span class="p">)</span><span class="s">,  p value = </span><span class="si">$p</span><span class="s">&quot;</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">result2</span> <span class="o">=</span> <span class="n">PowerDivergenceTest</span><span class="p">([</span><span class="mi">10</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span> <span class="mi">12</span><span class="p">],</span> <span class="n">lambda</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pvalue</span><span class="p">(</span><span class="n">result2</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">&quot;G-sq. = </span><span class="si">$</span><span class="p">(</span><span class="n">result2</span><span class="o">.</span><span class="n">stat</span><span class="p">)</span><span class="s">,  df = </span><span class="si">$</span><span class="p">(</span><span class="n">result2</span><span class="o">.</span><span class="n">df</span><span class="p">)</span><span class="s">,  p value = </span><span class="si">$p</span><span class="s">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -19955,7 +19960,7 @@ M189.502 757.381 L1312.76 757.381 L1312.76 47.2441 L189.502 47.2441  Z
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[119]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">G2_test</span><span class="p">([</span><span class="mi">10</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span> <span class="mi">12</span><span class="p">])</span> <span class="c"># 上の例と同じである</span>
@@ -19990,18 +19995,25 @@ M189.502 757.381 L1312.76 757.381 L1312.76 47.2441 L189.502 47.2441  Z
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.4.%E3%80%80%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC%E3%81%AE%E6%AD%A3%E7%A2%BA%E6%A4%9C%E5%AE%9A">2.4.&#12288;&#12501;&#12451;&#12483;&#12471;&#12515;&#12540;&#12398;&#27491;&#30906;&#26908;&#23450;<a class="anchor-link" href="#2.4.%E3%80%80%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC%E3%81%AE%E6%AD%A3%E7%A2%BA%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>FisherExactTest(a::Integer, b::Integer, c::Integer, d::Integer)</p>
-<p>HypothesisTests.FisherExactTest() で用意されているのは 2×2 分割表の場合だけである。</p>
+<h2 id="2.4.%E3%80%80%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC%E3%81%AE%E6%AD%A3%E7%A2%BA%E6%A4%9C%E5%AE%9A">2.4.&#12288;&#12501;&#12451;&#12483;&#12471;&#12515;&#12540;&#12398;&#27491;&#30906;&#26908;&#23450;<a class="anchor-link" href="#2.4.%E3%80%80%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC%E3%81%AE%E6%AD%A3%E7%A2%BA%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>関数定義<br>
+<code>FisherExactTest(a::Integer, b::Integer, c::Integer, d::Integer)</code></p>
+<p><code>FisherExactTest()</code> で用意されているのは 2×2 分割表の場合だけである。4 つのセルの度数を指定する。</p>
+<p>帰無仮説は何通りかの表現法があるが，同じことを意味している。</p>
+<ul>
+<li>2 要因が独立である</li>
+<li>2 群の比率が等しい $\displaystyle \frac{a}{a+b} = \frac{c}{c+d}$</li>
+<li>オッズ比が 1 である $\displaystyle \frac{a/c}{b/d} = \frac{a\cdot d}{b\cdot c}=1$</li>
+</ul>
+<p>■ 使用例</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[120]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">HypothesisTests</span>
-<span class="n">FisherExactTest</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">FisherExactTest</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -20017,7 +20029,7 @@ M189.502 757.381 L1312.76 757.381 L1312.76 47.2441 L189.502 47.2441  Z
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[120]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -20051,34 +20063,19 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>■ 個別に表示できる統計量</p>
 <ul>
-<li>有意確率の表示法</li>
+<li>$p$ 値</li>
 </ul>
-<p>上のようなデフォルトの出力では両側検定の有意確率（p 値）が表示される。</p>
-<p>片側検定の場合の p 値を表示するためには，一旦戻り値を変数に代入し，pvalue() に tail=:both, tail=:left, tail=:right をして計算・表示する。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[121]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">FisherExactTest</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[122]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c"># 両側検定の p 値</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c"># デフォールトで両側検定の p 値</span>
 </pre></div>
 
      </div>
@@ -20094,7 +20091,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[122]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -20112,7 +20109,7 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[123]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:both</span><span class="p">)</span> <span class="c"># 両側検定の p 値</span>
@@ -20131,7 +20128,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[123]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -20149,7 +20146,7 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[124]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:left</span><span class="p">)</span> <span class="c"># 片側検定の p 値</span>
@@ -20168,7 +20165,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[124]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -20186,7 +20183,7 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[125]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:right</span><span class="p">)</span> <span class="c"># 片側検定の p 値</span>
@@ -20205,7 +20202,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[125]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
 
@@ -20223,15 +20220,57 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>FisherExactTest() の両側検定の p 値は該当する片側確率を 2 倍するものである。</p>
+<p><code>FisherExactTest()</code> の両側検定の $p$ 値は該当する片側確率を 2 倍するものである。</p>
 <p>上の例では，0.014589609220157725 = 2 × 0.007294804610078863 になっている。</p>
-<p>このような計算方法は R や matlab などの他の統計ソフトと違う。同じ結果を得るためには，オプション設定 method=:minlike としなければならない。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[126]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="ss">:central</span><span class="p">)</span> <span class="c"># 両側検定の p 値（デフォルト）</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.014589609220157725</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>このような計算方法は R や matlab などの他の統計ソフトと違う。同じ結果を得るためには，オプション設定 <code>method=:minlike</code> としなければならない。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="ss">:minlike</span><span class="p">)</span>
@@ -20250,7 +20289,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[126]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -20265,19 +20304,62 @@ Details:
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">RCall</span> <span class="c"># R で計算すると以下のようになる</span>
+<span class="sa">R</span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">options(digits=15)</span>
+<span class="s">x = matrix(c(10, 3, 4, 12), 2)</span>
+<span class="s">fisher.test(x)</span><span class="si">$p</span><span class="s">.value</span>
+<span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>RObject{RealSxp}
+[1] 0.00922057031339851
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>オッズ比は　result.ω で表示できる。</li>
+<li>ω　オッズ比</li>
 </ul>
-<p>ω は REPL では \omega[tab] で入力できる。ここからコピーしてもよいし，IM のギリシア文字入力でもよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[127]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">ω</span>
@@ -20296,7 +20378,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[127]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
 
 
@@ -20315,14 +20397,14 @@ Details:
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>オッズ比の信頼区間は confint(result) で表示できる</li>
+<li><code>confint</code>　オッズ比の信頼区間</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[128]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
@@ -20341,7 +20423,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[128]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -20359,15 +20441,13 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>信頼率は，level で指定できる（0 &lt; level &lt; 1）</li>
-</ul>
+<p>信頼率は，<code>level</code> で指定できる（<code>0 &lt; level &lt; 1</code>）</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[129]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.95</span><span class="p">)</span>
@@ -20386,7 +20466,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[129]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
 
 
 
@@ -20404,30 +20484,47 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.5.%E3%80%80%E4%BA%8C%E9%A0%85%E6%A4%9C%E5%AE%9A">2.5.&#12288;&#20108;&#38917;&#26908;&#23450;<a class="anchor-link" href="#2.5.%E3%80%80%E4%BA%8C%E9%A0%85%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>BinomialTest(x::Integer, n::Integer, p::Real = 0.5)<br>
-BinomialTest(x::AbstractVector{Bool}, p::Real = 0.5)</p>
-<p>二項検定は BinomialTest() で行う。</p>
+<p>■ オッズ比の $p$ 値と信頼区間について</p>
+<p>オッズ比（$OR$）の $p$ 値，信頼区間には何通りかの方法がある。</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>関数の引数指定，結果の出力ともに，R とほとんど同じである。</p>
-<p>BinomialTest(x, n, p=0.5)</p>
-<ul>
-<li>x 成功数</li>
-<li>n 試行数</li>
-<li>p 母比率。デフォルトは 0.5</li>
-</ul>
+<p>`FisherExactTest() は，R の fisher.test() と同じく，条件付き最尤推定量を求める。　<a href="https://oku.edu.mie-u.ac.jp/~okumura/stat/fishertest.html">外部リンク：Fisherの正確検定</a></p>
+<p>一方，広く使われているのは条件なしの最尤推定量（Wald のオッズ比）で，以下の関数で計算できる。　<a href="http://www.snap-tck.com/room04/c01/stat/stat03/stat0304_2.html#note05">外部リンク：統計学入門-第3章</a></p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Distributions</span>
+<span class="k">function</span> <span class="n">oddsratio</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">;</span> <span class="n">conf</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">correct</span><span class="o">=</span><span class="nb">false</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">correct</span> <span class="o">||</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">d</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">b</span><span class="o">+</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">+</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">d</span><span class="o">+</span><span class="mf">0.5</span>
+    <span class="k">end</span>
+    <span class="n">or</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">d</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">LCL</span><span class="p">,</span> <span class="n">UCL</span> <span class="o">=</span> <span class="n">or</span> <span class="o">.*</span> <span class="n">exp</span><span class="o">.</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">.*</span> <span class="n">quantile</span><span class="p">(</span><span class="n">Normal</span><span class="p">(),</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="n">conf</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="n">c</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="n">d</span><span class="p">))</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;オッズ比 = </span><span class="si">$or</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="p">(</span><span class="kt">Int</span><span class="p">(</span><span class="mi">100</span><span class="n">conf</span><span class="p">))</span><span class="s">% 信頼区間  [</span><span class="si">$LCL</span><span class="s">, </span><span class="si">$UCL</span><span class="s">]&quot;</span><span class="p">)</span>
+<span class="k">end</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[130]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">BinomialTest</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">oddsratio</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -20443,7 +20540,120 @@ BinomialTest(x::AbstractVector{Bool}, p::Real = 0.5)</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[130]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>オッズ比 = 10.0
+95% 信頼区間  [1.7975962537192371, 55.62984446206951]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>R での実行結果を添付しておく。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">RCall</span>
+<span class="sa">R</span><span class="s">&quot;fisher.test(matrix(c(10, 3, 4, 12), 2))&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>RObject{VecSxp}
+
+	Fisher&#39;s Exact Test for Count Data
+
+data:  matrix(c(10, 3, 4, 12), 2)
+p-value = 0.009221
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+  1.422275 80.340584
+sample estimates:
+odds ratio 
+   9.06776 
+
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="2.5.%E3%80%80%E4%BA%8C%E9%A0%85%E6%A4%9C%E5%AE%9A">2.5.&#12288;&#20108;&#38917;&#26908;&#23450;<a class="anchor-link" href="#2.5.%E3%80%80%E4%BA%8C%E9%A0%85%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>二項検定は <code>BinomialTest()</code> で行う。</p>
+<p>関数定義1<br>
+<code>BinomialTest(x::Integer, n::Integer, p::Real = 0.5)</code><br>
+成功母比率 <code>p</code> の試行を <code>n</code> 回行い，<code>x</code> 回成功したとき，母比率が特定の値（デフォルトでは 0.5）であるかどうか検定する。</p>
+<p>関数定義2<br>
+<code>BinomialTest(x::AbstractVector{Bool}, p::Real = 0.5)</code><br>
+成功のとき 1，不成功のとき 0 の <code>Bool</code> 試行結果ベクトル <code>x</code> と母比率 <code>p</code> を与える場合。<br></p>
+<p>たとえば，20回の実験結果が <code>x = Bool[1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0]</code> の場合，関数定義2 では <code>`BinomialTest(x)</code> と書く。
+成功が 12 回なので， 関数定義1 で書くと <code>BinomialTest(12, 20)</code> とも書ける。</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>■ 使用例</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">BinomialTest</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 
 
 
@@ -20476,18 +20686,23 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>■ 個別に表示できる統計量</p>
+<p>概要</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>有意確率の表示</li>
+<li>$p$ 値</li>
 </ul>
-<p>デフォルトでは両側検定の有意確率（p 値）が表示される。</p>
-<p>片側検定の結果を表示するためには，結果を一旦変数に代入しておき，pvalue() で検定の方向を tail で指定する。二項分布の母平均を m = n * p として，x &lt; m の場合は :left，x &gt; m の場合は :right を指定する。得られた有意確率が 0.5 以上の場合は，帰無仮説の設定法を間違えているか，:left と :right を取り違えているないか検討が必要である。</p>
-<p>両側検定の場合は tail のデフォルトは :both なので指定しなくてもよい。</p>
+<p>デフォルトでは両側検定の $p$ 値が表示される。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[131]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">BinomialTest</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
@@ -20501,7 +20716,7 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[132]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:left</span><span class="p">)</span>
@@ -20520,7 +20735,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[132]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
 
 
 
@@ -20538,7 +20753,7 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[133]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:right</span><span class="p">)</span>
@@ -20557,7 +20772,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[133]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
 
 
 
@@ -20575,7 +20790,7 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[134]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:both</span><span class="p">)</span>
@@ -20594,7 +20809,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[134]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
 
 
 
@@ -20612,15 +20827,15 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>なお，両側検定の有意確率（p 値）は該当する片側検定の p 値を 2 倍したものであり，R や matlab などの他の統計ソフトとは違う。</p>
+<p>なお，両側検定の $p$ 値は該当する片側検定の $p$ 値を 2 倍したものであり，R や matlab などの他の統計ソフトとは違う。</p>
 <p>計算方法により結果が違うのは，「母比率が 0.5 以外の両側検定」の場合に限られる。</p>
-<p>以下の例，x=18, n=24, p=0.68 の場合，p 値は 0.6206975448201958 が表示されるが，R では 0.5205908910845283 となる。</p>
+<p>以下の例，x=18, n=24, p=0.68 の場合，$p$ 値は 0.6206975448201958 が表示されるが，R では 0.5205908910845283 となる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[135]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">BinomialTest</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mf">0.68</span><span class="p">);</span> <span class="c"># p=0.68 の場合。数値だけ指定するので注意。</span>
@@ -20640,7 +20855,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[135]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
 
 
 
@@ -20655,13 +20870,53 @@ Details:
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">RCall</span>
+<span class="sa">R</span><span class="s">&quot;&quot;&quot;</span>
+<span class="s">options(digits=16)</span>
+<span class="s">binom.test(18, 24, 0.68)</span><span class="si">$p</span><span class="s">.value</span>
+<span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>RObject{RealSxp}
+[1] 0.5205908910845283
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<pre>> # R の場合
-> options(digits=16)
-> binom.test(18, 24, 0.68)$p.value
-[1] 0.5205908910845283</pre><p>Julia では，n = 18〜24 の二項分布の確率の合計が 0.3103487724100979 で，</p>
+<p><code>BinomialTest()</code> では，$n = 18,..., 24$ の二項分布の確率の合計が 0.3103487724100979 で，</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -20704,7 +20959,7 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>その 2 倍が両側有意確率になっている。</p>
+<p>その 2 倍が両側 $p$ 値になっている。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -20747,8 +21002,8 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>R などでは，まず n = 18〜24 を右側の棄却域とするところまでは同じであるが，もう一方の側の棄却域を次のようにして決める。</p>
-<p>x = 0, 1, ... と順に見ていき，観察値 18 のときの確率より小さい最大の n まで，図でいえば x = 0 〜 14 までを棄却域とする。</p>
+<p>R などでは，まず $n = 18,...,24$ を右側の棄却域とするところまでは同じであるが，もう一方の側の棄却域を次のようにして決める。</p>
+<p>$x = 0, 1, ...$ と順に見ていき，観察値 18 のときの確率より小さい最大の $n$ まで，図でいえば $x = 0, ..., 14$ までを棄却域とする。</p>
 <p>それぞれの棄却域における確率の合計を両側確率とする。</p>
 
 </div>
@@ -21104,7 +21359,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>FisherTest() の場合と異なり，同じ結果を得るためのオプション設定がないので，以下のようなプログラムを使用すればよい。</p>
+<p><code>FisherTest()</code> の場合と異なり，同じ結果を得るためのオプション設定がないので，以下のようなプログラムを使用すればよい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -21278,13 +21533,12 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 <ul>
 <li>信頼区間の表示</li>
 </ul>
-<p>信頼区間を表示するために confint() を用いる。第 1 引数は BinomialTest() の結果を代入した変数である。その他の引数として，信頼区間の位置を指定する tail，信頼率を指定する level がある。level=0.95, tail=:both がデフォルトである。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[144]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">BinomialTest</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">26</span><span class="p">)</span>
@@ -21304,7 +21558,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[144]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
 
 
 
@@ -21322,7 +21576,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[145]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
@@ -21341,7 +21595,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[145]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[56]:</div>
 
 
 
@@ -21359,7 +21613,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[146]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:right</span><span class="p">)</span>
@@ -21378,7 +21632,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[146]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
 
 
 
@@ -21396,7 +21650,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[147]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:left</span><span class="p">)</span>
@@ -21415,7 +21669,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[147]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
 
 
 
@@ -21441,14 +21695,16 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.6.1.%E3%80%80%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%88%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%89">2.6.1.&#12288;&#19968;&#27161;&#26412;&#12398;&#26908;&#23450;&#65288;&#27597;&#24179;&#22343;&#12398;&#26908;&#23450;&#65289;<a class="anchor-link" href="#2.6.1.%E3%80%80%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%88%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%89">&#182;</a></h3><p>OneSampleTTest(v::AbstractVector{T&lt;:Real}, μ0::Real = 0)</p>
+<h3 id="2.6.1.%E3%80%80%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%88%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%89">2.6.1.&#12288;&#19968;&#27161;&#26412;&#12398;&#26908;&#23450;&#65288;&#27597;&#24179;&#22343;&#12398;&#26908;&#23450;&#65289;<a class="anchor-link" href="#2.6.1.%E3%80%80%E4%B8%80%E6%A8%99%E6%9C%AC%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%88%E6%AF%8D%E5%B9%B3%E5%9D%87%E3%81%AE%E6%A4%9C%E5%AE%9A%EF%BC%89">&#182;</a></h3><p>関数定義<br>
+<code>OneSampleTTest(v::AbstractVector{T&lt;:Real}, μ0::Real = 0)</code></p>
 <p>対応のある二標本の場合，対応のあるデータの差をとって一標本の検定を行うのと同じである。</p>
+<p>■ 使用例</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[148]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.6</span><span class="p">,</span> <span class="mf">8.1</span><span class="p">,</span> <span class="mf">6.6</span><span class="p">,</span> <span class="mf">4.7</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">9.6</span><span class="p">,</span> <span class="mf">5.6</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">];</span>
@@ -21464,11 +21720,11 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[149]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">HypothesisTests</span>
-<span class="n">OneSampleTTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">OneSampleTTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21484,7 +21740,7 @@ M1220.37 736.904 L1220.37 737.283 L1252.05 737.283 L1252.05 736.904 L1220.37 736
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[149]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[77]:</div>
 
 
 
@@ -21519,10 +21775,10 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[150]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">OneSampleTTest</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">OneSampleTTest</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21538,7 +21794,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[150]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[78]:</div>
 
 
 
@@ -21617,13 +21873,21 @@ Details:
 <p>これらを個別に表示したり，片側検定の結果や，特定の信頼率における信頼区間を表示する際には，OneSampleTTest() の結果を変数に代入しておく。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>$p$ 値</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[151]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">OneSampleTTest</span><span class="p">(</span><span class="n">z</span><span class="p">);</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21631,10 +21895,460 @@ Details:
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[79]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.4453534218554348</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[152]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:both</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.4453534218554348</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:left</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[81]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.7773232890722825</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:right</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[82]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.2226767109277174</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>信頼区間　信頼区間は母平均の信頼区間である。</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[83]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(-1.6142612308053204, 3.3742612308053195)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:both</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[84]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(-1.6142612308053204, 3.3742612308053195)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[85]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(-2.7032783553640023, 4.463278355364001)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:right</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[86]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(-1.141195783743237, Inf)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:right</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[87]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(-2.2309258663578753, Inf)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:left</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[95]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(-Inf, 2.901195783743236)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><code>n</code>　サンプルサイズ</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[112]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>10
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[113]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">xbar</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0.8799999999999997
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><code>t</code>　検定統計量（$t$ 分布にしたがう）</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[114]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
@@ -21670,17 +22384,17 @@ Details:
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>有意確率の表示</li>
+<li>df　$t$ 分布の自由度</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[153]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[115]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">pvalue</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:left</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21696,15 +22410,13 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[153]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.7773232890722825</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>9
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -21715,17 +22427,18 @@ Details:
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>信頼区間の表示</li>
+<li>xbar　標本平均<br>
+<code>xbar = mean(x) - mean(y) = mean(x - y) = mean(z)</code></li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[154]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">tail</span><span class="o">=</span><span class="ss">:right</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">xbar</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21741,15 +22454,13 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[154]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(-2.2309258663578753, Inf)</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0.8799999999999997
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -21759,7 +22470,98 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.6.2.%E3%80%80%E7%AD%89%E5%88%86%E6%95%A3%E3%81%AE%E5%A0%B4%E5%90%88%E3%81%AE-t-%E6%A4%9C%E5%AE%9A">2.6.2.&#12288;&#31561;&#20998;&#25955;&#12398;&#22580;&#21512;&#12398; t &#26908;&#23450;<a class="anchor-link" href="#2.6.2.%E3%80%80%E7%AD%89%E5%88%86%E6%95%A3%E3%81%AE%E5%A0%B4%E5%90%88%E3%81%AE-t-%E6%A4%9C%E5%AE%9A">&#182;</a></h3><p>EqualVarianceTTest(x::AbstractVector{T&lt;:Real}, y::AbstractVector{T&lt;:Real})</p>
+<ul>
+<li>μ0　母平均</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[116]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">μ0</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>stderr　標準誤差<br>
+<code>result.t = (result.xbar - result.μ0) / result.stderr</code></li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="nb">stderr</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1.1026029808291529
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="2.6.2.%E3%80%80%E7%AD%89%E5%88%86%E6%95%A3%E3%81%AE%E5%A0%B4%E5%90%88%E3%81%AE-$t$-%E6%A4%9C%E5%AE%9A">2.6.2.&#12288;&#31561;&#20998;&#25955;&#12398;&#22580;&#21512;&#12398; $t$ &#26908;&#23450;<a class="anchor-link" href="#2.6.2.%E3%80%80%E7%AD%89%E5%88%86%E6%95%A3%E3%81%AE%E5%A0%B4%E5%90%88%E3%81%AE-$t$-%E6%A4%9C%E5%AE%9A">&#182;</a></h3><p>独立 2 標本の分散が等しいことを仮定する平均値の差の検定である。</p>
+<p>一般的には，等分散を仮定しない $t$ 検定（Welch の方法）が推奨される。</p>
+<p>関数定義<br>
+<code>EqualVarianceTTest(x::AbstractVector{T&lt;:Real}, y::AbstractVector{T&lt;:Real})</code></p>
+<p>■ 使用例</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -21783,7 +22585,7 @@ Details:
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[156]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">EqualVarianceTTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">EqualVarianceTTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -21810,18 +22612,18 @@ Details:
 Population details:
     parameter of interest:   Mean difference
     value under h_0:         0
-    point estimate:          -0.166667
-    95% confidence interval: (-1.448, 1.115)
+    point estimate:          0.88
+    95% confidence interval: (-1.446, 3.206)
 
 Test summary:
     outcome with 95% confidence: fail to reject h_0
-    two-sided p-value:           0.7889
+    two-sided p-value:           0.4370
 
 Details:
-    number of observations:   [12,10]
-    t-statistic:              -0.271312734545191
-    degrees of freedom:       20
-    empirical standard error: 0.6142972497994038
+    number of observations:   [10,10]
+    t-statistic:              0.7949211379626868
+    degrees of freedom:       18
+    empirical standard error: 1.107028053443593
 </pre>
 </div>
 
@@ -21829,109 +22631,6 @@ Details:
 
 </div>
 
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>EqualVarianceTTest() の戻り値は以下のようなものである。</p>
-<table>
-<thead><tr>
-<th style="text-align:left">変数名</th>
-<th style="text-align:left">型</th>
-<th style="text-align:left">備考</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">n_x</td>
-<td style="text-align:left">Int</td>
-<td style="text-align:left">第 1 標本のサンプルサイズ</td>
-</tr>
-<tr>
-<td style="text-align:left">n_y</td>
-<td style="text-align:left">Int</td>
-<td style="text-align:left">第 2 標本のサンプルサイズ</td>
-</tr>
-<tr>
-<td style="text-align:left">xbar</td>
-<td style="text-align:left">Real</td>
-<td style="text-align:left">平均値の差</td>
-</tr>
-<tr>
-<td style="text-align:left">t</td>
-<td style="text-align:left">Real</td>
-<td style="text-align:left">t 統計量</td>
-</tr>
-<tr>
-<td style="text-align:left">df</td>
-<td style="text-align:left">Int</td>
-<td style="text-align:left">自由度</td>
-</tr>
-<tr>
-<td style="text-align:left">stderr</td>
-<td style="text-align:left">Real</td>
-<td style="text-align:left">経験的標準誤差</td>
-</tr>
-<tr>
-<td style="text-align:left">μ0</td>
-<td style="text-align:left">Real</td>
-<td style="text-align:left">母平均</td>
-</tr>
-</tbody>
-</table>
-<p>これらを個別に表示したり，片側検定の結果や，特定の信頼率における信頼区間を表示する際には，EqualVarianceTTest() の結果を変数に代入しておく。</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[157]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s">&quot;less&quot;</span><span class="p">,</span> <span class="n">var_equal</span><span class="o">=</span><span class="nb">true</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[157]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(x = [1, 2, 3, 6, 3, 1, 2, 1, 1, 1, 3, 4], y = [2, 1, 2, 3, 4, 2, 1, 2, 3, 5], alternative = &#34;less&#34;, var_equal = true)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[158]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">EqualVarianceTTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -22254,7 +22953,7 @@ Details:
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>有意確率の表示</li>
+<li>$p$ 値</li>
 </ul>
 
 </div>
@@ -22559,7 +23258,7 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>p 値は 0.6305 となり，ApproximateMannWhitneyUTest() の場合の 0.6334388940675 とは異った値になった。</p>
+<p>$p$ 値は 0.6305 となり，ApproximateMannWhitneyUTest() の場合の 0.6334388940675 とは異った値になった。</p>
 <p>しかし，R の coin パッケージを使った正確な検定とも違う。</p>
 <pre>
         > x = c(1, 2, 3, 6, 3, 1, 2, 1, 1, 1, 3, 4)
@@ -22574,7 +23273,7 @@ Details:
 
         data:  val by g (a, b)
         Z = -0.51095591724442, p-value = 0.6326831063673
-        alternative hypothesis: true mu is not equal to 0</pre><p>分割表形式のデータを入力して正確な p 値を計算できるオンラインサイト <a href="http://aoki2.si.gunma-u.ac.jp/exact/utest/getpar.html">http://aoki2.si.gunma-u.ac.jp/exact/utest/getpar.html</a> で計算しても，coin ライブラリの結果と同じになる。</p>
+        alternative hypothesis: true mu is not equal to 0</pre><p>分割表形式のデータを入力して正確な $p$ 値を計算できるオンラインサイト <a href="http://aoki2.si.gunma-u.ac.jp/exact/utest/getpar.html">http://aoki2.si.gunma-u.ac.jp/exact/utest/getpar.html</a> で計算しても，coin ライブラリの結果と同じになる。</p>
 <p>同順位のない 50 以下のサンプルサイズデータでも確認してみよう。</p>
 
 </div>
@@ -22745,11 +23444,11 @@ Z = -2.1759555622061, p-value = 0.02996075132298
 alternative hypothesis: true mu is not equal to 0
 </pre><p><a href="https://juliastats.org/HypothesisTests.jl/stable/nonparametric/#Mann-Whitney-U-test-1">https://juliastats.org/HypothesisTests.jl/stable/nonparametric/#Mann-Whitney-U-test-1</a> において，</p>
 <p>When there are no tied ranks, the exact p-value is computed using the pwilcox function from the Rmath package.</p>
-<p>と述べているが，ここでいっている「exact p-value」は漸近分布ではなく（U 検定統計量の平均値と分散により，標準正規分布から p 値を求めるのではなく），pwilcox で計算したといっているだけで，「exact test による p 値ではない」。</p>
+<p>と述べているが，ここでいっている「exact p-value」は漸近分布ではなく（U 検定統計量の平均値と分散により，標準正規分布から $p$ 値を求めるのではなく），pwilcox で計算したといっているだけで，「exact test による $p$ 値ではない」。</p>
 <p>また，</p>
 <p>In the presence of tied ranks, a p-value is computed by exhaustive enumeration of permutations, which can be very slow for even moderately sized data sets.</p>
 <p>といってはいるが，同順位のあるデータの場合はデータの順列についてすべての評価をしているようには見えない。</p>
-<p>なお，プールしたサンプルサイズが 10 以下であれば，「1.12. 並べ替え検定（無作為検定）」を用いて，同順位があっても正確な p 値を求めることができる。</p>
+<p>なお，プールしたサンプルサイズが 10 以下であれば，「1.12. 並べ替え検定（無作為検定）」を用いて，同順位があっても正確な $p$ 値を求めることができる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -22880,7 +23579,7 @@ x = observations larger than<br>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>有意確率の表示</li>
+<li>$p$ 値</li>
 </ul>
 <p>pvalue() で求める。tail に :left, :right, :both を指定できる。</p>
 
@@ -23218,7 +23917,7 @@ ApproximateSignedRankTest(x::AbstractVector{&lt;:Real}[, y::AbstractVector{&lt;:
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>使用法は，UnequalVarianceOneWayANOVATest(g1, g2, g3) のように，標本ごとの観察値ベクトルを列挙する。</p>
 <p>引数 verbose=false にすれば結果を表示しない。デフォルトは verbose=true である。</p>
-<p>戻り値は F 値，第 1 自由度，第 2 自由度，p 値の 4 個である。代入して後で使用することができる。代入しなければ，4 個の数値が表示される。</p>
+<p>戻り値は F 値，第 1 自由度，第 2 自由度，$p$ 値の 4 個である。代入して後で使用することができる。代入しなければ，4 個の数値が表示される。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -23555,9 +24254,9 @@ A² | Float64  |  検定統計量</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="2.2.2.%E3%80%80k-%E6%A8%99%E6%9C%AC%E3%81%AE%E5%A0%B4%E5%90%88">2.2.2.&#12288;k &#27161;&#26412;&#12398;&#22580;&#21512;<a class="anchor-link" href="#2.2.2.%E3%80%80k-%E6%A8%99%E6%9C%AC%E3%81%AE%E5%A0%B4%E5%90%88">&#182;</a></h3><p>KSampleADTest(xs::AbstractVector{&lt;:Real}...; modified = true, nsim = 0)</p>
 <p>引数は，各標本の測定値ベクトルを列挙する。<br>
-p 値の計算を標準正規分布により漸近検定で求めるとき modified=true にする。<br>
-シミュレーションにより p 値を求めるときは，シミュレーションの回数を nsim で指定する。<br>
-nsim=0 のときはシミュレーションを行わず，漸近検定で p 値を求める。</p>
+$p$ 値の計算を標準正規分布により漸近検定で求めるとき modified=true にする。<br>
+シミュレーションにより $p$ 値を求めるときは，シミュレーションの回数を nsim で指定する。<br>
+nsim=0 のときはシミュレーションを行わず，漸近検定で $p$ 値を求める。</p>
 <table>
 <thead><tr>
 <th style="text-align:left">変数名</th>
@@ -23604,7 +24303,7 @@ nsim=0 のときはシミュレーションを行わず，漸近検定で p 値�
 <tr>
 <td style="text-align:left">nsim</td>
 <td style="text-align:left">Int</td>
-<td style="text-align:left">p 値を計算するシミュレーションの回数<br>0 を指定したときは漸近検定</td>
+<td style="text-align:left">$p$ 値を計算するシミュレーションの回数<br>0 を指定したときは漸近検定</td>
 </tr>
 </tbody>
 </table>
@@ -23943,7 +24642,7 @@ ApproximatePermutationTest(x::Vector, y::Vector, f::Function, n::Int)<br>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">mean</span><span class="p">(</span><span class="n">abs</span><span class="o">.</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span> <span class="o">.&gt;=</span>  <span class="mf">1.0</span><span class="p">)</span> <span class="c"># -1 以下，または 1 以上の割合が p 値</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">mean</span><span class="p">(</span><span class="n">abs</span><span class="o">.</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">samples</span><span class="p">)</span> <span class="o">.&gt;=</span>  <span class="mf">1.0</span><span class="p">)</span> <span class="c"># -1 以下，または 1 以上の割合が $p$ 値</span>
 </pre></div>
 
      </div>
