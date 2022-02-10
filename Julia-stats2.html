@@ -14538,7 +14538,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>最新バージョン 2022-02-02 16:45
+<pre>最新バージョン 2022-02-10 23:42
 </pre>
 </div>
 </div>
@@ -14559,7 +14559,7 @@ a.anchor-link {
 場合によっては同じ変数が幾つかの型のデータを取るような場合もあるが，最終的に集計・解析される時点では同じ型に変換される。</p>
 <p><img src="Julia-stats2-1.png" alt="Image"></p>
 <p>データファイルは，XLSX 形式（拡張子が .xlsx）で保存してかまわない。</p>
-<p>XLSX 形式で保存されたファイル名を "df.xlsx" としたとき，XLSX パッケージを使用してデータフレーム df に読み込むことができる。
+<p>XLSX 形式で保存されたファイル名を <code>df.xlsx</code> としたとき，<code>XLSX</code> パッケージを使用してデータフレーム <code>df</code> に読み込むことができる。
 XLS 形式はサポートしていない。</p>
 
 </div>
@@ -14603,7 +14603,7 @@ XLS 形式はサポートしていない。</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>読み込まれたデータフレームの各列はすべて Any という型を持っている。</p>
+<p>読み込まれたデータフレームの各列はすべて <code>Any</code> という型を持っている。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14646,9 +14646,9 @@ XLS 形式はサポートしていない。</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Any は最上位の型であり，特に他の型に変更する必要はないが，処理速度のパフォーマンスを上げるために変更したほうがよい場合もある。</p>
-<p>実数型，整数型，文字列型への変更はそれぞれ float.(), Int.(), sring.() で行える。</p>
-<p>なお，下の例のように列を参照するときには，データフレーム.列名 のような形式で参照する（他の参照法もあるがこれが一番簡潔）。</p>
+<p><code>Any</code> は最上位の型であり，特に他の型に変更する必要はないが，処理速度のパフォーマンスを上げるために変更したほうがよい場合もある。</p>
+<p>実数型，整数型，文字列型への変更はそれぞれ <code>float.()</code>, <code>Int.()</code>, <code>sring.()</code> で行える。</p>
+<p>なお，下の例のように列を参照するときには，<code>データフレーム.列名</code> のような形式で参照する（他の参照法もあるがこれが一番簡潔）。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14734,7 +14734,7 @@ XLS 形式はサポートしていない。</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Any 型が必要な場合もある。その一つの例が，欠損値 missing を扱う場合である。missing は 実数型でも整数型でも文字列型でもないため，それらの型を持つ変数へ代入することができない。</p>
+<p><code>Any</code> 型が必要な場合もある。その一つの例が，欠損値 <code>missing</code> を扱う場合である。<code>missing</code> は 実数型でも整数型でも文字列型でもないため，それらの型を持つ変数へ代入することができない。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14828,7 +14828,7 @@ Stacktrace:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>df.Height の型は Any なので，missing を代入できる。</p>
+<p><code>df.Height</code> の型は <code>Any</code> なので，<code>missing</code> を代入できる。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14871,9 +14871,9 @@ Stacktrace:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.2.%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.2.&#12288;CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.2.%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>上述のように XLSX 形式のワークシートファイルは XLSX.readtable() によって直接読み込むこともできるが，XLS 形式のワークシートには対応していない。
-また，Excel のバージョンアップなどで，XLSX.readtable() が対応できなくなる可能性もある。
-このようなことから，一般性を保証するためには CSV 形式（拡張子が .csv）で保存することが望ましい。</p>
+<h2 id="1.2.%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.2.&#12288;CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.2.%E3%80%80CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>上述のように XLSX 形式のワークシートファイルは <code>XLSX.readtable()</code> によって直接読み込むこともできるが，XLS 形式のワークシートには対応していない。
+また，Excel のバージョンアップなどで，<code>XLSX.readtable()</code> が対応できなくなる可能性もある。
+このようなことから，一般性を保証するためには CSV 形式（拡張子が <code>.csv</code>）で保存することが望ましい。</p>
 <h3 id="1.2.1.%E3%80%80%E5%85%B8%E5%9E%8B%E7%9A%84%E3%81%AA-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.2.1.&#12288;&#20856;&#22411;&#30340;&#12394; CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.2.1.%E3%80%80%E5%85%B8%E5%9E%8B%E7%9A%84%E3%81%AA-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h3><p>CSV ファイルは以下のようになっている。1 行目に変数名，2 行目以降にデータが，それぞれカンマで区切られている。</p>
 <p>ID,Weight,Height,Age,BloodType<br>
 125,44.6,157.6,17,A<br>
@@ -14925,127 +14925,123 @@ Stacktrace:
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>データフレームの各列の型は，実際に入力されるデータから推論され妥当なものになっている。</p>
-<p>当然，前述したように，Any 型以外の場合には missing は代入できない。</p>
+<p>当然，前述したように，<code>Any</code> 型以外の場合には <code>missing</code> は代入できない。</p>
 <h3 id="1.2.2.%E3%80%80%E4%B8%80%E8%88%AC%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.2.2.&#12288;&#19968;&#33324;&#12398; CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.2.2.%E3%80%80%E4%B8%80%E8%88%AC%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h3><p>CSV ファイルは Excel ファイルの一般的な保存形式ということに限らず，単に，前述したような 1 行目に変数名，2列目以降にデータをカンマで区切って列挙したものということである。</p>
 <p>Excel を使わずとも単純なエディタで CSV ファイルをつくることもできる。
-また，世の中にある CSV ファイルの中には CSV.read(ファイル名, DataFrame) だけでは読み込めないものもある。</p>
-<h3 id="1.2.3.%E3%80%80CSV.read-%E3%81%AE%E5%BC%95%E6%95%B0">1.2.3.&#12288;CSV.read &#12398;&#24341;&#25968;<a class="anchor-link" href="#1.2.3.%E3%80%80CSV.read-%E3%81%AE%E5%BC%95%E6%95%B0">&#182;</a></h3><p>それらに対応するために CSV.read() が持っているいくつかのオプション（引数）についてまとめておこう。詳しくは <a href="https://csv.juliadata.org/stable/">https://csv.juliadata.org/stable/</a> を参照。</p>
+また，世の中にある CSV ファイルの中には <code>CSV.read(ファイル名, DataFrame)</code> だけでは読み込めないものもある。</p>
+<h3 id="1.2.3.%E3%80%80CSV.read-%E3%81%AE%E5%BC%95%E6%95%B0">1.2.3.&#12288;CSV.read &#12398;&#24341;&#25968;<a class="anchor-link" href="#1.2.3.%E3%80%80CSV.read-%E3%81%AE%E5%BC%95%E6%95%B0">&#182;</a></h3><p>それらに対応するために `CSV.read() が持っているいくつかのオプション（引数）についてまとめておこう。詳しくは <a href="https://csv.juliadata.org/stable/">https://csv.juliadata.org/stable/</a> を参照。</p>
 <ul>
-<li><p>header=整数<br>
+<li><p><code>header=整数</code><br>
 列名の定義について指定する。省略されている場合は，適当に解釈される。<br>
 列名が何行目に定義されているかを指定する。<br>
-デフォルトでは header=1。<br>
+デフォルトでは <code>header=1</code>。<br>
 2 以上の値が指定されたときはそれまでの行は読み飛ばされる。<br>
-また，列名の指定行のすぐ後からデータが始まると解釈されるので，もし読み飛ばすべき行があるならば，skipto, datarow でデータ開始行を指定する。<br>
-例　df = CSV.read("small.csv", DataFrame, header=0, skipto=2)</p>
+また，列名の指定行のすぐ後からデータが始まると解釈されるので，もし読み飛ばすべき行があるならば，<code>skipto</code> でデータ開始行を指定する。<br>
+例　<code>df = CSV.read("small.csv", DataFrame, header=0, skipto=2)</code></p>
 </li>
-<li><p>header=0 もしくは header=false<br>
+<li><p><code>header=0</code> もしくは <code>header=false</code><br>
 列名を持たないファイルの場合は，列名を自動生成することができる。<br>
-例　df = CSV.read("small.csv", DataFrame, header=0)</p>
+例　<code>df = CSV.read("small.csv", DataFrame, header=0)</code></p>
 </li>
-<li><p>header=["ab", "cd", ...]<br>
+<li><p><code>header=["ab", "cd", ...]</code><br>
 文字列ベクトルで列名を定義する。<br>
-例　df = CSV.read("small.csv", DataFrame, header=["a1", "b1", "c1"])</p>
+例　<code>df = CSV.read("small.csv", DataFrame, header=["a1", "b1", "c1"])</code></p>
 </li>
-<li><p>header=[:ab, :cd, ...]<br>
+<li><p><code>header=[:ab, :cd, ...]</code><br>
 シンボルベクトルで列名を定義する。<br>
-例　df = CSV.read("small.csv", DataFrame, header=[:a, :b, :c]])</p>
+例　<code>df = CSV.read("small.csv", DataFrame, header=[:a, :b, :c]])</code></p>
 </li>
-<li><p>skipto<br>
+<li><p><code>skipto</code><br>
 データが始まる行番号を指定する。</p>
 </li>
-<li><p>footerskip<br>
+<li><p><code>footerskip</code><br>
 データの最後の何行を読み飛ばすかを指定する。</p>
 </li>
-<li><p>limit<br>
+<li><p><code>limit</code><br>
 入力行数の制限</p>
 </li>
-<li><p>transpose=false<br>
+<li><p><code>transpose=false</code><br>
 行と列を転置して入力する。</p>
 </li>
-<li><p>comment<br>
+<li><p><code>comment</code><br>
 指定した文字列から始まる行を（コメント行として）読み飛ばす。</p>
 </li>
-<li><p>ignoreemptylines=true<br>
+<li><p><code>ignoreemptylines=true</code><br>
 空行を読み飛ばす</p>
 </li>
-<li><p>select<br>
+<li><p><code>select</code><br>
 選択する列をベクトルで指定する。<br>
-select=[1, 3]　列番号で指定<br>
-select=[:a, :c]　列シンボルで指定<br>
-select=["a", "c"]　列名で指定<br>
-select=[true, false, true]　論理値で指定<br>
-select=(i, nm) -&gt; i in (1, 3)　ラムダ式（無名関数）で指定<br></p>
+<code>select=[1, 3]</code>　列番号で指定<br>
+<code>select=[:a, :c]</code>　列シンボルで指定<br>
+<code>select=["a", "c"]</code>　列名で指定<br>
+<code>select=[true, false, true]</code>　論理値で指定<br>
+<code>select=(i, nm) -&gt; i in (1, 3)</code>　ラムダ式（無名関数）で指定<br></p>
 </li>
-<li><p>drop<br>
-選択しない列をベクトルで指定する（select の逆である）。</p>
+<li><p><code>drop</code><br>
+選択しない列をベクトルで指定する（<code>select</code> の逆である）。</p>
 </li>
-<li><p>missingstrings, missingstring<br>
-欠損値を表す文字列を指定する。R では NA が自動的に欠損値扱いになるが，Julia では特別に指定しないといけないので注意が必要である。<br>
-missingstring="-999"<br>
-missingstrings=["-999", "NA"]</p>
+<li><p><code>missingstrings</code>, <code>missingstring&lt;br&gt;
+欠損値を表す文字列を指定する。R では</code>NA<code>が自動的に欠損値扱いになるが，Julia では特別に指定しないといけないので注意が必要である。&lt;br&gt;</code>missingstring="-999"<code>&lt;br&gt;</code>missingstrings=["-999", "NA"]`</p>
 </li>
-<li><p>delim=','<br>
+<li><p><code>delim=','</code><br>
 データのデリミターをシングルクオートでくくって指定する。<br>
-最初の 10 行を見て，カンマ(',')，タブ('\t')，半角空白(' ')，コロン(':')，セミコロン(';')，連結 concatenation('|') のどれかをデリミターと解釈する。<br>
-delim="@@@" のように文字列も使える</p>
+最初の 10 行を見て，カンマ(<code>,</code>)，タブ(<code>\t</code>)，半角空白(<code>`)，コロン(</code>:<code>)，セミコロン(</code>;<code>)，連結 concatenation(</code>|<code>) のどれかをデリミターと解釈する。&lt;br&gt;</code>delim="@@@"` のように文字列も使える</p>
 </li>
-<li><p>ignorerepeated=false<br>
-連続するデリミタを無視するかどうかを指示する。<br>
-複数の空白で桁位置を揃えて入力されたファイルを読むときなどには，
-delim=' ', ignorerepeated=true を指定すればよい。</p>
+<li><p><code>ignorerepeated=false&lt;br&gt;
+連続するデリミタを無視するかどうかを指示する。&lt;br&gt;
+複数の空白で桁位置を揃えて入力されたファイルを読むときなどには，</code>delim=' ', ignorerepeated=true` を指定すればよい。</p>
 </li>
-<li><p>quotechar='"'<br>
+<li><p><code>quotechar='"'</code><br>
 文字列をくくる引用符である。</p>
 </li>
-<li><p>escapechar='"'<br>
+<li><p><code>escapechar='"'</code><br>
 引用符のエスケープ文字である。</p>
 </li>
-<li><p>dateformat<br>
+<li><p><code>dateformat</code><br>
 日付，時間のフォーマットを示す文字列である。<br>
-dateformat="yyyy/mm/dd" など</p>
+<code>dateformat="yyyy/mm/dd"</code> など</p>
 </li>
-<li><p>dateformats<br>
+<li><p><code>dateformats</code><br>
 日付，時間のフォーマットを辞書型で示す。</p>
 </li>
-<li><p>decimal='.'<br>
-小数点を表す文字をシングルクオートくくて指定する。</p>
+<li><p><code>decimal='.'</code><br>
+小数点を表す文字をシングルクオートでくくって指定する。</p>
 </li>
-<li><p>truestrings=["T", "TRUE"]<br>
-true の他に真値を表す文字列を定義する。</p>
+<li><p><code>truestrings=["T", "TRUE"]</code><br>
+<code>true</code> の他に真値を表す文字列を定義する。</p>
 </li>
-<li><p>falsestrings=["F", "FALSE"]<br>
-false の他に真値を表す文字列を定義する。</p>
+<li><p><code>falsestrings=["F", "FALSE"]</code><br>
+<code>false</code> の他に真値を表す文字列を定義する。</p>
 </li>
-<li><p>type<br>
+<li><p><code>type</code><br>
 ファイル全体に共通する唯一のデータ型を指定する。<br>
 項目全て（全列）をここで指定した型として読む。<br>
-実数データ行列を読むときに type=Float64 のように指定する。整数の場合は Int，文字列の場合は String である。</p>
+実数データ行列を読むときに <code>type=Float64</code> のように指定する。整数の場合は <code>Int</code>，文字列の場合は <code>String</code> である。</p>
 </li>
-<li><p>types<br>
+<li><p><code>types</code><br>
 列ごとのデータ型を指定する。<br>
 ベクトルで与える場合は，全ての列について指定する。<br>
-types=Dict(3 =&gt; Int)　　3 列目の変数は整数ということを指定する。<br>
-types=Dict(:col3 =&gt; Int)　　3 列目の変数は整数ということを指定する。<br>
-types=Dict("col4" =&gt; Float64)　　"col4" という列の変数は実数であることを指定する。<br>
-types=[Int, Float64, String]</p>
+<code>types=Dict(3 =&gt; Int)</code>　　3 列目の変数は整数ということを指定する。<br>
+<code>types=Dict(:col3 =&gt; Int)</code>　　3 列目の変数は整数ということを指定する。<br>
+<code>types=Dict("col4" =&gt; Float64)</code>　　<code>"col4"</code> という列の変数は実数であることを指定する。<br>
+<code>types=[Int, Float64, String]</code></p>
 </li>
-<li><p>typemap<br>
+<li><p><code>typemap</code><br>
 特定の型の入力値を別の型として読み込む。<br>
-型のマッピング Dict(Float64=&gt;String) のように指定する。<br>
-typemap=Dict(Int =&gt; String)　　整数を文字列として読み込む。<br>
-types=Dict(:zipcode =&gt; String)　　郵便コードを文字列として読み込む。</p>
+型のマッピング <code>Dict(Float64=&gt;String)</code> のように指定する。<br>
+<code>typemap=Dict(Int =&gt; String)</code>　　整数を文字列として読み込む。<br>
+<code>types=Dict(:zipcode =&gt; String)</code>　　郵便コードを文字列として読み込む。</p>
 </li>
-<li><p>pool<br>
-lazystrings=false</p>
+<li><p><code>pool</code><br>
+<code>lazystrings=false</code></p>
 </li>
 <li><p>strict=false<br>
-不正な値は警告して missing にする</p>
+不正な値は警告して <code>missing</code> にする</p>
 </li>
 <li><p>silencewarnings=false<br>
-strict=false のとき，不正な値の警告はしない</p>
+<code>strict=false</code> のとき，不正な値の警告はしない</p>
 </li>
-<li><p>maxwarnings=100<br>
+<li><p><code>maxwarnings=100</code><br>
 警告を表示する最高回数</p>
 </li>
 </ul>
@@ -15055,7 +15051,7 @@ strict=false のとき，不正な値の警告はしない</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="1.3.-%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E4%B8%8A%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">1.3. &#12452;&#12531;&#12479;&#12540;&#12493;&#12483;&#12488;&#19978;&#12398; CSV &#12501;&#12449;&#12452;&#12523;<a class="anchor-link" href="#1.3.-%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E4%B8%8A%E3%81%AE-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">&#182;</a></h2><p>インターネット上にある CSV ファイルを読み込むのは以下のようにする。</p>
-<p>なお，何回もサイトにアクセスするのは良くないので，読み取ったデータフレームを 「2. データフレームを CSV ファイルに書き出す」によって保存し，以後はウンロードしたデータを使用するようにしたい。</p>
+<p>なお，何回もサイトにアクセスするのは良くないので，読み取ったデータフレームを 「2. データフレームを CSV ファイルに書き出す」によって保存し，以後はダウンロードしたデータを使用するようにしたい。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15129,10 +15125,10 @@ strict=false のとき，不正な値の警告はしない</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>である。</p>
 <p>まず，これを CSV ファイルとして保存する。
-それぞれをコピーしてテキストエディタにペーストし，たとえば data1.csv，data2.csv という名前で保存する。</p>
+それぞれをコピーしてテキストエディタにペーストし，たとえば <code>data1.csv</code>，<code>data2.csv</code> という名前で保存する。</p>
 <p>行頭，行末に複数の空白があるような場合にはテキストエディタではなく Excel などのワークシートアプリに読み込ませればデータ部分を取り出すのが容易になることもある。同時にいくばくかの編集も行うことができる。その後 CSV ファイルとして保存すればよい。</p>
-<p>データファイルに読み込むには，CSV.read() を用いる。保存した CSV ファイルが，何らかの点で標準のものと違う場合には，それに対応するために前節の CSV.read() の引数を使用する。</p>
-<p>data1.csv は，1 行目に変数名，2行目以降にデータという構成の標準的な CSV ファイルなので，簡単に読み込める。</p>
+<p>データファイルに読み込むには，<code>CSV.read()</code> を用いる。保存した CSV ファイルが，何らかの点で標準のものと違う場合には，それに対応するために前節の <code>CSV.read()</code> の引数を使用する。</p>
+<p><code>data1.csv</code> は，1 行目に変数名，2行目以降にデータという構成の標準的な CSV ファイルなので，簡単に読み込める。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15175,12 +15171,12 @@ strict=false のとき，不正な値の警告はしない</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>data2.csv はデータ部分の最も左の列は本来のデータではなくデータフレームでの通し番号である。1 行目の変数名にはこれが含まれない。</p>
+<p><code>data2.csv</code> はデータ部分の最も左の列は本来のデータではなくデータフレームでの通し番号である。1 行目の変数名にはこれが含まれない。</p>
 <p>このデータを読み込むための対処法はいくつかある。</p>
 <ul>
-<li>data2.csv をテキストエディタで開いて，一行目の変数名の最初に任意の（他と重複しない）変数名を付け加える。</li>
-<li>data2.csv をテキストエディタで開いて，データ部分の最初の列を削除する。</li>
-<li>CSV.read() の引数 header で列名を定義する。</li>
+<li><code>data2.csv</code> をテキストエディタで開いて，一行目の変数名の最初に任意の（他と重複しない）変数名を付け加える。</li>
+<li><code>data2.csv</code> をテキストエディタで開いて，データ部分の最初の列を削除する。</li>
+<li><code>CSV.read()</code> の引数 <code>header</code> で列名を定義する。</li>
 </ul>
 <p>どれも一長一短であるが，最後の選択肢がわかりやすいかもしれない。</p>
 
@@ -15226,13 +15222,13 @@ strict=false のとき，不正な値の警告はしない</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>もし，このような煩わしい処理が何度も必要であれば，以下のような Julia プログラムを用意すればよい。</p>
 <ul>
-<li>このプログラムは，まず csv ファイルの 1 行目から列名を読む。<br></li>
-<li>次に，datarow 以降のデータから 1 列目を除いて列名なしのデータフレームとして読む。<br></li>
+<li>このプログラムは，まず CSV ファイルの 1 行目から列名を読む。<br></li>
+<li>次に，<code>skipto</code> 以降のデータから 1 列目を除いて列名なしのデータフレームとして読む。<br></li>
 <li>最後に，データフレームの列名を付けて，返す。</li>
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
@@ -15245,7 +15241,7 @@ strict=false のとき，不正な値の警告はしない</p>
     <span class="n">df</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skipto</span><span class="o">=</span><span class="n">skipto</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="n">rename!</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">names</span><span class="p">)</span>
     <span class="n">df</span>
-<span class="k">end</span>
+<span class="k">end</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -15253,33 +15249,10 @@ strict=false のとき，不正な値の警告はしない</p>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>readcsvfile (generic function with 1 method)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>使用法は次のようにする。datarow はデフォルトで 3 になっているので，それ以外のときには明示指定する。</p>
+<p>使用法は次のようにする。<code>skipto</code> はデフォルトで 3 になっているので，それ以外のときには明示指定する。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15322,9 +15295,9 @@ strict=false のとき，不正な値の警告はしない</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="1.5.%E3%80%80%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%9F%E5%86%85%E5%AE%B9%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E3%81%99%E3%82%8B">1.5.&#12288;&#12463;&#12522;&#12483;&#12503;&#12508;&#12540;&#12489;&#12395;&#12467;&#12500;&#12540;&#12375;&#12383;&#20869;&#23481;&#12434;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12395;&#12377;&#12427;<a class="anchor-link" href="#1.5.%E3%80%80%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%9F%E5%86%85%E5%AE%B9%E3%82%92%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%81%AB%E3%81%99%E3%82%8B">&#182;</a></h2><p>モニターに表示された標準的なデータフレームの形式をしたデータをデータフレームに読み込む。</p>
-<p>このような場合は，CSV.read() の第 1 引数として，ファイル名ではなく IOBuffer(clipboard()) を指定すれば良い。</p>
-<p>使用法は，たとえば以下のようなデータフレーム様の部分を control+C（Windows の場合は Ctrl+C）でコピーして，すぐに，<br>
-df = CSV.read(IOBuffer(clipboard()), DataFrame)<br>
+<p>このような場合は，<code>CSV.read()</code> の第 1 引数として，ファイル名ではなく <code>IOBuffer(clipboard())</code> を指定すれば良い。</p>
+<p>使用法は，たとえば以下のようなデータフレーム様の部分を <code>control+C</code>（Windows の場合は <code>Ctrl+C</code>）でコピーして，すぐに，<br>
+<code>df = CSV.read(IOBuffer(clipboard()), DataFrame)</code><br>
 を実行する。</p>
 <p>以下の 3 行は，カンマで区切られたデータフレーム様の場合である。これをコピーし，</p>
 <pre>
@@ -15373,8 +15346,8 @@ foo,bar,baz
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>次の例は，空白で区切られたデータフレーム様の場合である。</p>
-<p>CSV.read() の引数で，delim=' ', ignorerepeated=true　を使用する。</p>
-<p>なお，見た目が空白でも，全角空白やタブで区切られている場合があるので必ずしも簡単に読めるわけではない。そのような場合には，一旦 CSV ファイルとして保存し，ファイルに必要な修正を加えた後 CSV.read() する。</p>
+<p><code>CSV.read()</code> の引数で，<code>delim=' ', ignorerepeated=true</code>　を使用する。</p>
+<p>なお，見た目が空白でも，全角空白やタブで区切られている場合があるので必ずしも簡単に読めるわけではない。そのような場合には，一旦 CSV ファイルとして保存し，ファイルに必要な修正を加えた後 <code>CSV.read()</code> する。</p>
 <p>以下をコピーし，</p>
 <pre>
 foo bar baz
@@ -15385,7 +15358,7 @@ foo bar baz
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="kt">IOBuffer</span><span class="p">(</span><span class="n">clipboard</span><span class="p">()),</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="sc">&#39; &#39;</span><span class="p">,</span> <span class="n">ignorerepeated</span><span class="o">=</span><span class="nb">true</span><span class="p">)</span>
@@ -15404,7 +15377,7 @@ foo bar baz
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -15421,7 +15394,7 @@ foo bar baz
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.6.%E3%80%80%E6%96%87%E5%AD%97%E5%88%97%E8%A1%8C%E3%81%8B%E3%82%89%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B">1.6.&#12288;&#25991;&#23383;&#21015;&#34892;&#12363;&#12425;&#20837;&#21147;&#12377;&#12427;<a class="anchor-link" href="#1.6.%E3%80%80%E6%96%87%E5%AD%97%E5%88%97%E8%A1%8C%E3%81%8B%E3%82%89%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B">&#182;</a></h2><p>Julia はプログラム中に，三重のダブルクオートで区切られた複数行の文字列を書くことができる。また，文字列から入力する機能もある。これを組み合わせれば，以下のようなことができる。</p>
+<h2 id="1.6.%E3%80%80%E6%96%87%E5%AD%97%E5%88%97%E8%A1%8C%E3%81%8B%E3%82%89%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B">1.6.&#12288;&#25991;&#23383;&#21015;&#34892;&#12363;&#12425;&#20837;&#21147;&#12377;&#12427;<a class="anchor-link" href="#1.6.%E3%80%80%E6%96%87%E5%AD%97%E5%88%97%E8%A1%8C%E3%81%8B%E3%82%89%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B">&#182;</a></h2><p>Julia はプログラム中に，三重のダブルクオート <code>"""</code> で区切られた複数行の文字列を書くことができる。また，文字列から入力する機能もある。これを組み合わせれば，以下のようなことができる。</p>
 <p>前節 1.5. の方法は，クリップボードを使うので一時的で再現性に劣る。しかし，この方法によればプログラム中にクリップボードに取り込んだものを残しておくことができる。</p>
 
 </div>
@@ -15487,12 +15460,12 @@ foo bar baz
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1.7.%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">1.7.&#12288;&#12456;&#12531;&#12467;&#12540;&#12487;&#12451;&#12531;&#12464;&#12398;&#36949;&#12358;&#12501;&#12449;&#12452;&#12523;&#12434;&#35501;&#12416;<a class="anchor-link" href="#1.7.%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#182;</a></h2><p>Windows で作られた（変数名などに）日本語を含むファイル（インターネットからダウンロードしたファイルや研究チームで共有するファイル）は，以下のようにして読む（エンコーディングとして，shift_jis ではなく，cp932 を指定する）。</p>
-<p>以下のような cp932 で保存された CSV ファイルを読む。</p>
+<h2 id="1.7.%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">1.7.&#12288;&#12456;&#12531;&#12467;&#12540;&#12487;&#12451;&#12531;&#12464;&#12398;&#36949;&#12358;&#12501;&#12449;&#12452;&#12523;&#12434;&#35501;&#12416;<a class="anchor-link" href="#1.7.%E3%80%80%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E9%81%95%E3%81%86%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%AA%AD%E3%82%80">&#182;</a></h2><p>Windows で作られた（変数名などに）日本語を含むファイル（インターネットからダウンロードしたファイルや研究チームで共有するファイル）は，以下のようにして読む（エンコーディングとして，<code>shift_jis</code> ではなく，<code>cp932</code> を指定する）。</p>
+<p>以下のような <code>cp932</code> で保存された CSV ファイルを読む。</p>
 <p>日本語,ファイル,数値<br>
 1,2,3<br>
 4,5,6</p>
-<p>CSV.read("cp932.csv", DataFrame) では，日本語による変数名が文字化けしており，ちゃんと読めていない。</p>
+<p><code>CSV.read("cp932.csv", DataFrame)</code> では，日本語による変数名が文字化けしており，ちゃんと読めていない。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15577,13 +15550,13 @@ foo bar baz
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Julia, R, Python においても，最近ではエンコーディングはほとんど utf-8 に統一されている。
-毎回いちいち cp932 と指定して読み込むより，いっそのこと utf-8 にしてしまえばよい。</p>
-<p>方法は色々あるが，保存時にエンコーディングを選べるエディタで読み込み，utf-8 で保存する。</p>
-<p>または，コマンドラインで nkf が使えるようであれば</p>
-<p>% nkf -w cp932.csv &gt; utf8.csv</p>
+<p>Julia, R, Python においても，最近ではエンコーディングはほとんど <code>utf-8</code> に統一されている。
+毎回いちいち <code>cp932</code> と指定して読み込むより，いっそのこと <code>utf-8</code> にしてしまえばよい。</p>
+<p>方法は色々あるが，保存時にエンコーディングを選べるエディタで読み込み，<code>utf-8</code> で保存する。</p>
+<p>または，コマンドラインで <code>nkf</code> が使えるようであれば</p>
+<p>% <code>nkf -w cp932.csv &gt; utf8.csv</code></p>
 <p>のようにエンコードを変換する。</p>
-<p>nkf コマンドのインストールは <a href="https://qiita.com/ponsuke0531/items/d0b6d743a70c624a1ba7">https://qiita.com/ponsuke0531/items/d0b6d743a70c624a1ba7</a> などを参照。</p>
+<p><code>nkf</code> コマンドのインストールは <a href="https://qiita.com/ponsuke0531/items/d0b6d743a70c624a1ba7">https://qiita.com/ponsuke0531/items/d0b6d743a70c624a1ba7</a> などを参照。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15633,7 +15606,7 @@ ID,Weight,Height,Age,BloodType
 43754.3162.222AB
 42645.4160.831O
 24348.5174.534B</pre><p>このようなデータファイルは稀かもしれないが，たとえば 1 行に 0〜9 の値を持つ 100 変数のデータを考える。もし，数字をカンマで区切って入力するのはかなり煩雑な作業になる。これを，カンマで区切らずに長さ 100 の文字列として入力すればかなり省力できる。</p>
-<p>そのようなデータの読み取りは特別な処理が必要である。R には fwf 関数があるが，Julia にはない（必要と思う人が自分で入力関数を書いている）ので，関数を書いた。</p>
+<p>そのようなデータの読み取りは特別な処理が必要である。R には <code>fwf</code> 関数があるが，Julia にはない（必要と思う人が自分で入力関数を書いている）ので，関数を書いた。</p>
 <p><a href="https://blog.goo.ne.jp/r-de-r/e/87cf94ca1ac03e36f5d92400691ef8b4">https://blog.goo.ne.jp/r-de-r/e/87cf94ca1ac03e36f5d92400691ef8b4</a> を参照して欲しい。</p>
 <p>上のファイルに読み取りのための情報（2 行目）を加えて以下のようにする。</p>
 <pre>
@@ -15650,17 +15623,17 @@ julia&gt; df = fixedformat("sample2.dat")<br></p>
 <p><img src="Julia-stats2-2.png" alt="Image"></p>
 <h1 id="2.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%99">2.&#12288;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12434; CSV &#12501;&#12449;&#12452;&#12523;&#12395;&#26360;&#12365;&#20986;&#12377;<a class="anchor-link" href="#2.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92-CSV-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E6%9B%B8%E3%81%8D%E5%87%BA%E3%81%99">&#182;</a></h1><p>入力されたデータはそのまま使われる場合もあるが，いろいろな編集や新たな変数の創生など元のデータとはかなり違いがでてくることも多い。毎回同じような手順を経てデータ分析に取り掛かるのは，無駄でもあるので，その時点のデータを別ファイルで保存しておき，次回以降はそのファイルからデータフレームに入力すればよい。</p>
 <p>編集されたデータフレームの保存は簡単で，<br>
-CSV.write(ファイル, データフレーム)<br>
+<code>CSV.write(ファイル, データフレーム)</code><br>
 とすればよい。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">CSV</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;output.csv&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">CSV</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;output.csv&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -15668,68 +15641,45 @@ CSV.write(ファイル, データフレーム)<br>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#34;output.csv&#34;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.1.%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">2.1.&#12288;CSV.write &#12398;&#24341;&#25968;<a class="anchor-link" href="#2.1.%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">&#182;</a></h2><p>CSV.write() の引数には，以下のようなものがある。詳しくは <a href="https://csv.juliadata.org/stable/">https://csv.juliadata.org/stable/</a> を参照。</p>
+<h2 id="2.1.%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">2.1.&#12288;CSV.write &#12398;&#24341;&#25968;<a class="anchor-link" href="#2.1.%E3%80%80CSV.write-%E3%81%AE%E5%BC%95%E6%95%B0">&#182;</a></h2><p><code>CSV.write()</code> の引数には，以下のようなものがある。詳しくは <a href="https://csv.juliadata.org/stable/">https://csv.juliadata.org/stable/</a> を参照。</p>
 <ul>
-<li><p>bufsize=2^22<br>
+<li><p><code>bufsize=2^22</code><br>
 バッファーサイズ</p>
 </li>
-<li><p>delim=','<br>
+<li><p><code>delim=','</code><br>
 デリミター</p>
 </li>
-<li><p>quotechar='"'<br>
+<li><p><code>quotechar='"'</code><br>
 引用符</p>
 </li>
-<li><p>escapechar='"'<br>
+<li><p><code>escapechar='"'</code><br>
 引用符のエスケープ文字</p>
 </li>
-<li><p>missingstring=""<br>
-missing を表す文字列</p>
+<li><p><code>missingstring=""</code><br>
+<code>missing</code> を表す文字列</p>
 </li>
-<li><p>dateformat<br>
-dateformat="yyyy/mm/dd" など</p>
+<li><p><code>dateformat</code><br>
+<code>dateformat="yyyy/mm/dd"</code> など</p>
 </li>
-<li><p>append=false<br>
+<li><p><code>append=false</code><br>
 既存のファイルに書き足すかどうか</p>
 </li>
-<li><p>writeheader=!append<br>
+<li><p><code>writeheader=!append</code><br>
 列名を出力するか</p>
 </li>
-<li><p>header<br>
+<li><p><code>header</code><br>
 使用する列名のリスト</p>
 </li>
-<li><p>newline='\n'<br>
+<li><p><code>newline='\n'</code><br>
 改行文字</p>
 </li>
-<li><p>quotestrings=false<br>
+<li><p><code>quotestrings=false</code><br>
 文字列を引用符で囲むかどうか</p>
 </li>
-<li><p>decimal='.'<br>
+<li><p><code>decimal='.'</code><br>
 小数点として使用する文字</p>
 </li>
 </ul>

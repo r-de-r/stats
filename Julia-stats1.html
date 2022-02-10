@@ -14538,7 +14538,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>最新バージョン 2022-01-26 22:55
+<pre>最新バージョン 2022-02-10 23:55
 </pre>
 </div>
 </div>
@@ -14557,94 +14557,94 @@ a.anchor-link {
 <p><img src="Julia-stats1-1.png" alt="Image"></p>
 <p>Download ボタンをクリックすると次のようなページになる。</p>
 <p><img src="Julia-stats1-2.png" alt="Image"></p>
-<p>上部には最新版が表示されている（2021/12/22 にリリースされた v1.7.1 版）。</p>
+<p>上部には最新版が表示されている（2022/02/06 にリリースされた v1.7.2 版）。</p>
 <p>Windows, macOS, Linux, FreeBSD から自分の OS に合ったものを選択する。</p>
 <p>x86, ARM の2種類ある場合には，いわゆる M1/M2 チップが入っているマシンでは ARM を選ぶほうがよい(x86のほうでも動くが最適ではない）。</p>
 <p>最新版は，数ヶ月ごとのバージョンアップがあるので，ときどきチェックするとよい。</p>
 <p>下の方には，ちょっと前の（枯れた）版 (2021/12/19 にリリースされた v1.6.5 版）がリストアップされている。最新版で一部動かないパッケージがある要な場合にはこれらを選べばよい（複数のバージョンを同時にインストールすることもできる）。</p>
 <h2 id="1.2.%E3%80%80Julia-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">1.2.&#12288;Julia &#12398;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;<a class="anchor-link" href="#1.2.%E3%80%80Julia-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">&#182;</a></h2><p>ダウンロードされたファイルを対象として，各 OS ごとの手順（他のアプリケーションをインストールするのと同じ手順）にしたがえばよい。</p>
-<p>たとえば，macOS の場合は，ダウンロードしたファイルをダブルクリックして出てくるフォルダ中の Julia-x.x.app をアプリケーションフォルダにコピーする。</p>
+<p>たとえば，macOS の場合は，ダウンロードしたファイルをダブルクリックして出てくるフォルダ中の <code>Julia-x.x.app</code> をアプリケーションフォルダにコピーする。</p>
 <p><img src="Julia-stats1-3.png" alt="Image"></p>
-<p>macOS の場合は，アプリケーションフォルダを開き，Julia-x.x.app をドックに入れておくと，ドックのアイコンをクリックするだけで，Julia が起動される。</p>
+<p>macOS の場合は，アプリケーションフォルダを開き，<code>Julia-x.x.app</code> をドックに入れておくと，ドックのアイコンをクリックするだけで，Julia が起動される。</p>
 <p>Windows の場合はダウンロード進行状況ウインドウにあるダウンロードファイルをクリックするだけでインストールでき，デスクトップとタスクバーに Julia のアイコンが配置される。アイコンをクリックすれば，Julia が起動される。</p>
-<h2 id="1.3.%E3%80%80Julia-%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B">1.3.&#12288;Julia &#12434;&#36215;&#21205;&#12375;&#32066;&#20102;&#12377;&#12427;<a class="anchor-link" href="#1.3.%E3%80%80Julia-%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B">&#182;</a></h2><p>Julia-x.x.app をクリックすることにより，Julia が起動する。</p>
+<h2 id="1.3.%E3%80%80Julia-%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B">1.3.&#12288;Julia &#12434;&#36215;&#21205;&#12375;&#32066;&#20102;&#12377;&#12427;<a class="anchor-link" href="#1.3.%E3%80%80Julia-%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B">&#182;</a></h2><p><code>Julia-x.x.app</code> をクリックすることにより，Julia が起動する。</p>
 <p><img src="Julia-stats1-4.png" alt="Image"></p>
 <p>これは R での「R コンソール」と同じで，プロンプトにしたがって計算式などを入力すれば，入力に対する出力が表示される。Julia では REPL; Read-Eval-PrintLoop と呼ぶ。</p>
-<p>終了するときには，プロンプトが出ているときに，control-D を押す（control キーを押しながら D キーを押す）。</p>
+<p>終了するときには，プロンプトが出ているときに，<code>control-D</code> を押す（<code>control</code> キーを押しながら <code>D</code> キーを押す）。</p>
 <h2 id="1.4.%E3%80%80%E4%BD%9C%E6%A5%AD%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B">1.4.&#12288;&#20316;&#26989;&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12434;&#22793;&#12360;&#12427;<a class="anchor-link" href="#1.4.%E3%80%80%E4%BD%9C%E6%A5%AD%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B">&#182;</a></h2><p>現在の作業ディレクトリを表示するには，pwd() を使う。</p>
-<p>julia&gt; pwd()
+<p>julia&gt; <code>pwd()</code>
 "/Users/foo/"</p>
 <p>作業ディレクトリを変更するときには，cd() を使う。</p>
-<p>julia&gt; cd("/Users/foo/Desktop/Julia")</p>
+<p>julia&gt; <code>cd("/Users/foo/Desktop/Julia")</code></p>
 <p>正しく変更できたかどうかは pwd() で確かめることができる。</p>
-<p>julia&gt; pwd()
+<p>julia&gt; <code>pwd()</code>
 "/Users/foo/Desktop/Julia"</p>
 <h2 id="1.5.%E3%80%80Julia-%E3%81%AE%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A%E3%82%92%E3%81%99%E3%82%8B">1.5.&#12288;Julia &#12398;&#29872;&#22659;&#35373;&#23450;&#12434;&#12377;&#12427;<a class="anchor-link" href="#1.5.%E3%80%80Julia-%E3%81%AE%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A%E3%82%92%E3%81%99%E3%82%8B">&#182;</a></h2><p>たとえば，前節の作業ディレクトリの変更の場合，毎回同じ作業ディレクトリを設定したいような場合には，~/.julia/config ディレクトリにある startup.jl ファイルに設定事項を記載しておけばよい。</p>
 <h3 id="1.5.1.%E3%80%80startup.jl-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%81%82%E3%82%8B%E3%81%8B%E3%82%92%E7%A2%BA%E8%AA%8D">1.5.1.&#12288;startup.jl &#12501;&#12449;&#12452;&#12523;&#12364;&#12354;&#12427;&#12363;&#12434;&#30906;&#35469;<a class="anchor-link" href="#1.5.1.%E3%80%80startup.jl-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%81%82%E3%82%8B%E3%81%8B%E3%82%92%E7%A2%BA%E8%AA%8D">&#182;</a></h3><p>Mac の場合は「ターミナル」，Windows の場合は「Windows PowerShell」で以下を実行する（プロンプトはそれぞれ違うが、以下では % と表記しておく）。</p>
-<p>% cd ~/.julia<br>
-% ls -l</p>
-<p>表示されるファイル名の中に config というのがない場合には 1.5.3. へ進む。</p>
-<p>config がない場合には以下のようにして新しいディレクトリを作成後、1.5.2. へ進む。</p>
-<p>% mkdir config</p>
+<p>% <code>cd ~/.julia</code><br>
+% <code>ls -l</code></p>
+<p>表示されるファイル名の中に <code>config</code> というのがない場合には 1.5.3. へ進む。</p>
+<p><code>config</code> がない場合には以下のようにして新しいディレクトリを作成後、1.5.2. へ進む。</p>
+<p>% <code>mkdir config</code></p>
 <h3 id="1.5.2.%E3%80%80config-%E3%81%8C%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E5%A0%B4%E5%90%88">1.5.2.&#12288;config &#12364;&#12394;&#12363;&#12387;&#12383;&#22580;&#21512;<a class="anchor-link" href="#1.5.2.%E3%80%80config-%E3%81%8C%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E5%A0%B4%E5%90%88">&#182;</a></h3><p>以下のように入力する（青字の部分をコピー・ペーストすればよい）。</p>
-<p>% echo 'cd("/Users/foo/Julia")' &gt; config/startup.jl
-% cat config/startup.jl</p>
+<p>% <code>echo 'cd("/Users/foo/Julia")' &gt; config/startup.jl</code>
+% <code>cat config/startup.jl</code></p>
 <p>2 行目を入力後
-cd("/Users/foo/Julia")
+<code>cd("/Users/foo/Julia")</code>
 が表示されれば設定完了である。</p>
 <p>設定を追加する場合には次の 1.5.3. へ進む。</p>
-<h3 id="1.5.3.%E3%80%80startup.jl-%E3%81%8C%E3%81%82%E3%82%8B%E5%A0%B4%E5%90%88">1.5.3.&#12288;startup.jl &#12364;&#12354;&#12427;&#22580;&#21512;<a class="anchor-link" href="#1.5.3.%E3%80%80startup.jl-%E3%81%8C%E3%81%82%E3%82%8B%E5%A0%B4%E5%90%88">&#182;</a></h3><p>ls -l で以下のように startup.jl がある場合には</p>
+<h3 id="1.5.3.%E3%80%80startup.jl-%E3%81%8C%E3%81%82%E3%82%8B%E5%A0%B4%E5%90%88">1.5.3.&#12288;startup.jl &#12364;&#12354;&#12427;&#22580;&#21512;<a class="anchor-link" href="#1.5.3.%E3%80%80startup.jl-%E3%81%8C%E3%81%82%E3%82%8B%E5%A0%B4%E5%90%88">&#182;</a></h3><p><code>ls -l</code> で以下のように <code>startup.jl</code> がある場合には</p>
 <p>total 8<br>
 -rw-r--r--  1 foo   staff  109  1 15 13:06 startup.jl</p>
-<p>% open config/startup.jl</p>
-<p>により startup.jl が（あなたがよく使っているエディタで）開くので，追加書きして保存する。コマンドラインでの操作に慣れている場合は vi などのエディタで編集してもよい。</p>
-<h3 id="1.5.4.%E3%80%80%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E7%A2%BA%E8%AA%8D">1.5.4.&#12288;&#22793;&#26356;&#20869;&#23481;&#12398;&#30906;&#35469;<a class="anchor-link" href="#1.5.4.%E3%80%80%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E7%A2%BA%E8%AA%8D">&#182;</a></h3><p>新しく startup.jl を作った場合や，追加書きした場合は cat startup.jl でファイルの内容を確認しておこう。</p>
-<p>% cat ~/.julia/config/startup.jl<br>
+<p>% <code>open config/startup.jl</code></p>
+<p>により <code>startup.jl</code> が（あなたがよく使っているエディタで）開くので，追加書きして保存する。コマンドラインでの操作に慣れている場合は <code>vi</code> などのエディタで編集してもよい。</p>
+<h3 id="1.5.4.%E3%80%80%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E7%A2%BA%E8%AA%8D">1.5.4.&#12288;&#22793;&#26356;&#20869;&#23481;&#12398;&#30906;&#35469;<a class="anchor-link" href="#1.5.4.%E3%80%80%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E7%A2%BA%E8%AA%8D">&#182;</a></h3><p>新しく <code>startup.jl</code> を作った場合や，追加書きした場合は <code>cat startup.jl</code> でファイルの内容を確認しておこう。</p>
+<p>% <code>cat ~/.julia/config/startup.jl</code><br>
 cd("/Users/foo/Julia/")</p>
-<h2 id="1.6.%E3%80%80%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E4%BD%BF%E3%81%86">1.6.&#12288;&#12458;&#12531;&#12521;&#12452;&#12531;&#12504;&#12523;&#12503;&#12434;&#20351;&#12358;<a class="anchor-link" href="#1.6.%E3%80%80%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h2><p>Julia の 対話モード（REPL） で，? を押せば，プロンプトが &gt;julia から help?&gt; に変わる。オンラインヘルプを求めたい関数名などを入力すれば，説明が得られる。</p>
-<p>たとえば，exit 関数は，対話モードで exit() と入力するのは，^D を入力するのと同じで，Julia を終了するという説明が得られる。</p>
-<p>help?&gt; exit
+<h2 id="1.6.%E3%80%80%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E4%BD%BF%E3%81%86">1.6.&#12288;&#12458;&#12531;&#12521;&#12452;&#12531;&#12504;&#12523;&#12503;&#12434;&#20351;&#12358;<a class="anchor-link" href="#1.6.%E3%80%80%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h2><p>Julia の 対話モード（REPL） で，<code>?</code> を押せば，プロンプトが <code>&gt;julia</code> から <code>help?&gt;</code> に変わる。オンラインヘルプを求めたい関数名などを入力すれば，説明が得られる。</p>
+<p>たとえば，<code>exit</code> 関数は，対話モードで <code>exit()</code> と入力するのは，<code>^D</code> を入力するのと同じで，Julia を終了するという説明が得られる。</p>
+<p>help?&gt; <code>exit</code>
 search: exit atexit textwidth process_exited indexin nextind IndexLinear TextDisplay istextmime Exception</p>
 <p>exit(code=0)</p>
 <p>Stop the program with an exit code. The default exit code is zero, indicating that the program completed
   successfully. In an interactive session, exit() can be called with the keyboard shortcut ^D.</p>
 <h2 id="1.7.%E3%80%80%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B">1.7.&#12288;&#12497;&#12483;&#12465;&#12540;&#12472;&#12434;&#21033;&#29992;&#12377;&#12427;<a class="anchor-link" href="#1.7.%E3%80%80%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B">&#182;</a></h2><p>特に余分なパッケージを使わなくても様々な計算はできるが，場合によってはパッケージが必要になることがある。</p>
-<p>たとえば，2, 3, 5, 7, 11 の 5 個のデータの平均値を計算することを考えよう。</p>
-<p>データを x という変数に格納するのは以下のようにする。データをカンマで区切って全体を [ ] で括り，x = で x に代入することを表す。</p>
-<p>julia&gt; x = [2,3,5,7,11]</p>
-<p>入力すると，結果が返される。なお，結果の表示が不要な場合は，　REPL 入力の文末に ; を付ければよい。</p>
+<p>たとえば，<code>2, 3, 5, 7, 11</code> の 5 個のデータの平均値を計算することを考えよう。</p>
+<p>データを <code>x</code> という変数に格納するのは以下のようにする。データをカンマで区切って全体を <code>[ ]</code> で括り，<code>x =</code> で <code>x</code> に代入することを表す。</p>
+<p>julia&gt; <code>x = [2,3,5,7,11]</code></p>
+<p>入力すると，結果が返される。なお，結果の表示が不要な場合は，　REPL 入力の文末に <code>;</code> を付ければよい。</p>
 <p>5-element Vector{Int64}:<br>
   2<br>
   3<br>
   5<br>
   7<br>
  11</p>
-<p>さて，平均値を求める関数は mean だろうと決めてかかって，以下のようにすると，エラーが発生する。</p>
-<p>julia&gt; mean(x)<br>
+<p>さて，平均値を求める関数は <code>mean</code> だろうと決めてかかって，以下のようにすると，エラーが発生する。</p>
+<p>julia&gt; <code>mean(x)</code><br>
 ERROR: UndefVarError: mean not defined<br>
 Stacktrace:<br>
  [1] top-level scope<br>
    @ REPL[5]:1</p>
-<p>実は，mean という関数は（よく使う関数なのに）Statistics パッケージに入っている。
-そもそも，Statistics パッケージがまだコンピュータの中にない場合には，新たに追加しなければならない。</p>
-<p>プロンプトが &gt;julia のとき，] キーを押すと，プロンプトが (@vx.x) pkg&gt; に変わる。
-そこで，add Statistics と入力する。</p>
-<p>(@vx.x) pkg&gt; add Statistics</p>
-<p>その後処理内容が表示され，エラーがなければ (@vx.x) pkg&gt; のときに delete キーを押せばプロンプトがもとに戻る。</p>
-<p>パッケージの add はこれによって，パッケージがあなたのコンピュータ上に用意されたので，これ一回きりでよい（パッケージをアップデートするひつようが出れば update Statistics とすればよい）。</p>
-<p>関数を使うには，まず using Statistics が必要である。これは，Statistics を使う必要があるときは Julia セッションで 1 回行えばよい（一度 Julia を終了して，再度 Julia を立ち上げた場合にはまた 1 回は行う必要がある）。</p>
-<p>julia&gt; using Statistics</p>
-<p>これで始めて mean() 関数が使える。</p>
-<p>julia&gt; mean(x)
+<p>実は，<code>mean</code> という関数は（よく使う関数なのに）<code>Statistics</code> パッケージに入っている。
+そもそも，<code>Statistics</code> パッケージがまだコンピュータの中にない場合には，新たに追加しなければならない。</p>
+<p>プロンプトが <code>&gt;julia</code> のとき，<code>]</code> キーを押すと，プロンプトが <code>(@vx.x) pkg&gt;</code> に変わる。
+そこで，<code>add Statistics</code> と入力する。</p>
+<p>(@vx.x) pkg&gt; <code>add Statistics</code></p>
+<p>その後処理内容が表示され，エラーがなければ <code>(@vx.x) pkg&gt;</code> のときに <code>delete</code> キーを押せばプロンプトがもとに戻る。</p>
+<p>パッケージの <code>add</code> はこれによって，パッケージがあなたのコンピュータ上に用意されたので，これ一回きりでよい（パッケージをアップデートするひつようが出れば <code>update Statistics</code> とすればよい）。</p>
+<p>関数を使うには，まず <code>using Statistics</code> が必要である。これは，<code>Statistics</code> を使う必要があるときは Julia セッションで 1 回行えばよい（一度 Julia を終了して，再度 Julia を立ち上げた場合にはまた 1 回は行う必要がある）。</p>
+<p>julia&gt; <code>using Statistics</code></p>
+<p>これで始めて <code>mean()</code> 関数が使える。</p>
+<p>julia&gt; <code>mean(x)</code>
 5.6</p>
-<p>毎回 using を行うのが嫌だという場合は，前節の「Julia の環境設定をする」に書いた startup.jl によく使うパッケージの using を書いておくのも一つの便法であろう（ただし，Julia の立ち上げ時に若干余分な時間が必要になる）。</p>
-<p>% cat startup.jl<br>
+<p>毎回 <code>using</code> を行うのが嫌だという場合は，前節の「Julia の環境設定をする」に書いた <code>startup.jl</code> によく使うパッケージの <code>using</code> を書いておくのも一つの便法であろう（ただし，Julia の立ち上げ時に若干余分な時間が必要になる）。</p>
+<p>% <code>cat startup.jl</code><br>
 cd("/Users/foo/Julia/")<br>
 using Statistics<br>
 using LinearAlgebra</p>
 <p>などなど</p>
 <p>パッケージのインストールは必要に応じて行えばよいが、よく使いそうなパッケージをまとめてインストールしておくとよいかもしれない。</p>
-<p>(@vx.x) pkg&gt; add CSV, DataFrames, Plots, Distributions, FreqTables, GLM, HypergeometricFunctions, HypothesisTests, MultivariateStats, SpecialFunctions, StatsBase, StatsPlots, StringEncodings, Tables, XLSX, LinearAlgebra, Statistics</p>
+<p>(@vx.x) pkg&gt; <code>add CSV, DataFrames, Plots, Distributions, FreqTables, GLM, HypergeometricFunctions, HypothesisTests, MultivariateStats, SpecialFunctions, StatsBase, StatsPlots, StringEncodings, Tables, XLSX, LinearAlgebra, Statistics</code></p>
 <h2 id="1.8.%E3%80%80%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%82%92%E4%BD%BF%E3%81%86">1.8.&#12288;&#12456;&#12487;&#12451;&#12479;&#12434;&#20351;&#12358;<a class="anchor-link" href="#1.8.%E3%80%80%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF%E3%82%92%E4%BD%BF%E3%81%86">&#182;</a></h2><p>Julia では R のエディタウインドウのようなものはない。Julia では R のエディタウインドウのようなものはない。替わりに，Atom とか Jupyter lab がある。</p>
 <h3 id="1.8.1.%E3%80%80Atom">1.8.1.&#12288;Atom<a class="anchor-link" href="#1.8.1.%E3%80%80Atom">&#182;</a></h3><p>Atom はテキストエディタであるが，プログラムの一部を選択して実行することができる。Windows 版もある。</p>
 <p><a href="https://atom.io/">https://atom.io/</a></p>
@@ -14666,6 +14666,20 @@ JupyterLab desktop application, based on Electron.<br>
 <p>Jupyter lab は，文書，プログラム，実行結果をまとめて保存できる。</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
