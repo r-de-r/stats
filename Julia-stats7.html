@@ -25668,10 +25668,35 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.10.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E3%81%AE%E6%A4%9C%E5%AE%9A">2.10.&#12288;&#30456;&#38306;&#20418;&#25968;&#12398;&#26908;&#23450;<a class="anchor-link" href="#2.10.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E3%81%AE%E6%A4%9C%E5%AE%9A">&#182;</a></h2><h3 id="2.10.1.%E3%80%80%E7%84%A1%E7%9B%B8%E9%96%A2%E6%A4%9C%E5%AE%9A">2.10.1.&#12288;&#28961;&#30456;&#38306;&#26908;&#23450;<a class="anchor-link" href="#2.10.1.%E3%80%80%E7%84%A1%E7%9B%B8%E9%96%A2%E6%A4%9C%E5%AE%9A">&#182;</a></h3><p>母相関係数が 0 である（無相関）かどうかの検定である。HypothesTests にはないが，簡単な関数を作っておこう。</p>
-<p>関数定義<br>
-<code>CorTest(x::AbstractVector{&lt;:Real}, y::AbstractVector{&lt;:Real}; level=0.95)</code><br>
-<code>CorTest(n::Int, r::Float64; level=0.95)</code></p>
+<h2 id="2.10.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E3%81%AE%E6%A4%9C%E5%AE%9A">2.10.&#12288;&#30456;&#38306;&#20418;&#25968;&#12398;&#26908;&#23450;<a class="anchor-link" href="#2.10.%E3%80%80%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0%E3%81%AE%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>ここでは母相関係数が 0 である（無相関）かどうかの検定を取り上げる。HypothesTests にはないが，簡単な関数を作っておこう。</p>
+<p>関数定義　2 変数をベクトル x, y で与える場合<br>
+<code>CorTest(x::AbstractVector{&lt;:Real}, y::AbstractVector{&lt;:Real}; level=0.95, method="pearson")</code><br></p>
+<p>関数定義　サンプルサイズ n と 相関係数 r で与える場合
+<code>CorTest(n::Int, r::Float64; level=0.95, method="pearson")</code></p>
+<p>method には以下のものが指定できる。</p>
+<table>
+<thead><tr>
+<th style="text-align:left"><code>method</code></th>
+<th style="text-align:left">相関係数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>"pearson"</code></td>
+<td style="text-align:left">ピアソンの積率相関係数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>"spearman"</code></td>
+<td style="text-align:left">スピアマンの順位相関係数</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>"kendall"</code></td>
+<td style="text-align:left">ケンドールの順位相関係数</td>
+</tr>
+</tbody>
+</table>
+<p>スピアマンの順位相関係数，ケンドールの順位相関係数においては，同順位がある場合には近似検定になる。</p>
+<p>ケンドールの順位相関係数においては，信頼区間は求めない。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -25680,20 +25705,28 @@ Details:
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Statistics</span><span class="p">,</span> <span class="n">Distributions</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span> <span class="n">Statistics</span><span class="p">,</span> <span class="n">StatsBase</span><span class="p">,</span> <span class="n">Distributions</span>
 <span class="n">roundn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">digits</span><span class="p">)</span> <span class="o">=</span> <span class="n">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="n">digits</span><span class="p">)</span>
 <span class="n">formatp</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="mf">0.00001</span> <span class="o">?</span> <span class="s">&quot;&lt; 0.00001&quot;</span> <span class="o">:</span> <span class="s">&quot;= &quot;</span> <span class="o">*</span> <span class="n">string</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="k">function</span> <span class="n">CorTest</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">AbstractVector</span><span class="p">{</span><span class="o">&lt;:</span><span class="kt">Real</span><span class="p">},</span> <span class="n">y</span><span class="o">::</span><span class="kt">AbstractVector</span><span class="p">{</span><span class="o">&lt;:</span><span class="kt">Real</span><span class="p">};</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.95</span><span class="p">)</span>
-    <span class="n">CorTest</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">cor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span> <span class="n">level</span><span class="p">)</span>
+<span class="n">index</span><span class="p">(</span><span class="n">method</span><span class="p">)</span> <span class="o">=</span> <span class="n">indexin</span><span class="p">(</span><span class="n">method</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="sc">&#39;p&#39;</span><span class="p">,</span> <span class="sc">&#39;s&#39;</span><span class="p">,</span> <span class="sc">&#39;k&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">function</span> <span class="n">CorTest</span><span class="p">(</span><span class="n">x</span><span class="o">::</span><span class="kt">AbstractVector</span><span class="p">{</span><span class="o">&lt;:</span><span class="kt">Real</span><span class="p">},</span> <span class="n">y</span><span class="o">::</span><span class="kt">AbstractVector</span><span class="p">{</span><span class="o">&lt;:</span><span class="kt">Real</span><span class="p">};</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;pearson&quot;</span><span class="p">)</span>
+    <span class="n">func</span> <span class="o">=</span> <span class="p">[</span><span class="n">cor</span><span class="p">,</span> <span class="n">corspearman</span><span class="p">,</span> <span class="n">corkendall</span><span class="p">][</span><span class="n">index</span><span class="p">(</span><span class="n">method</span><span class="p">)]</span>
+    <span class="n">CorTest</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span> <span class="n">level</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
 <span class="k">end</span>
-<span class="k">function</span> <span class="n">CorTest</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">r</span><span class="o">::</span><span class="kt">Float64</span><span class="p">;</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.95</span><span class="p">)</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">abs</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="n">ccdf</span><span class="p">(</span><span class="n">TDist</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
-    <span class="n">q</span> <span class="o">=</span> <span class="n">quantile</span><span class="p">(</span><span class="n">Normal</span><span class="p">(),</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="mf">0.5</span><span class="n">level</span><span class="p">)</span>
-    <span class="n">conf</span> <span class="o">=</span> <span class="n">tanh</span><span class="o">.</span><span class="p">(</span><span class="n">atanh</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">.+</span> <span class="p">[</span><span class="n">q</span><span class="p">,</span> <span class="o">-</span><span class="n">q</span><span class="p">]</span> <span class="o">./</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;n = </span><span class="si">$n</span><span class="s">, r = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">, t = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">, df = </span><span class="si">$df</span><span class="s">, p-value </span><span class="si">$</span><span class="p">(</span><span class="n">formatp</span><span class="p">(</span><span class="n">q</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="p">(</span><span class="kt">Int</span><span class="p">(</span><span class="mi">100</span><span class="n">level</span><span class="p">))</span><span class="s"> percent confidence interval = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="o">.</span><span class="p">(</span><span class="n">conf</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="k">function</span> <span class="n">CorTest</span><span class="p">(</span><span class="n">n</span><span class="o">::</span><span class="kt">Int</span><span class="p">,</span> <span class="n">r</span><span class="o">::</span><span class="kt">Float64</span><span class="p">;</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;pearson&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">method</span> <span class="o">!=</span> <span class="s">&quot;kendall&quot;</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="n">ccdf</span><span class="p">(</span><span class="n">TDist</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="n">abs</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="n">quantile</span><span class="p">(</span><span class="n">Normal</span><span class="p">(),</span> <span class="mf">0.5</span> <span class="o">-</span> <span class="mf">0.5</span><span class="n">level</span><span class="p">)</span>
+        <span class="n">conf</span> <span class="o">=</span> <span class="n">tanh</span><span class="o">.</span><span class="p">(</span><span class="n">atanh</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">.+</span> <span class="p">[</span><span class="n">q</span><span class="p">,</span> <span class="o">-</span><span class="n">q</span><span class="p">]</span> <span class="o">./</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;n = </span><span class="si">$n</span><span class="s">, r = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">, t = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">, df = </span><span class="si">$df</span><span class="s">, p-value </span><span class="si">$</span><span class="p">(</span><span class="n">formatp</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="p">(</span><span class="kt">Int</span><span class="p">(</span><span class="mi">100</span><span class="n">level</span><span class="p">))</span><span class="s"> percent confidence interval = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="o">.</span><span class="p">(</span><span class="n">conf</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="k">else</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">r</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">((</span><span class="mi">4</span><span class="n">n</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">9</span><span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)))</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="n">ccdf</span><span class="p">(</span><span class="n">Normal</span><span class="p">(),</span> <span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;n = </span><span class="si">$n</span><span class="s">, r = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">, z = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span><span class="s">, p-value </span><span class="si">$</span><span class="p">(</span><span class="n">formatp</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="k">end</span>
 <span class="k">end</span><span class="p">;</span>
 </pre></div>
 
@@ -25711,11 +25744,13 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">58.3</span><span class="p">,</span> <span class="mf">43.6</span><span class="p">,</span> <span class="mf">49.9</span><span class="p">,</span> <span class="mf">64.1</span><span class="p">,</span> <span class="mf">51.6</span><span class="p">,</span> <span class="mf">36.6</span><span class="p">,</span> <span class="mf">58.7</span><span class="p">,</span> <span class="mf">66.7</span><span class="p">,</span> <span class="mf">50.7</span><span class="p">,</span> <span class="mf">53.1</span><span class="p">,</span> 
+     <span class="mf">56.1</span><span class="p">,</span> <span class="mf">42.0</span><span class="p">,</span> <span class="mf">45.5</span><span class="p">,</span> <span class="mf">30.9</span><span class="p">,</span> <span class="mf">42.3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">46.3</span><span class="p">,</span> <span class="mf">51.5</span><span class="p">,</span> <span class="mf">64.5</span><span class="p">,</span> <span class="mf">55.6</span><span class="p">,</span> <span class="mf">63.9</span><span class="p">,</span> <span class="mf">35.6</span><span class="p">,</span> <span class="mf">61.2</span><span class="p">,</span> <span class="mf">56.9</span><span class="p">,</span> <span class="mf">44.2</span><span class="p">,</span> <span class="mf">57.3</span><span class="p">,</span> 
+     <span class="mf">42.7</span><span class="p">,</span> <span class="mf">47.1</span><span class="p">,</span> <span class="mf">32.4</span><span class="p">,</span> <span class="mf">39.7</span><span class="p">,</span> <span class="mf">51.0</span><span class="p">]</span>
 <span class="n">CorTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 
@@ -25736,8 +25771,115 @@ Details:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>n = 9, r = -0.70052, t = 2.59711, df = 7, p-value &lt; 0.00001
-95 percent confidence interval = [-0.93135, -0.06806]
+<pre>n = 15, r = 0.52225, t = 2.20803, df = 13, p-value = 0.04582
+95 percent confidence interval = [0.01363, 0.81616]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">CorTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;spearman&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>n = 15, r = 0.47143, t = 1.92737, df = 13, p-value = 0.07607
+95 percent confidence interval = [-0.05384, 0.79234]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">CorTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;kendall&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>n = 15, r = 0.31429, z = 1.63308, p-value = 0.10245
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="n">CorTest</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span> <span class="c"># 信頼率の設定は，level= で指定する</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>n = 15, r = 0.52225, t = 2.20803, df = 13, p-value = 0.04582
+99 percent confidence interval = [-0.16269, 0.86753]
 </pre>
 </div>
 </div>
@@ -25755,7 +25897,7 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">CorTest</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">cor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
@@ -25778,8 +25920,8 @@ Details:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>n = 9, r = -0.70052, t = 2.59711, df = 7, p-value &lt; 0.00001
-95 percent confidence interval = [-0.93135, -0.06806]
+<pre>n = 15, r = 0.52225, t = 2.20803, df = 13, p-value = 0.04582
+95 percent confidence interval = [0.01363, 0.81616]
 </pre>
 </div>
 </div>
@@ -25791,10 +25933,10 @@ Details:
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">CorTest</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mf">0.476</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">CorTest</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mf">0.476</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -25814,14 +25956,28 @@ Details:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>n = 24, r = 0.476, t = 2.53869, df = 22, p-value &lt; 0.00001
-95 percent confidence interval = [0.08986, 0.73774]
+<pre>n = 24, r = 0.476, t = 2.53869, df = 22, p-value = 0.01871
+90 percent confidence interval = [0.15754, 0.70478]
 </pre>
 </div>
 </div>
 
 </div>
 
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-julia"><pre><span></span><span class="c">### 2.10.2.</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
@@ -27209,49 +27365,10 @@ Details:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.14.-%E3%83%AF%E3%83%AB%E3%83%89%E3%83%BB%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A9%E3%83%93%E3%83%83%E3%83%84%E9%80%A3%E6%A4%9C%E5%AE%9A">2.14. &#12527;&#12523;&#12489;&#12539;&#12454;&#12457;&#12523;&#12501;&#12457;&#12499;&#12483;&#12484;&#36899;&#26908;&#23450;<a class="anchor-link" href="#2.14.-%E3%83%AF%E3%83%AB%E3%83%89%E3%83%BB%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A9%E3%83%93%E3%83%83%E3%83%84%E9%80%A3%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>関数定義<br>
+<h2 id="2.14.%E3%80%80%E3%83%AF%E3%83%AB%E3%83%89%E3%83%BB%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A9%E3%83%93%E3%83%83%E3%83%84%E9%80%A3%E6%A4%9C%E5%AE%9A">2.14.&#12288;&#12527;&#12523;&#12489;&#12539;&#12454;&#12457;&#12523;&#12501;&#12457;&#12499;&#12483;&#12484;&#36899;&#26908;&#23450;<a class="anchor-link" href="#2.14.%E3%80%80%E3%83%AF%E3%83%AB%E3%83%89%E3%83%BB%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%95%E3%82%A9%E3%83%93%E3%83%83%E3%83%84%E9%80%A3%E6%A4%9C%E5%AE%9A">&#182;</a></h2><p>関数定義<br>
 <code>WaldWolfowitzTest(x::AbstractVector{Bool})</code><br>
 <code>WaldWolfowitzTest(x::AbstractVector{&lt;:Real})</code></p>
-<table>
-<thead><tr>
-<th style="text-align:left">変数名</th>
-<th style="text-align:left">型</th>
-<th style="text-align:left">備考</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">nabove</td>
-<td style="text-align:left">Int</td>
-<td style="text-align:left">中央値より大きいデータの数　ve median (or of value a)</td>
-</tr>
-<tr>
-<td style="text-align:left">nbelow</td>
-<td style="text-align:left">Int</td>
-<td style="text-align:left">中央値より小さいデータの数　Number of points below median (or of value b)</td>
-</tr>
-<tr>
-<td style="text-align:left">nruns</td>
-<td style="text-align:left">Int</td>
-<td style="text-align:left">連の数　Number of runs</td>
-</tr>
-<tr>
-<td style="text-align:left">μ</td>
-<td style="text-align:left">T</td>
-<td style="text-align:left">検定統計量の平均値。結果の中の value under h_0</td>
-</tr>
-<tr>
-<td style="text-align:left">σ</td>
-<td style="text-align:left">T</td>
-<td style="text-align:left">検定統計量の標準偏差</td>
-</tr>
-<tr>
-<td style="text-align:left">z</td>
-<td style="text-align:left">T</td>
-<td style="text-align:left">標準正規得点</td>
-</tr>
-</tbody>
-</table>
+<p>引数が実数ベクトルの場合は，平均値より大きいか小さいかの論理ベクトルに変換して検定に用いられる。</p>
 <p>■ 使用例</p>
 
 </div>
@@ -27434,7 +27551,8 @@ Details:
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>nabove, nbelow, nruns, μ, σ, z</li>
+<li><code>nabove</code>, <code>nbelow</code>, <code>nruns</code>, <code>μ</code>, <code>σ</code>, <code>z</code><br>
+平均値より大きいデータの個数，平均値より小さいデータの個数，連の個数，標準正規分布で近似するときの連の平均と標準偏差，標準化得点</li>
 </ul>
 
 </div>
