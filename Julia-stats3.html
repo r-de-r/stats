@@ -14538,7 +14538,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>最新バージョン 2022-02-12 18:45
+<pre>最新バージョン 2022-02-12 22:38
 </pre>
 </div>
 </div>
@@ -15004,7 +15004,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[0.45873489952536006, 0.626932465262697, 0.6075088011958474]
+<pre>[0.7991058992934438, 0.5488265499907017, 0.25023859372356105]
 </pre>
 </div>
 </div>
@@ -15039,7 +15039,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[94, 91, 8]
+<pre>[58, 17, 30]
 </pre>
 </div>
 </div>
@@ -15074,7 +15074,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[-0.6776016836161118, -0.00423615747572717, 0.1446013405130095]
+<pre>[-1.1815263990722997, 1.0751136350350181, 0.9761600046996706]
 </pre>
 </div>
 </div>
@@ -15109,7 +15109,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[61.61054401288567, 37.197973004744554, 41.290298690571014]
+<pre>[48.63644542784215, 47.118231164340585, 44.138668333172674]
 </pre>
 </div>
 </div>
@@ -15291,11 +15291,10 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[178]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">ncol</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
-<span class="n">length</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">println</span>
 </pre></div>
 
      </div>
@@ -15317,31 +15316,6 @@ a.anchor-link {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>6
 </pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-MethodError: no method matching length(::DataFrame)
-Closest candidates are:
-  length(<span class="ansi-red-intense-fg">::Union{Base.KeySet, Base.ValueIterator}</span>) at /Applications/Julia-1.7.app/Contents/Resources/julia/share/julia/base/abstractdict.jl:58
-  length(<span class="ansi-red-intense-fg">::Union{LinearAlgebra.Adjoint{T, S}, LinearAlgebra.Transpose{T, S}} where {T, S}</span>) at /Applications/Julia-1.7.app/Contents/Resources/julia/share/julia/stdlib/v1.7/LinearAlgebra/src/adjtrans.jl:171
-  length(<span class="ansi-red-intense-fg">::Union{ZMQ._Message, Base.RefValue{ZMQ._Message}}</span>) at ~/.julia/packages/ZMQ/R3wSD/src/_message.jl:31
-  ...
-
-Stacktrace:
- [1] top-level scope
-   @ In[22]:2
- [2] eval
-   @ ./boot.jl:373 [inlined]
- [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
-   @ Base ./loading.jl:1196</pre>
 </div>
 </div>
 
@@ -20986,7 +20960,7 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[161]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">source</span> <span class="o">|&gt;</span> <span class="nd">@mapmany</span><span class="p">(</span><span class="n">_</span><span class="o">.</span><span class="n">second</span><span class="p">,</span> <span class="p">{</span><span class="kt">Key</span><span class="o">=</span><span class="kt">_</span><span class="o">.</span><span class="kt">first</span><span class="p">,</span> <span class="kt">Value</span><span class="o">=</span><span class="kt">__</span><span class="p">})</span> <span class="o">|&gt;</span> <span class="n">DataFrame</span>
@@ -21005,7 +20979,7 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[161]:</div>
 
 
 
@@ -21025,10 +20999,10 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 <h2 id="30.8.%E3%80%80%E8%A6%81%E7%B4%A0%E3%82%92%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%99%E3%80%80@take-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">30.8.&#12288;&#35201;&#32032;&#12434;&#21462;&#12426;&#20986;&#12377;&#12288;@take &#12467;&#12510;&#12531;&#12489;<a class="anchor-link" href="#30.8.%E3%80%80%E8%A6%81%E7%B4%A0%E3%82%92%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%99%E3%80%80@take-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">&#182;</a></h2><p>最初から幾つの要素を取り出すかを指示する</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[162]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">source</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -21040,16 +21014,42 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[162]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>3-element Vector{Int64}:
+ 1
+ 2
+ 3</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="30.9.%E3%80%80%E8%A6%81%E7%B4%A0%E3%82%92%E6%8D%A8%E3%81%A6%E3%82%8B%E3%80%80@drop-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">30.9.&#12288;&#35201;&#32032;&#12434;&#25448;&#12390;&#12427;&#12288;@drop &#12467;&#12510;&#12531;&#12489;<a class="anchor-link" href="#30.9.%E3%80%80%E8%A6%81%E7%B4%A0%E3%82%92%E6%8D%A8%E3%81%A6%E3%82%8B%E3%80%80@drop-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">&#182;</a></h2><p>最初から幾つの要素を捨てるかを指示する。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[163]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">source</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -21061,16 +21061,41 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[163]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>2-element Vector{Int64}:
+ 4
+ 5</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="30.10.%E3%80%80%E9%87%8D%E8%A4%87%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E9%99%A4%E3%81%8F%E3%80%80@unique-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">30.10.&#12288;&#37325;&#35079;&#12487;&#12540;&#12479;&#12434;&#38500;&#12367;&#12288;@unique &#12467;&#12510;&#12531;&#12489;<a class="anchor-link" href="#30.10.%E3%80%80%E9%87%8D%E8%A4%87%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E9%99%A4%E3%81%8F%E3%80%80@unique-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">&#182;</a></h2><p>重複データを取り除く（ユニークなデータのみを残す）</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[164]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">source</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -21082,6 +21107,32 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[164]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>3-element Vector{Int64}:
+ 1
+ 2
+ 3</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -21090,10 +21141,10 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 <p><code>selector</code> は名前，位置，述語関数で選択，排除を指定する，これらは順に適用される（順序が変更されることはない）。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[165]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="s">&quot;Cherry&quot;</span><span class="p">],</span><span class="n">amount</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
@@ -21106,10 +21157,32 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[165]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>3 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>price</th><th>fruit</th></tr><tr><th></th><th title="Float64">Float64</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>1.2</td><td>Apple</td></tr><tr><th>2</th><td>2.0</td><td>Banana</td></tr><tr><th>3</th><td>0.4</td><td>Cherry</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[166]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="s">&quot;Cherry&quot;</span><span class="p">],</span><span class="n">amount</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
@@ -21122,6 +21195,28 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[166]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>3 rows × 3 columns</p><table class="data-frame"><thead><tr><th></th><th>price</th><th>isyellow</th><th>fruit</th></tr><tr><th></th><th title="Float64">Float64</th><th title="Bool">Bool</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>1.2</td><td>0</td><td>Apple</td></tr><tr><th>2</th><td>2.0</td><td>1</td><td>Banana</td></tr><tr><th>3</th><td>0.4</td><td>0</td><td>Cherry</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -21130,10 +21225,10 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 <p><code>args</code> は順に適用される</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[167]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="s">&quot;Cherry&quot;</span><span class="p">],</span><span class="n">amount</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
@@ -21146,16 +21241,38 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[167]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>3 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>name</th><th>amount</th><th>cost</th><th>isyellow</th></tr><tr><th></th><th title="String">String</th><th title="Int64">Int64</th><th title="Float64">Float64</th><th title="Bool">Bool</th></tr></thead><tbody><tr><th>1</th><td>Apple</td><td>2</td><td>1.2</td><td>0</td></tr><tr><th>2</th><td>Banana</td><td>6</td><td>2.0</td><td>1</td></tr><tr><th>3</th><td>Cherry</td><td>1000</td><td>0.4</td><td>0</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="30.13.%E3%80%80%E5%A4%89%E6%95%B0%E5%A4%89%E6%8F%9B%E3%80%80@mutate-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">30.13.&#12288;&#22793;&#25968;&#22793;&#25563;&#12288;@mutate &#12467;&#12510;&#12531;&#12489;<a class="anchor-link" href="#30.13.%E3%80%80%E5%A4%89%E6%95%B0%E5%A4%89%E6%8F%9B%E3%80%80@mutate-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">&#182;</a></h2><p>数式で変数変換</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[168]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="s">&quot;Cherry&quot;</span><span class="p">],</span><span class="n">amount</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1000</span><span class="p">],</span>
@@ -21168,6 +21285,28 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[168]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>3 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>fruit</th><th>amount</th><th>price</th><th>isyellow</th></tr><tr><th></th><th title="String">String</th><th title="Int64">Int64</th><th title="Float64">Float64</th><th title="Bool">Bool</th></tr></thead><tbody><tr><th>1</th><td>Apple</td><td>2</td><td>4.4</td><td>1</td></tr><tr><th>2</th><td>Banana</td><td>6</td><td>10.0</td><td>0</td></tr><tr><th>3</th><td>Cherry</td><td>1000</td><td>1000.8</td><td>0</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -21176,10 +21315,10 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 <p>引数なしで <code>@dropna()</code> のように使用されるときは，全ての列が対象になる。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[169]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="nb">missing</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
@@ -21191,10 +21330,32 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[169]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>2 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>a</th><th>b</th></tr><tr><th></th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>4</td></tr><tr><th>2</th><td>3</td><td>5</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[170]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">df</span> <span class="o">|&gt;</span> <span class="nd">@dropna</span><span class="p">(</span><span class="ss">:b</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">DataFrame</span>
@@ -21205,10 +21366,32 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[170]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>2 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>a</th><th>b</th></tr><tr><th></th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>4</td></tr><tr><th>2</th><td>3</td><td>5</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[171]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">df</span> <span class="o">|&gt;</span> <span class="nd">@dropna</span><span class="p">(</span><span class="ss">:b</span><span class="p">,</span> <span class="ss">:a</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">DataFrame</span>
@@ -21219,6 +21402,28 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[171]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>2 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>a</th><th>b</th></tr><tr><th></th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>4</td></tr><tr><th>2</th><td>3</td><td>5</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -21227,10 +21432,10 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 <p><code>@dissallowna()</code> のように引数なしで使われると全ての列を対象にする。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[172]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="nb">missing</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
@@ -21242,10 +21447,32 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[172]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>2 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>a</th><th>b</th></tr><tr><th></th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>4</td></tr><tr><th>2</th><td>3</td><td>6</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[173]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">missing</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="nb">missing</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
@@ -21257,6 +21484,28 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[173]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>2 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>a</th><th>b</th></tr><tr><th></th><th title="Union{Missing, Int64}">Int64?</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>4</td></tr><tr><th>2</th><td><em>missing</em></td><td>5</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
@@ -21264,10 +21513,10 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 <p><code>source |&gt; @replacena(replacement_value)</code></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[174]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="nb">missing</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
@@ -21279,10 +21528,32 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[174]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>3 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>a</th><th>b</th></tr><tr><th></th><th title="Int64">Int64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>4</td></tr><tr><th>2</th><td>0</td><td>5</td></tr><tr><th>3</th><td>3</td><td>6</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[175]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="nb">missing</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;One&quot;</span><span class="p">,</span><span class="nb">missing</span><span class="p">,</span><span class="s">&quot;Three&quot;</span><span class="p">])</span>
@@ -21294,16 +21565,38 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[175]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div class="data-frame"><p>3 rows × 2 columns</p><table class="data-frame"><thead><tr><th></th><th>a</th><th>b</th></tr><tr><th></th><th title="Int64">Int64</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>One</td></tr><tr><th>2</th><td>2</td><td>Unknown</td></tr><tr><th>3</th><td>0</td><td>Three</td></tr></tbody></table></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="31.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92%E4%BA%8C%E6%AC%A1%E5%85%83%E9%85%8D%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B">31.&#12288;&#12487;&#12540;&#12479;&#12501;&#12524;&#12540;&#12512;&#12434;&#20108;&#27425;&#20803;&#37197;&#21015;&#12395;&#22793;&#25563;&#12377;&#12427;<a class="anchor-link" href="#31.%E3%80%80%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%82%92%E4%BA%8C%E6%AC%A1%E5%85%83%E9%85%8D%E5%88%97%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B">&#182;</a></h1><p>Matrix() を使用する。データフレームの各列の型が違う場合（特に数値型と文字列型が混在するような場合）には，R のように最上位の型に統一されることはない。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[176]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="kt">Matrix</span><span class="p">(</span><span class="n">airquality</span><span class="p">);</span>
@@ -21315,10 +21608,38 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[176]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>5×6 Matrix{Float64}:
+ 41.0  190.0   7.4  67.0  5.0  1.0
+ 36.0  118.0   8.0  72.0  5.0  2.0
+ 12.0  149.0  12.6  74.0  5.0  3.0
+ 18.0  313.0  11.5  62.0  5.0  4.0
+ 23.0  299.0   8.6  65.0  5.0  7.0</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[177]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">M2</span> <span class="o">=</span> <span class="kt">Matrix</span><span class="p">(</span><span class="n">iris</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span> <span class="o">:</span><span class="p">])</span>
@@ -21327,6 +21648,32 @@ Julia の一般的な規約であるが，関数名の最後が <code>!</code> �
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[177]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>3×5 Matrix{Any}:
+ 5.1  3.5  1.4  0.2  &#34;setosa&#34;
+ 4.9  3.0  1.4  0.2  &#34;setosa&#34;
+ 4.7  3.2  1.3  0.2  &#34;setosa&#34;</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
