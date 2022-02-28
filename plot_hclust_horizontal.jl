@@ -1,8 +1,9 @@
 """
 
-Julia の Clustering.hclust() はデンドログラムを描く機能を持たない。
+Julia の Clustering.hclust() の分析結果を水平方向のデンドログラムとして描く。
 
-以下のプログラムは，R の plot() と同じであるが水平方向のデンドログラムを描く。
+StatsPlots パッケージの plot() は垂直方向のデンドログラムを描く。
+
 """
 
 using Plots

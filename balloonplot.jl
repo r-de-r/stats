@@ -32,7 +32,7 @@ function balloonplot(table; xlabel="", ylabel="",
     yticks!(1:row, reverse(row_names))
     p2
 end;
-​
+
 """
 使用法
 

@@ -44,7 +44,7 @@ function mosaicplot(t; xlabel="", ylabel="",
       display(p)
 end
 
-"""
+#=
 使用例
 
 てんとう虫の住んでいる場所と色についてのデータをモザイクプロットで描いてみる。
@@ -88,4 +88,4 @@ Dim1 ╲ Dim2 │ "Industrial"       "Rural"
 "red"       │           85            70
 
 julia> mosaicplot(table; xlabel="Havitat", ylabel="morph_colour", color=[:black, :red])
-"""
+=#
