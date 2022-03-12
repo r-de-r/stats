@@ -15128,16 +15128,19 @@ Stacktrace:
 <li><p><code>drop</code><br>
 選択しない列をベクトルで指定する（<code>select</code> の逆である）。</p>
 </li>
-<li><p><code>missingstrings</code>, <code>missingstring&lt;br&gt;
-欠損値を表す文字列を指定する。R では</code>NA<code>が自動的に欠損値扱いになるが，Julia では特別に指定しないといけないので注意が必要である。&lt;br&gt;</code>missingstring="-999"<code>&lt;br&gt;</code>missingstrings=["-999", "NA"]`</p>
+<li><p><code>missingstrings</code>, <code>missingstring</code><br>
+欠損値を表す文字列を指定する。R では <code>NA</code> が自動的に欠損値扱いになるが，Julia では特別に指定しないといけないので注意が必要である。<br>
+<code>missingstring="-999"</code><br>
+<code>missingstrings=["-999", "NA"]</code></p>
 </li>
 <li><p><code>delim=','</code><br>
 データのデリミターをシングルクオートでくくって指定する。<br>
 最初の 10 行を見て，カンマ(<code>,</code>)，タブ(<code>\t</code>)，半角空白(<code>`)，コロン(</code>:<code>)，セミコロン(</code>;<code>)，連結 concatenation(</code>|<code>) のどれかをデリミターと解釈する。&lt;br&gt;</code>delim="@@@"` のように文字列も使える</p>
 </li>
-<li><p><code>ignorerepeated=false&lt;br&gt;
-連続するデリミタを無視するかどうかを指示する。&lt;br&gt;
-複数の空白で桁位置を揃えて入力されたファイルを読むときなどには，</code>delim=' ', ignorerepeated=true` を指定すればよい。</p>
+<li><p><code>ignorerepeated=false</code><br>
+連続するデリミタを無視するかどうかを指示する。<br>
+複数の空白で桁位置を揃えて入力されたファイルを読むときなどには，
+<code>delim=' ', ignorerepeated=true</code> を指定すればよい。</p>
 </li>
 <li><p><code>quotechar='"'</code><br>
 文字列をくくる引用符である。</p>
