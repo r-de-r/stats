@@ -14614,7 +14614,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>最新バージョン 2022-05-21 11:08
+<pre>最新バージョン 2022-05-21 11:17
 </pre>
 </div>
 </div>
@@ -27972,7 +27972,7 @@ Details:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="13.%E3%80%80%E5%AF%BE%E5%BF%9C%E3%81%AE%E3%81%AA%E3%81%84-k-%E6%A8%99%E6%9C%AC%EF%BC%88%E7%8B%AC%E7%AB%8B-k-%E6%A8%99%E6%9C%AC%EF%BC%89">13.&#12288;&#23550;&#24540;&#12398;&#12394;&#12356; k &#27161;&#26412;&#65288;&#29420;&#31435; k &#27161;&#26412;&#65289;<a class="anchor-link" href="#13.%E3%80%80%E5%AF%BE%E5%BF%9C%E3%81%AE%E3%81%AA%E3%81%84-k-%E6%A8%99%E6%9C%AC%EF%BC%88%E7%8B%AC%E7%AB%8B-k-%E6%A8%99%E6%9C%AC%EF%BC%89">&#182;</a></h1><p>対応のない k 標本は，対応のない 2 標本の拡張である。</p>
+<h1 id="13.%E3%80%80%E5%AF%BE%E5%BF%9C%E3%81%AE%E3%81%AA%E3%81%84-k-%E6%A8%99%E6%9C%AC%EF%BC%88%E7%8B%AC%E7%AB%8B-k-%E6%A8%99%E6%9C%AC%EF%BC%89">13.&#12288;&#23550;&#24540;&#12398;&#12394;&#12356; k &#27161;&#26412;&#65288;&#29420;&#31435; k &#27161;&#26412;&#65289;<a class="anchor-link" href="#13.%E3%80%80%E5%AF%BE%E5%BF%9C%E3%81%AE%E3%81%AA%E3%81%84-k-%E6%A8%99%E6%9C%AC%EF%BC%88%E7%8B%AC%E7%AB%8B-k-%E6%A8%99%E6%9C%AC%EF%BC%89">&#182;</a></h1><p>対応のない $k$ 標本は，対応のない 2 標本の拡張である。</p>
 <p>対応のない 2 標本に対する $t$ 検定は，一元配置分散分析に対応する。</p>
 
 </div>
@@ -27998,10 +27998,12 @@ Details:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[240]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-julia"><pre><span></span><span class="n">g1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">27.7</span><span class="p">,</span><span class="w"> </span><span class="mf">45.2</span><span class="p">,</span><span class="w"> </span><span class="mf">32.8</span><span class="p">,</span><span class="w"> </span><span class="mf">49.5</span><span class="p">,</span><span class="w"> </span><span class="mf">31.0</span><span class="p">,</span><span class="w"> </span><span class="mf">55.5</span><span class="p">,</span><span class="w"> </span><span class="mf">31.7</span><span class="p">,</span><span class="w"> </span><span class="mf">53.9</span><span class="p">];</span><span class="w"></span>
+<div class=" highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">HypothesisTests</span><span class="w"></span>
+
+<span class="n">g1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">27.7</span><span class="p">,</span><span class="w"> </span><span class="mf">45.2</span><span class="p">,</span><span class="w"> </span><span class="mf">32.8</span><span class="p">,</span><span class="w"> </span><span class="mf">49.5</span><span class="p">,</span><span class="w"> </span><span class="mf">31.0</span><span class="p">,</span><span class="w"> </span><span class="mf">55.5</span><span class="p">,</span><span class="w"> </span><span class="mf">31.7</span><span class="p">,</span><span class="w"> </span><span class="mf">53.9</span><span class="p">];</span><span class="w"></span>
 <span class="n">g2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">38.0</span><span class="p">,</span><span class="w"> </span><span class="mf">47.4</span><span class="p">,</span><span class="w"> </span><span class="mf">55.3</span><span class="p">,</span><span class="w"> </span><span class="mf">52.5</span><span class="p">,</span><span class="w"> </span><span class="mf">39.2</span><span class="p">,</span><span class="w"> </span><span class="mf">34.9</span><span class="p">];</span><span class="w"></span>
 <span class="n">g3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">44.0</span><span class="p">,</span><span class="w"> </span><span class="mf">29.8</span><span class="p">,</span><span class="w"> </span><span class="mf">42.5</span><span class="p">,</span><span class="w"> </span><span class="mf">23.4</span><span class="p">,</span><span class="w"> </span><span class="mf">20.7</span><span class="p">,</span><span class="w"> </span><span class="mf">57.3</span><span class="p">,</span><span class="w"> </span><span class="mf">42.0</span><span class="p">,</span><span class="w"> </span><span class="mf">56.8</span><span class="p">,</span><span class="w"> </span><span class="mf">44.1</span><span class="p">,</span><span class="w"> </span><span class="mf">32.7</span><span class="p">];</span><span class="w"></span>
 
@@ -28023,7 +28025,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[240]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -28070,7 +28072,7 @@ Details:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Statistics</span><span class="p">,</span><span class="w"> </span><span class="n">Distributions</span><span class="w"></span>
@@ -28094,7 +28096,7 @@ Details:
 <span class="w">    </span><span class="n">Vb</span><span class="p">,</span><span class="w"> </span><span class="n">Vw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sb</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dfb</span><span class="p">,</span><span class="w"> </span><span class="n">Sw</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dfw</span><span class="w"></span>
 <span class="w">    </span><span class="n">F</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vb</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Vw</span><span class="w"></span>
 <span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ccdf</span><span class="p">(</span><span class="n">FDist</span><span class="p">(</span><span class="n">dfb</span><span class="p">,</span><span class="w"> </span><span class="n">dfw</span><span class="p">),</span><span class="w"> </span><span class="n">F</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;F = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="s">,  df1 = </span><span class="si">$dfb</span><span class="s">,  df2 = </span><span class="si">$dfw</span><span class="s">,  p-value </span><span class="si">$</span><span class="p">(</span><span class="n">formatp</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="s">)&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;F = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="s">,  df1 = </span><span class="si">$dfb</span><span class="s">,  df2 = </span><span class="si">$dfw</span><span class="s">,  p-value </span><span class="si">$</span><span class="p">(</span><span class="n">formatp</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="k">end</span><span class="w"></span>
 </pre></div>
 
@@ -28113,7 +28115,7 @@ Details:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -28145,7 +28147,7 @@ Details:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">g1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">27.7</span><span class="p">,</span><span class="w"> </span><span class="mf">45.2</span><span class="p">,</span><span class="w"> </span><span class="mf">32.8</span><span class="p">,</span><span class="w"> </span><span class="mf">49.5</span><span class="p">,</span><span class="w"> </span><span class="mf">31.0</span><span class="p">,</span><span class="w"> </span><span class="mf">55.5</span><span class="p">,</span><span class="w"> </span><span class="mf">31.7</span><span class="p">,</span><span class="w"> </span><span class="mf">53.9</span><span class="p">];</span><span class="w"></span>
@@ -28174,7 +28176,7 @@ Details:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>F = 0.40416,  df1 = 2,  df2 = 21,  p-value = 0.67262)
+<pre>F = 0.40416,  df1 = 2,  df2 = 21,  p-value = 0.67262
 </pre>
 </div>
 </div>
@@ -28204,7 +28206,7 @@ Details:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[241]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">Statistics</span><span class="p">,</span><span class="w"> </span><span class="n">Distributions</span><span class="w"></span>
@@ -28228,7 +28230,7 @@ Details:
 <span class="w">    </span><span class="n">df1</span><span class="p">,</span><span class="w"> </span><span class="n">df2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="n">tmp</span><span class="w"></span>
 <span class="w">    </span><span class="n">F</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">wi</span><span class="w"> </span><span class="o">.*</span><span class="w"> </span><span class="p">(</span><span class="n">mi</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">df1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">tmp</span><span class="p">))</span><span class="w"></span>
 <span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ccdf</span><span class="p">(</span><span class="n">FDist</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span><span class="w"> </span><span class="n">df2</span><span class="p">),</span><span class="w"> </span><span class="n">F</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;F = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="s">,  df1 = </span><span class="si">$df1</span><span class="s">,  df2 = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="s">,  p-value </span><span class="si">$</span><span class="p">(</span><span class="n">formatp</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="s">)&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;F = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="s">,  df1 = </span><span class="si">$df1</span><span class="s">,  df2 = </span><span class="si">$</span><span class="p">(</span><span class="n">roundn</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="s">,  p-value </span><span class="si">$</span><span class="p">(</span><span class="n">formatp</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="s">&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="k">end</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 
@@ -28254,7 +28256,7 @@ Details:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[242]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="n">UnequalVarianceOneWayANOVATest</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span><span class="w"> </span><span class="n">g2</span><span class="p">,</span><span class="w"> </span><span class="n">g3</span><span class="p">)</span><span class="w"></span>
@@ -28279,7 +28281,7 @@ Details:
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>F = 0.51339,  df1 = 2,  df2 = 13.589,  p-value = 0.60962)
+<pre>F = 0.51339,  df1 = 2,  df2 = 13.589,  p-value = 0.60962
 </pre>
 </div>
 </div>
