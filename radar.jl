@@ -32,7 +32,7 @@ function radar(df; maxx=Inf, minx=Inf, normalize=true, col="", lty="", title="")
                   seriestype=:path, label="", linecolor=border, linestyle=lty)
         end
     end
-    pyplot()
+    # pyplot()
     axisname = names(df)
     df = Matrix(df)
     n, m = size(df)

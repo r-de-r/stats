@@ -26,7 +26,7 @@ function constellationgraph(dat; w=0, points=100, col=1, alpha=0.2)
     dat = π .* (dat .- mn) ./ rg
     y = sin.(dat) * w
     x = cos.(dat) * w
-    pyplot()
+    # pyplot()
     scatter(x, y, color=col, alpha=alpha, aspect_ratio=1,
             xlims=(-1.05, 1.05), ylims=(0, 1.05), grid=false,
             yticks=false, yshowaxis=false, label="")

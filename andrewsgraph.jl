@@ -36,7 +36,7 @@ function andrewsgraph(dat; normalize=true, points=100, col=1, alpha=0.2)
     end
     coef[1, :] = repeat([1/sqrt(2)], points)
     data = transpose(data * coef)
-    pyplot()
+    # pyplot()
     plot(θ, data, color=col, alpha=alpha, grid=false,
             yticks=false, yshowaxis=false, label="")
     xticks!(range(-π, π, length=5), ["-π", "-π/2", "0", "π/2", "π"],
