@@ -28,8 +28,8 @@ function balloonplot(table; xlabel="", ylabel="",
             annotate!(j, row - i + 1, text(string(table[i, j]), 8))
         end
     end
-    xticks!(1:col, string.(col_names))
-    yticks!(1:row, string.(reverse(row_names)))
+    xticks!(1:col, col_names)
+    yticks!(1:row, reverse(row_names))
     p2
 end;
 

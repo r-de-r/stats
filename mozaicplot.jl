@@ -31,13 +31,13 @@ function mosaicplot(t; xlabel="", ylabel="",
       for col = 1:ncol # col = 1
             x1, x2 = colcumsums[col:col+1]
             rowsums = t[:, col] ./ sum(t[:, col])
-            rowcumsums = vec(cumsum(rowsums))
+            rowcumsums = vec(cumsum(rowsums, dims=1))
             pushfirst!(rowcumsums, 0)
             rowmid = (rowcumsums[1:end-1] .+ rowcumsums[2:end]) ./ 2
             for row = 1:nrow
                   rect(colcumsums, col, rowcumsums, row, color[row])
                   annotate!(colmid[col], rowmid[row],
-                        text("$(colnames[col])\n$(rownames[row])\n$(dispt[row, col])", :white, 8,),
+                        text("$(string(colnames[col]))\n$(string(rownames[row]))\n$(dispt[row, col])", :white, 8,),
                         label="")
             end
       end

@@ -4,7 +4,7 @@
 
 function obi(table; title="", ylabel="", barwidth=0.9, fontsize=8, width=600, height=300)
     g, n = size(table)
-    table2 = table ./ sum(table, dims=2)
+    table2 = Matrix(table ./ sum(table, dims=2))
     row_names, col_names = names(table)
     p2 = groupedbar(table2[:, end:-1:1],
         bar_width=barwidth,
@@ -15,14 +15,16 @@ function obi(table; title="", ylabel="", barwidth=0.9, fontsize=8, width=600, he
         showaxis=:x,
         title = title,
         ylabel = ylabel,
-        size=(width, height)
+        size=(width, height),
+        xlims=(0, 1),
+        label=""
         )
     for row in 1:g
         cum = cumsum(table2[row, :])
         cum0 = vcat(0, cum[1:end-1]...)
         for col in n:-1:1
             annotate!((cum0[col] + cum[col])/2, row,
-                text(col_names[col] * "\n" * string(table[row, col]), fontsize))
+                text(string(col_names[col]) * "\n" * string(table[row, col]), fontsize))
         end
     end
     p2
